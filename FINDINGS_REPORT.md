@@ -217,7 +217,7 @@ We categorized all 374 contracts by what they're actually for. The results revea
 | Transportation | $4.2M | 15% | 14/95 |
 | Software / IT | $2.5M | 7% | 3/40 |
 | Instructional Services | $2.6M | 13% | 4/30 |
-| Facilities Contracts | $800K | 15% | 2/13 |
+| Facilities & Maintenance | $800K | 15% | 2/13 |
 | Legal Services | $600K | 67% | 4/6 |
 
 Three patterns jump out:
@@ -226,7 +226,7 @@ Three patterns jump out:
 
 2. **Capital projects have the biggest dollar exposure.** $14.5 million in capital reserve withdrawals — primarily Pennetta Industrial Automation's $7.26M for boiler replacements — appeared at two separate meetings with no documentation at either. These are one-time, high-dollar approvals that bypass the normal bidding process through capital reserve accounts.
 
-3. **Facilities contracts are dominated by one vendor.** Of $19.6 million in facilities contracts, $15.8 million (81%) goes to Pennetta Industrial Automation alone. The other facilities vendors (William J. Guarini, Sal Electric, Mak Group, Vanderbeck, Fox Fence, In-Line AGM) are all fully documented. Pennetta is the only facilities vendor with documentation gaps.
+3. **Facilities & Maintenance spending is dominated by one vendor.** Of $19.6 million in facilities and maintenance contracts, $15.8 million (81%) goes to Pennetta Industrial Automation alone. The other facilities vendors (William J. Guarini, Sal Electric, Mak Group, Vanderbeck, Fox Fence, In-Line AGM) are all fully documented. Pennetta is the only facilities vendor with documentation gaps.
 
 **Fully documented categories** (0% gap): Food Service (34 items, $20.7M), Construction (11 items, $8.2M), Architecture/Engineering (4 items), Insurance/Benefits (3 items, $7M), Supplies, Equipment Repair.
 

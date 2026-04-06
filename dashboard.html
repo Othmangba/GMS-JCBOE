@@ -788,14 +788,14 @@ function switchTab02(tab, btn) {
 function categorize(text, vendor) {
   var t = (text + ' ' + (vendor||'')).toLowerCase();
   if (/legal|attorney|counsel|law group|law firm/.test(t)) return 'Legal Services';
-  if (/transport|route r\d|route \d|bus service|to and from|to\/from|drtrs/.test(t)) return 'Transportation';
+  if (/transport|route r\d|route \d|bus service|to and from|to\/from|drtrs|multiple vendors.*route|by route|american star|multiple bidders/.test(t)) return 'Transportation';
   if (/hvac|boiler|cooling|heating|air quality|ventilat|cooling tower/.test(t)) return 'HVAC / Mechanical';
   if (/software|licens|hosting|saas|cloud|subscription|proprietary|hardware support|technology department|infinite campus|powerschool|edplan|google|goguardian/.test(t)) return 'Software / IT';
   if (/tuition|iep|out.of.district|sending.*receiving/.test(t)) return 'Special Ed Tuition';
   if (/construction|renovation|roof|masonry|asphalt|concrete|capital reserve|facade|turf field|paving|tuck point/.test(t)) return 'Construction';
   if (/plumbing|electrical service|generator|fencing|window|floor|welding|pipe|fire alarm|fire sprinkler|suppression/.test(t)) return 'Building Systems';
   if (/food|meal|cafeteria|frozen|groceries|kitchen|dairy|milk|produce|grease trap/.test(t)) return 'Food Service';
-  if (/tutor|instruction|professional development|training|curriculum|literacy|orton|cisco certification|college.*readiness|music ed/.test(t)) return 'Instructional';
+  if (/tutor|instruction|professional development|training|curriculum|literacy|orton|cisco certification|college.*readiness|music ed|edmentum/.test(t)) return 'Instructional';
   if (/therap|speech|nursing|health|ot\/pt|occupational|physical therapy|medical|nurse|behavioral analyst|neurolog|psychoeducational/.test(t)) return 'Health / Therapy';
   if (/employment contract|superintendent.*employ/.test(t)) return 'Employment';
   if (/community school|after.school|camp|casper|sheltered workshop|disabilities employ|project search/.test(t)) return 'Community / Vocational';
@@ -827,7 +827,7 @@ function categorize(text, vendor) {
   if (/stop loss|dental carrier|medical carrier/.test(t)) return 'Insurance / Benefits';
   if (/verizon|spectrotel|telecommunicat/.test(t)) return 'Telecom';
   if (/barnabas|medical center|hospital/.test(t)) return 'Health / Therapy';
-  if (/guarini|vanderbeck|pennetta|mak group|in.line agm|fox fence|sal electric|pmx?y construction/.test(t)) return 'Facilities Contracts';
+  if (/guarini|vanderbeck|pennetta|mak group|in.line agm|fox fence|sal electric|pmx?y construction/.test(t)) return 'Facilities & Maintenance';
   if (/center for supportive|supportive schools|new city kids|speranza|educational arts|team wilderness|coalition.*inclusive/.test(t)) return 'Community Programs';
   if (/dual enrollment|career.*technical|post.secondary/.test(t)) return 'Career / Technical Ed';
   if (/record retention|content management|student records/.test(t)) return 'Software / IT';
