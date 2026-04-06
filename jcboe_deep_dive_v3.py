@@ -218,14 +218,13 @@ def check_contract_docs():
 
     all_meetings = get_all_meetings()
 
-    # Focus on regular meetings from 2024 onward (where contracts are approved)
+    # All meetings from 2024 onward (regular, special, and other — contracts can be approved in any)
     target_meetings = [
         m for m in all_meetings
         if m.get("numberdate") and str(m["numberdate"]) >= "20240101"
-        and "regular" in m.get("name", "").lower()
     ]
     target_meetings.sort(key=lambda m: str(m["numberdate"]))
-    print(f"\nRegular meetings since Jan 2024: {len(target_meetings)}\n")
+    print(f"\nAll meetings since Jan 2024: {len(target_meetings)}\n")
 
     # Contract detection
     contract_pattern = re.compile(
@@ -317,14 +316,41 @@ def check_contract_docs():
             else:
                 meeting_resolution_only += 1
 
-            # Extract vendor name (simple)
+            # Extract vendor name — multiple patterns since resolutions vary
             vendor = ""
-            vendor_match = re.search(
-                r'(?:contract|agreement|order|services)\s+(?:with|to|from|awarded to)\s+([A-Z][A-Za-z\s&,.\'-]+?)(?:\s*,\s*(?:LLC|Inc|Corp|Ltd))?(?:\s*[,.]|\s+for\s+)',
-                text
-            )
-            if vendor_match:
-                vendor = vendor_match.group(1).strip().rstrip(',.')
+            vendor_patterns = [
+                # "WHEREAS, [Vendor] was awarded..."
+                r'WHEREAS\s*,\s*([A-Z][A-Za-z0-9\s&,.\'\-/]+?)\s+was\s+awarded',
+                # "WHEREAS, [Vendor] has offered to renew..."
+                r'WHEREAS\s*,\s*([A-Z][A-Za-z0-9\s&,.\'\-/]+?)\s+has\s+offered',
+                # "WHEREAS, [Vendor] provides..."
+                r'WHEREAS\s*,\s*([A-Z][A-Za-z0-9\s&,.\'\-/]+?)\s+provides',
+                # "WHEREAS, [Vendor] is awarded..."
+                r'WHEREAS\s*,\s*([A-Z][A-Za-z0-9\s&,.\'\-/]+?)\s+is\s+awarded',
+                # "WHEREAS, [Vendor] located at..."
+                r'WHEREAS\s*,\s*([A-Z][A-Za-z0-9\s&,.\'\-/]+?)\s+[Ll]ocated\s+at',
+                # "contract/agreement with [Vendor]" (original pattern, broadened)
+                r'(?:contract|agreement|order|services)\s+(?:with|to|from|awarded to)\s+([A-Z][A-Za-z0-9\s&,.\'\-/]+?)(?:\s*,\s*(?:LLC|Inc|Corp|Ltd|LP|LLP)\.?)?(?:\s*[,.]|\s+for\s+|\s+in\s+)',
+                # "awarded a contract to [Vendor]"
+                r'awarded\s+(?:a\s+)?(?:contract|the\s+contract)\s+to\s+([A-Z][A-Za-z0-9\s&,.\'\-/]+?)(?:\s*,|\s+for\s+|\s+in\s+|\s+thru\s+)',
+                # "[Vendor], [address]" pattern (Vendor followed by street number)
+                r'WHEREAS\s*,\s*([A-Z][A-Za-z0-9\s&,.\'\-/]+?),\s+\d+\s+[A-Z]',
+            ]
+            skip_prefixes = [
+                'the jersey city', 'the district', 'the board', 'the special',
+                'njac', 'n.j.s.a', 'pursuant', 'section', 'in accordance',
+                'the 2', 'a notice', 'the notice', 'p arents', 'parents',
+            ]
+            for vp in vendor_patterns:
+                vm = re.search(vp, text)
+                if vm:
+                    candidate = vm.group(1).strip().rstrip(',. ')
+                    # Skip generic/institutional phrases
+                    if not any(candidate.lower().startswith(s) for s in skip_prefixes) and len(candidate) > 2:
+                        vendor = candidate
+                        # Clean up trailing suffixes that got included
+                        vendor = re.sub(r'\s*,?\s*(LLC|Inc|Corp|Ltd|LP|LLP)\.?\s*$', '', vendor).strip()
+                        break
 
             item_info = {
                 "date": mdate,

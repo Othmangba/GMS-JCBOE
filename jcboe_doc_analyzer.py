@@ -163,14 +163,20 @@ def extract_pdf_text(filepath):
     return "[No PDF reader available - install PyMuPDF: pip3 install PyMuPDF]", 0
 
 
-def analyze_pdf_content(text):
-    """Analyze what type of document this is based on content."""
+def analyze_pdf_content(text, filename="", page_count=0, file_size=0):
+    """Analyze what type of document this is based on content and metadata.
+
+    Uses both text content analysis and filename/metadata heuristics to
+    classify documents into specific categories, reducing the 'OTHER' bucket.
+    """
     text_lower = text.lower()
+    fname_lower = filename.lower()
+    text_len = len(text.strip())
 
     findings = {
-        "has_signatures": bool(re.search(r'(signature|signed by|authorized by|witness)', text_lower)),
-        "has_terms": bool(re.search(r'(terms and conditions|term of (contract|agreement)|shall commence|shall terminate|duration)', text_lower)),
-        "has_scope": bool(re.search(r'(scope of (work|services)|deliverables|specifications|shall provide|shall perform)', text_lower)),
+        "has_signatures": bool(re.search(r'(signature|signed by|authorized by|witness|notary)', text_lower)),
+        "has_terms": bool(re.search(r'(terms and conditions|term of (contract|agreement)|shall commence|shall terminate|duration|effective.*throu)', text_lower)),
+        "has_scope": bool(re.search(r'(scope of (work|services)|deliverables|specifications|shall provide|shall perform|services to be rendered)', text_lower)),
         "has_dollar_amounts": bool(re.search(r'\$[\d,]+', text)),
         "has_dates": bool(re.search(r'(effective date|commencement|expiration|through|thru)\s*:?\s*\w+\s+\d', text_lower)),
         "has_vendor_info": bool(re.search(r'(vendor|contractor|consultant|provider|company|firm)\s*:?\s*[A-Z]', text)),
@@ -178,20 +184,69 @@ def analyze_pdf_content(text):
         "has_termination_clause": bool(re.search(r'(terminat|cancel|breach|default|remedy)', text_lower)),
         "has_payment_terms": bool(re.search(r'(payment|invoice|billing|net \d+|upon completion|monthly)', text_lower)),
         "has_legal_boilerplate": bool(re.search(r'(governing law|jurisdiction|dispute|arbitrat|force majeure|severab)', text_lower)),
-        "has_po_number": bool(re.search(r'(p/?o\s*#|purchase order|requisition)', text_lower)),
-        "has_account_code": bool(re.search(r'(acct|account)\s*#?\s*\d{2}[-.]?\d{3}', text_lower)),
-        "has_board_resolution": bool(re.search(r'(be it resolved|resolution|board of education)', text_lower)),
+        "has_po_number": bool(re.search(r'(p/?o\s*#|purchase order|requisition|approval form)', text_lower)),
+        "has_account_code": bool(re.search(r'(acct|account)\s*(#|code|number)?\s*\d{2}[-.]?\d{3}', text_lower)),
+        "has_board_resolution": bool(re.search(r'(be it resolved|whereas\s*,|now,?\s*therefore|board of education)', text_lower)),
+        # New signals
+        "has_bid_tabulation": bool(re.search(r'(bid tabulation|bid summary|bid results|bidder|low bid|responsive bid|bid opening|bid award)', text_lower)),
+        "has_renewal_language": bool(re.search(r'(renew|renewal|year\s+\d\s+of|extend|extension|maintenance.*support|license.*maint|subscription)', text_lower)),
+        "has_amendment_language": bool(re.search(r'(amendment|change order|addendum|modification|supplement|revised|increase.*amount|additional.*amount)', text_lower)),
+        "has_whereas_pattern": bool(re.search(r'whereas\s*,.*whereas\s*,', text_lower, re.DOTALL)),
+        "has_af_form_markers": bool(re.search(r'(af\s*\d{4,5}|approval\s*form|approved\s*for\s*payment|fund\s*cert)', text_lower)),
+        "has_software_language": bool(re.search(r'(software|license|saas|cloud|hosting|subscription|proprietary)', text_lower)),
+        "has_tuition_language": bool(re.search(r'(tuition|sending.*receiving|iep|individualized education|out.of.district|oodt)', text_lower)),
     }
 
-    # Classify document type
+    # --- Classification logic (ordered from most specific to least) ---
+
+    # 1. ACTUAL_CONTRACT — has contractual terms + scope + legal weight
     if findings["has_terms"] and findings["has_scope"] and (findings["has_signatures"] or findings["has_legal_boilerplate"]):
         doc_type = "ACTUAL_CONTRACT"
-    elif findings["has_scope"] and findings["has_dollar_amounts"]:
+
+    # 2. AMENDMENT — change orders or contract modifications
+    elif findings["has_amendment_language"] and findings["has_dollar_amounts"]:
+        doc_type = "AMENDMENT"
+
+    # 3. BID_TABULATION — bid comparison/award sheets
+    elif findings["has_bid_tabulation"]:
+        doc_type = "BID_TABULATION"
+
+    # 4. PROPOSAL/QUOTE — scope + pricing but no signed agreement
+    elif findings["has_scope"] and findings["has_dollar_amounts"] and not findings["has_whereas_pattern"]:
         doc_type = "PROPOSAL/QUOTE"
-    elif findings["has_po_number"] and findings["has_account_code"]:
-        doc_type = "PO_FORM"
-    elif findings["has_board_resolution"]:
+
+    # 5. SOFTWARE_RENEWAL — license/maintenance/subscription renewals
+    elif findings["has_software_language"] and findings["has_renewal_language"]:
+        doc_type = "SOFTWARE_RENEWAL"
+
+    # 6. PO_FORM — AF-numbered approval forms (by filename or content)
+    elif (findings["has_po_number"] or findings["has_af_form_markers"] or
+          re.search(r'af\d{4,5}', fname_lower)):
+        # AF forms detected by filename pattern (strongest signal)
+        if re.search(r'af\d{4,5}', fname_lower) and page_count <= 2 and text_len < 3000:
+            doc_type = "PO_FORM"
+        elif findings["has_po_number"] and findings["has_account_code"]:
+            doc_type = "PO_FORM"
+        elif findings["has_af_form_markers"]:
+            doc_type = "PO_FORM"
+        else:
+            doc_type = "PO_FORM"
+
+    # 7. TUITION_CONTRACT — special ed / out-of-district tuition agreements
+    elif findings["has_tuition_language"] and findings["has_dollar_amounts"]:
+        doc_type = "TUITION_CONTRACT"
+
+    # 8. RESOLUTION_COPY — board resolution text
+    elif findings["has_board_resolution"] or findings["has_whereas_pattern"]:
         doc_type = "RESOLUTION_COPY"
+
+    # 9. SCANNED_FORM — minimal text from a scanned document (likely AF form)
+    elif text_len < 300 and page_count <= 2:
+        doc_type = "SCANNED_FORM"
+    elif is_only_watermark(text) and page_count >= 1:
+        doc_type = "SCANNED_FORM"
+
+    # 10. Fallback
     else:
         doc_type = "OTHER"
 
@@ -220,21 +275,17 @@ def main():
 
     os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
-    # We'll sample from specific meetings that have a mix of documented items
-    # Focus on meetings with good data: Feb 29, May 22, Jun 27, Aug 26 2024
-    sample_meetings_dates = [
-        "20240229",  # GL Group items with docs (for comparison)
-        "20240522",  # GL Group with multiple file attachments
-        "20240627",  # Large meeting, mix of docs
-        "20240925",  # 100% gap meeting (for contrast)
-        "20250626",  # Recent large meeting
-    ]
-
     all_meetings = get_all_meetings()
-    sample_meetings = [m for m in all_meetings if str(m.get("numberdate", "")) in sample_meetings_dates]
-    sample_meetings.sort(key=lambda m: str(m["numberdate"]))
 
-    print(f"\nSampling PDFs from {len(sample_meetings)} meetings")
+    # All meetings from Jan 2024 through present
+    target_meetings = [
+        m for m in all_meetings
+        if m.get("numberdate") and str(m["numberdate"]) >= "20240101"
+    ]
+    target_meetings.sort(key=lambda m: str(m["numberdate"]))
+    sample_meetings = target_meetings
+
+    print(f"\nAnalyzing ALL {len(sample_meetings)} meetings from 2024-2026")
     print(f"PDF reader: {'PyMuPDF' if HAS_PYMUPDF else 'pdfminer'}\n")
 
     # Contract approval pattern
@@ -248,13 +299,13 @@ def main():
 
     all_analyzed = []
     pdf_count = 0
-    MAX_PDFS = 60  # Don't download too many
 
-    for m in sample_meetings:
+    total_meetings = len(sample_meetings)
+    for mi, m in enumerate(sample_meetings, 1):
         mdate = str(m["numberdate"])
         mname = m.get("name", "")
         print(f"\n{'─' * 90}")
-        print(f"Meeting: {mdate} | {mname}")
+        print(f"[{mi}/{total_meetings}] Meeting: {mdate} | {mname}")
         print(f"{'─' * 90}")
 
         resp = make_request(BASE_URL + "/PRINT-AgendaDetailed",
@@ -282,9 +333,6 @@ def main():
             # Must have files
             file_divs = rightcol.find_all("div", class_="public-file")
             if not file_divs:
-                continue
-
-            if pdf_count >= MAX_PDFS:
                 continue
 
             # Get dollar amount
@@ -338,7 +386,7 @@ def main():
                 print(f"     Text extracted: {len(pdf_text)} chars")
 
                 # Analyze content
-                findings, doc_type = analyze_pdf_content(pdf_text)
+                findings, doc_type = analyze_pdf_content(pdf_text, filename=safe_name, page_count=page_count, file_size=size)
                 print(f"     Document type: {doc_type}")
 
                 present = [k.replace("has_", "") for k, v in findings.items() if v]
@@ -438,25 +486,25 @@ def main():
 
     # Export
     csv_file = "jcboe_pdf_analysis.csv"
+    finding_keys = [
+        "signatures", "terms", "scope", "dollar_amounts", "dates",
+        "vendor_info", "insurance_requirements", "termination_clause",
+        "payment_terms", "legal_boilerplate", "po_number", "account_code",
+        "board_resolution", "bid_tabulation", "renewal_language",
+        "amendment_language", "whereas_pattern", "af_form_markers",
+        "software_language", "tuition_language",
+    ]
     with open(csv_file, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["meeting_date", "contract_amount", "file_label", "file_size",
                          "page_count", "doc_type", "text_length",
-                         "has_signatures", "has_terms", "has_scope", "has_dollar_amounts",
-                         "has_dates", "has_vendor_info", "has_insurance_requirements",
-                         "has_termination_clause", "has_payment_terms", "has_legal_boilerplate",
-                         "has_po_number", "has_account_code", "has_board_resolution",
+                         *[f"has_{k}" for k in finding_keys],
                          "resolution_preview"])
         for a in all_analyzed:
             writer.writerow([
                 a["meeting_date"], a["contract_amount"], a["file_label"],
                 a["file_size"], a["page_count"], a["doc_type"], a["text_length"],
-                *[a["findings"][f"has_{x}"] for x in [
-                    "signatures", "terms", "scope", "dollar_amounts", "dates",
-                    "vendor_info", "insurance_requirements", "termination_clause",
-                    "payment_terms", "legal_boilerplate", "po_number", "account_code",
-                    "board_resolution"
-                ]],
+                *[a["findings"].get(f"has_{x}", False) for x in finding_keys],
                 a["resolution_preview"],
             ])
     print(f"\nCSV exported: {csv_file}")
