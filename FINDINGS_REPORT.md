@@ -272,9 +272,71 @@ All code, data, and methodology are published at [github.com/Othmangba/GMS-JCBOE
 
 ---
 
+## The Amendment Chain Gap — A Problem Only Memory Can Solve
+
+This is one of the most important things we found, and it's worth explaining carefully because it affects millions of dollars and it's almost invisible unless you know to look for it.
+
+### How It's Supposed to Work
+
+Let's say the Board votes in June to hire 12 bus companies to drive special education students to school. That's a big deal — $1.85 million, split across a dozen small companies. At the June meeting, there's a 5-page spreadsheet attached that lists every company, every route, every daily rate, and every annual total. If you attend that meeting or pull up the agenda on BoardDocs, you can see exactly who is getting paid what.
+
+So far, so good.
+
+### What Happens Next
+
+In August, one of those routes needs a change. A student needs a personal aide on the bus. That costs an extra $100 per day. The Board votes to approve the change — an "amendment" to the original contract.
+
+Here's what the August agenda says:
+
+> *"WHEREAS, the Jersey City Board of Education adopted Resolution 10.16 at the June 27, 2024 board meeting, awarding contracts to multiple vendors..."*
+
+That's it. No spreadsheet. No vendor names. No route numbers. Just a reference to "Resolution 10.16" from a meeting two months ago.
+
+If you're a parent, a journalist, or a concerned citizen reading the August agenda, you see: **"$1.85 million to multiple vendors."** Who are those vendors? The agenda doesn't say. You'd have to know to go back to the June meeting, find Resolution 10.16, and hope the spreadsheet is still there.
+
+### Then It Gets Worse
+
+In November, another route gets amended. More money for a different aide. The November agenda references the same June resolution. Then in December, another amendment. Then in March. Then in April, the Board votes to add three routes that were "omitted from the original resolution" — another $1.85 million, same generic language.
+
+By now you have a chain that looks like this:
+
+```
+June 2024:  Original award — $1.85M, 12 vendors, 5-page spreadsheet attached
+   ↓
+Aug 2024:   Amendment — references "Resolution 10.16" — no vendor list
+   ↓
+Nov 2024:   Amendment — references "Resolution 10.16" — no vendor list
+   ↓
+Dec 2024:   Amendment — references "Resolution 10.16" — no vendor list
+   ↓
+Mar 2025:   Amendment — references "Resolution 10.16" — no vendor list
+   ↓
+Apr 2025:   New routes added — $1.85M — "multiple vendors" — no vendor list
+```
+
+Each link in the chain only makes sense if you can see the link before it. But the only meeting that actually names the vendors is the first one. Every subsequent amendment is a dead end unless you know to go back to June 2024.
+
+### Why This Matters
+
+We found this pattern across **121 amendments and renewals** — 32% of all contract items. It's not limited to transportation. The same thing happens with:
+
+- **Special education services** — contracts renewed year after year, each renewal referencing the original award but never re-attaching the vendor agreement
+- **Construction projects** — change orders that add hundreds of thousands of dollars, referencing the original bid resolution but not the original contract
+- **Software licenses** — annual renewals that reference a prior resolution instead of attaching the current license agreement
+
+The result is that the Board's public record becomes a maze of cross-references. Each individual item looks fine — "approved per Resolution 8.07" — but no single meeting gives you the full picture. The institutional memory lives in the chain, and the chain is broken.
+
+### What Would Fix This
+
+This is exactly what a Proposal Lifecycle Metadata (PLM) system solves. In a PLM system, every amendment is linked to its parent contract. When you look at the August amendment, the system automatically shows you: here's the original June award, here are the 12 vendors, here are their rates, and here's what this amendment changes. No digging. No cross-referencing. No broken chains.
+
+We effectively built a static version of this system for this investigation. Our scripts crawl every meeting, identify every contract, trace amendment references back to their originals, and surface the gaps. The fact that we found what we found — using the same public data anyone can access — proves that the infrastructure to solve this problem already exists. It just needs to be built into the process, not bolted on after the fact.
+
+---
+
 ## About This Project
 
-This investigation is part of OCC Research's Governance Memory System (GMS) — a framework for building institutional memory infrastructure that makes governance cumulative, queryable, and accountable.
+This investigation is part of OCC Research's Governance Memory System (GMS) — a framework for building institutional memory infrastructure that makes governance cumulative, queryable, and accountable. The tools we built for this investigation are a proof of concept: a static PLM Agent that does retrospectively what a live system would do in real time — track every contract from proposal to payment, flag missing documentation, and surface the gaps before they become audit findings.
 
 It was led by Othman Gbadamassi, founder of OCC Research and a product of the Jersey City Public School system — McNair Academic High School, Class of 2017. This isn't an outsider's critique. This is a Jersey City kid who went through these schools, benefited from the teachers and programs they fund, and came back to ask a simple question: can the community see how the money is being spent?
 
