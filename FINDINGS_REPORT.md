@@ -280,9 +280,9 @@ It was led by Othman Gbadamassi, founder of OCC Research and a product of the Je
 
 The answer, right now, is mostly no. But it doesn't have to stay that way.
 
-**Governance that remembers.**
-
 [Full PDF Report](https://occresearch.org/gms-jcboe-report.pdf) | [Interactive Dashboard](https://github.com/Othmangba/GMS-JCBOE) | [occresearch.org](https://occresearch.org)
+
+**Governance that remembers. Institutional Memory as a Service.**
 
 ---
 
