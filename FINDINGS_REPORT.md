@@ -204,31 +204,33 @@ We categorized all 374 contracts by what they're actually for. The results revea
 | Category | Gap Rate | Gaps | Undocumented $ |
 |---|---|---|---|
 | Employment Contracts | 100% | 3/3 | $593,240 |
-| Legal Services | 67% | 4/6 | $600,000 |
-| Capital Projects | 50% | 2/4 | $14.5M |
-| HR Services | 50% | 1/2 | $240,000 |
-| Transportation | 15% | 14/95 | $4.2M |
+| Legal Services | 80% | 4/5 | $600,000 |
+| Transportation | 61% | 17/28 | $4.6M |
+| Instructional | 19% | 5/27 | $2.7M |
+| Security | 17% | 1/6 | $60,000 |
+| Facilities & Maintenance | 15% | 2/13 | $14.5M |
 
 **Biggest dollar exposure (most money without documentation):**
 
 | Category | Undocumented $ | Gap Rate | Items |
 |---|---|---|---|
-| Capital Projects | $14.5M | 50% | 2/4 |
-| Transportation | $4.2M | 15% | 14/95 |
-| Software / IT | $2.5M | 7% | 3/40 |
-| Instructional Services | $2.6M | 13% | 4/30 |
-| Facilities & Maintenance | $800K | 15% | 2/13 |
-| Legal Services | $600K | 67% | 4/6 |
+| Facilities & Maintenance | $14.5M | 15% | 2/13 |
+| Transportation | $4.6M | 61% | 17/28 |
+| Instructional | $2.7M | 19% | 5/27 |
+| Software / IT | $2.6M | 11% | 4/36 |
+| Community Programs | $896K | 11% | 3/28 |
+| Building Systems | $800K | 6% | 1/17 |
+| Legal Services | $600K | 80% | 4/5 |
+
+**Fully documented categories** (0% gap): Food Service (33 items), Construction (12 items), Architecture/Engineering (7 items), Insurance/Benefits (7 items), Equipment Repair (7 items), Supplies (7 items), Auditing (3 items).
 
 Three patterns jump out:
 
 1. **Legal services and employment contracts are almost never documented.** The district's outside law firms (Adams Lattiboudere for labor law, Machado Law Group for special ed law) were approved for a combined $600,000 across 4 items over two years — none with contracts attached. The Superintendent's and Business Administrator's employment contracts were approved without documentation, which the auditors also flagged.
 
-2. **Capital projects have the biggest dollar exposure.** $14.5 million in capital reserve withdrawals — primarily Pennetta Industrial Automation's $7.26M for boiler replacements — appeared at two separate meetings with no documentation at either. These are one-time, high-dollar approvals that bypass the normal bidding process through capital reserve accounts.
+2. **Transportation has the highest gap rate among major categories (61%).** 17 of 28 transportation items — including multi-vendor route awards and special education transport amendments — have no documentation. This is where the amendment chain problem is most severe: the original vendor list exists in one meeting's attachment, but every subsequent amendment is a dead end.
 
-3. **Facilities & Maintenance spending is dominated by one vendor.** Of $19.6 million in facilities and maintenance contracts, $15.8 million (81%) goes to Pennetta Industrial Automation alone. The other facilities vendors (William J. Guarini, Sal Electric, Mak Group, Vanderbeck, Fox Fence, In-Line AGM) are all fully documented. Pennetta is the only facilities vendor with documentation gaps.
-
-**Fully documented categories** (0% gap): Food Service (34 items, $20.7M), Construction (11 items, $8.2M), Architecture/Engineering (4 items), Insurance/Benefits (3 items, $7M), Supplies, Equipment Repair.
+3. **Facilities & Maintenance has the biggest dollar exposure ($14.5M).** This is almost entirely Pennetta Industrial Automation — $15.8 million out of $19.6 million in the category (81%). Every other facilities vendor (William J. Guarini, Sal Electric, Mak Group, Vanderbeck, Fox Fence, In-Line AGM) is fully documented. Pennetta is the only one with gaps, and their largest item ($7.26M for boiler replacements) appeared at two meetings with no documentation at either.
 
 ### Who Gets the Contracts?
 
