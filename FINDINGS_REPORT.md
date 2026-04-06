@@ -276,9 +276,13 @@ All code, data, and methodology are published at [github.com/Othmangba/GMS-JCBOE
 
 This investigation is part of OCC Research's Governance Memory System (GMS) — a framework for building institutional memory infrastructure that makes governance cumulative, queryable, and accountable.
 
+It was led by Othman Gbadamassi, founder of OCC Research and a product of the Jersey City Public School system — McNair Academic High School, Class of 2017. This isn't an outsider's critique. This is a Jersey City kid who went through these schools, benefited from the teachers and programs they fund, and came back to ask a simple question: can the community see how the money is being spent?
+
+The answer, right now, is mostly no. But it doesn't have to stay that way.
+
 **Governance that remembers.**
 
-For questions, feedback, or collaboration: [occresearch.org](https://occresearch.org)
+[Full PDF Report](https://occresearch.org/gms-jcboe-report.pdf) | [Interactive Dashboard](https://github.com/Othmangba/GMS-JCBOE) | [occresearch.org](https://occresearch.org)
 
 ---
 
