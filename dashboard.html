@@ -608,7 +608,8 @@ body {
       </div>
       <div style="display:flex;gap:8px;align-items:center">
         <button class="tab-btn active" onclick="switchTab02('docs',this)">Document Types</button>
-        <button class="tab-btn" onclick="switchTab02('cats',this)">Gap by Category</button>
+        <button class="tab-btn" onclick="switchTab02('cats-pct',this)">Gap % by Category</button>
+        <button class="tab-btn" onclick="switchTab02('cats-dollar',this)">Undocumented $ by Category</button>
       </div>
     </div>
     <div id="tab-docs">
@@ -721,13 +722,66 @@ function plainDesc(raw) {
 
 function esc(s) { var d=document.createElement("div"); d.textContent=s||""; return d.innerHTML; }
 
+function renderCatChart(mode) {
+  var cats = window._catData;
+  if(!cats) return;
+  var keys = Object.keys(cats).filter(function(c){ return cats[c].total >= 2; });
+
+  if(mode === 'dollar') {
+    // Sort by undocumented dollar value
+    keys.sort(function(a,b){ return cats[b].gapVal - cats[a].gapVal; });
+  } else {
+    // Sort by gap percentage
+    keys.sort(function(a,b){
+      return (cats[b].gaps/cats[b].total) - (cats[a].gaps/cats[a].total);
+    });
+  }
+
+  var maxDollar = 0;
+  keys.forEach(function(c){ if(cats[c].gapVal > maxDollar) maxDollar = cats[c].gapVal; });
+
+  var html = '';
+  keys.forEach(function(cat){
+    var c = cats[cat];
+    var gapPct = (c.gaps/c.total*100);
+    var docPct = 100 - gapPct;
+    if(gapPct === 0 && c.total < 5) return;
+
+    if(mode === 'dollar') {
+      // Bar width proportional to undocumented dollars
+      var barW = maxDollar > 0 ? (c.gapVal/maxDollar*100) : 0;
+      html += '<div class="cat-row">';
+      html += '<div class="cat-label">'+cat+'</div>';
+      html += '<div class="cat-bar-track">';
+      html += '<div class="cat-bar-gap" style="left:0;width:'+barW+'%">'+(c.gapVal > 0 ? fmt(c.gapVal) : '')+'</div>';
+      html += '</div>';
+      html += '<div class="cat-meta"><strong>'+c.gaps+'</strong>/'+c.total+' gaps<br>'+gapPct.toFixed(0)+'% rate</div>';
+      html += '</div>';
+    } else {
+      // Bar shows documented vs gap proportion
+      html += '<div class="cat-row">';
+      html += '<div class="cat-label">'+cat+'</div>';
+      html += '<div class="cat-bar-track">';
+      html += '<div class="cat-bar-doc" style="width:'+docPct+'%"></div>';
+      html += '<div class="cat-bar-gap" style="left:'+docPct+'%;width:'+gapPct+'%">'+(gapPct>=5?gapPct.toFixed(0)+'%':'')+'</div>';
+      html += '</div>';
+      html += '<div class="cat-meta"><strong>'+c.gaps+'</strong>/'+c.total+' gaps<br>'+fmt(c.gapVal)+' undoc</div>';
+      html += '</div>';
+    }
+  });
+  document.getElementById("cat-chart").innerHTML = html;
+}
+
 function switchTab02(tab, btn) {
   document.getElementById('tab-docs').style.display = tab==='docs' ? '' : 'none';
-  document.getElementById('tab-cats').style.display = tab==='cats' ? '' : 'none';
+  document.getElementById('tab-cats').style.display = tab.startsWith('cats') ? '' : 'none';
   document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
   btn.classList.add('active');
   var title = document.getElementById('panel02-title');
-  title.textContent = tab==='docs' ? "What's Actually Attached?" : "Gap Rate by Spending Category";
+  if(tab==='docs') title.textContent = "What's Actually Attached?";
+  else if(tab==='cats-pct') title.textContent = "Gap Rate by Spending Category";
+  else title.textContent = "Undocumented Dollars by Spending Category";
+  if(tab.startsWith('cats')) renderCatChart(tab==='cats-dollar' ? 'dollar' : 'pct');
 }
 
 function categorize(text) {
@@ -908,41 +962,18 @@ function categorize(text) {
   // Dynamic finding for doc types
   document.getElementById("finding-doctypes").innerHTML = '<div class="finding-label">What This Means</div><div class="finding-text">We analyzed <em>'+t.pdfs_analyzed+' PDFs</em> attached to contract items across '+t.meetings_count+' meetings. Of those, <em>'+poCt+' ('+((poCt/totF*100).toFixed(0))+'%) are internal purchase orders</em> &mdash; forms the district uses to authorize its own spending, not actual contracts. Only <em>'+conCt+' documents</em> contain real contract elements like terms, scope of work, and signatures. The remaining files are proposals, bid sheets, amendments, and software renewal notices &mdash; none of which are signed agreements.</div>';
 
-  // Category gap chart
-  (function(){
-    var cats = {};
-    DATA.meetings.forEach(function(m){
-      m.items.forEach(function(it){
-        var cat = categorize(it.text || '');
-        if(!cats[cat]) cats[cat] = {total:0, gaps:0, totalVal:0, gapVal:0};
-        cats[cat].total++;
-        cats[cat].totalVal += it.amount;
-        if(!it.has_file){ cats[cat].gaps++; cats[cat].gapVal += it.amount; }
-      });
+  // Category gap chart — build data once, render on demand
+  window._catData = {};
+  DATA.meetings.forEach(function(m){
+    m.items.forEach(function(it){
+      var cat = categorize(it.text || '');
+      if(!window._catData[cat]) window._catData[cat] = {total:0, gaps:0, totalVal:0, gapVal:0};
+      window._catData[cat].total++;
+      window._catData[cat].totalVal += it.amount;
+      if(!it.has_file){ window._catData[cat].gaps++; window._catData[cat].gapVal += it.amount; }
     });
-    // Sort by gap rate (min 2 items)
-    var sorted = Object.keys(cats).filter(function(c){ return cats[c].total >= 2; })
-      .sort(function(a,b){
-        var ga = cats[a].gaps/cats[a].total, gb = cats[b].gaps/cats[b].total;
-        return gb - ga;
-      });
-    var html = '';
-    sorted.forEach(function(cat){
-      var c = cats[cat];
-      var gapPct = (c.gaps/c.total*100);
-      var docPct = 100 - gapPct;
-      if(gapPct === 0 && c.total < 5) return; // skip tiny fully-doc'd categories
-      html += '<div class="cat-row">';
-      html += '<div class="cat-label">'+cat+'</div>';
-      html += '<div class="cat-bar-track">';
-      html += '<div class="cat-bar-doc" style="width:'+docPct+'%"></div>';
-      html += '<div class="cat-bar-gap" style="left:'+docPct+'%;width:'+gapPct+'%">'+(gapPct>=5?gapPct.toFixed(0)+'%':'')+'</div>';
-      html += '</div>';
-      html += '<div class="cat-meta"><strong>'+c.gaps+'</strong>/'+c.total+' gaps<br>'+fmt(c.gapVal)+' undoc</div>';
-      html += '</div>';
-    });
-    document.getElementById("cat-chart").innerHTML = html;
-  })();
+  });
+  renderCatChart('pct');
 
   // Undoc table — with plain-language descriptions
   document.getElementById("undoc-count").textContent = DATA.undocumented.length+" items totaling "+fmtF(t.undoc_value);
