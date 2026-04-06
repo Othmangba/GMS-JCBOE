@@ -332,6 +332,31 @@ body {
 .hbar-meta strong { color: var(--text); }
 .hbar-sub { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
 
+/* === TABS === */
+.tab-btn {
+  background: none; border: 1px solid var(--border); color: var(--text-muted);
+  font-family: var(--heading); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.5px; padding: 5px 14px 3px; cursor: pointer; transition: all 0.2s;
+}
+.tab-btn:hover { border-color: var(--text-dim); color: var(--text-dim); }
+.tab-btn.active { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+/* === CATEGORY CHART === */
+.cat-row {
+  display: grid; grid-template-columns: 160px 1fr 100px; gap: 12px;
+  align-items: center; padding: 6px 0; border-bottom: 1px solid var(--border);
+}
+.cat-row:last-child { border-bottom: none; }
+.cat-label { font-family: var(--heading); font-size: 13px; font-weight: 600; color: var(--text); text-align: right; }
+.cat-bar-track { height: 28px; background: var(--surface); position: relative; overflow: hidden; }
+.cat-bar-doc { height: 100%; background: var(--green-dim); position: absolute; left: 0; top: 0; }
+.cat-bar-gap { height: 100%; background: var(--accent-dim); position: absolute; top: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--heading); font-size: 11px; font-weight: 600; color: var(--accent);
+}
+.cat-meta { font-family: var(--heading); font-size: 11px; color: var(--text-dim); line-height: 1.5; }
+.cat-meta strong { color: var(--text); }
+
 /* === DOC TYPE BAR === */
 .doc-bar { display: flex; height: 56px; overflow: hidden; margin-bottom: 16px; border-radius: 2px; }
 .doc-seg {
@@ -501,7 +526,7 @@ body {
   <div class="guide-icon">?</div>
   <div>
     <strong>What is this?</strong> When the Board votes to spend taxpayer money on a contract, residents should be able to see the full agreement &mdash; what work is being done, how much it costs, and who signed off. This dashboard tracks how often that information is actually provided to the public through BoardDocs, the Board's official document portal.
-    <button class="guide-toggle" onclick="document.getElementById('glossary').classList.toggle('visible')">Show Glossary</button>
+    <button class="guide-toggle" onclick="var g=document.getElementById('glossary');g.classList.toggle('visible');this.textContent=g.classList.contains('visible')?'Close Glossary':'Show Glossary'">Show Glossary</button>
     <a class="guide-toggle" href="https://github.com/Othmangba/GMS-JCBOE/blob/main/FINDINGS_REPORT.md" target="_blank" style="text-decoration:none">Full Report</a>
   </div>
 </div>
@@ -579,13 +604,23 @@ body {
     <div class="panel-header">
       <div>
         <div class="panel-num">02</div>
-        <div class="panel-title">What's Actually Attached?</div>
+        <div class="panel-title" id="panel02-title">What's Actually Attached?</div>
       </div>
-      <div class="panel-subtitle">When the Board does attach a file, what kind of document is it?</div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="tab-btn active" onclick="switchTab02('docs',this)">Document Types</button>
+        <button class="tab-btn" onclick="switchTab02('cats',this)">Gap by Category</button>
+      </div>
     </div>
-    <div class="doc-bar" id="doc-bar"></div>
-    <div class="doc-legend" id="doc-legend"></div>
-    <div class="finding" id="finding-doctypes"></div>
+    <div id="tab-docs">
+      <div class="panel-subtitle" style="margin-bottom:12px">When the Board does attach a file, what kind of document is it?</div>
+      <div class="doc-bar" id="doc-bar"></div>
+      <div class="doc-legend" id="doc-legend"></div>
+      <div class="finding" id="finding-doctypes"></div>
+    </div>
+    <div id="tab-cats" style="display:none">
+      <div class="panel-subtitle" style="margin-bottom:12px">Which types of spending have the worst documentation gaps?</div>
+      <div id="cat-chart"></div>
+    </div>
   </div>
 
   <div class="two-col">
@@ -685,6 +720,37 @@ function plainDesc(raw) {
 }
 
 function esc(s) { var d=document.createElement("div"); d.textContent=s||""; return d.innerHTML; }
+
+function switchTab02(tab, btn) {
+  document.getElementById('tab-docs').style.display = tab==='docs' ? '' : 'none';
+  document.getElementById('tab-cats').style.display = tab==='cats' ? '' : 'none';
+  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  var title = document.getElementById('panel02-title');
+  title.textContent = tab==='docs' ? "What's Actually Attached?" : "Gap Rate by Spending Category";
+}
+
+function categorize(text) {
+  var t = text.toLowerCase();
+  if (/legal|attorney|counsel|law group|law firm/.test(t)) return 'Legal Services';
+  if (/transport|route r\d|bus service/.test(t)) return 'Transportation';
+  if (/hvac|boiler|cooling|heating|air quality|ventilat/.test(t)) return 'HVAC / Mechanical';
+  if (/software|licens|hosting|saas|cloud|subscription|proprietary|hardware support|technology department/.test(t)) return 'Software / IT';
+  if (/tuition|iep|out.of.district|sending.*receiving/.test(t)) return 'Special Ed Tuition';
+  if (/construction|renovation|roof|masonry|asphalt|concrete|capital reserve/.test(t)) return 'Construction';
+  if (/plumbing|electrical service|generator|fencing|window|floor|welding|pipe/.test(t)) return 'Building Repair';
+  if (/food|meal|cafeteria|frozen|groceries|kitchen/.test(t)) return 'Food Service';
+  if (/tutor|instruction|professional development|training|curriculum|literacy|orton/.test(t)) return 'Instructional';
+  if (/therap|speech|nursing|health|ot\/pt|occupational|physical therapy|medical|nurse/.test(t)) return 'Health / Therapy';
+  if (/employment contract|superintendent.*employ/.test(t)) return 'Employment';
+  if (/community school|after.school|camp|casper/.test(t)) return 'Community Programs';
+  if (/telecom|phone|voip|fiber|broadband/.test(t)) return 'Telecom';
+  if (/security|surveillance|environmental/.test(t)) return 'Security';
+  if (/insurance|broker|workers comp/.test(t)) return 'Insurance';
+  if (/pest|landscap|cleaning|custod/.test(t)) return 'Custodial';
+  if (/travel|conference/.test(t)) return 'Travel Policy';
+  return 'Other';
+}
 
 (function render() {
   var t = DATA.totals;
@@ -841,6 +907,42 @@ function esc(s) { var d=document.createElement("div"); d.textContent=s||""; retu
   }).join("");
   // Dynamic finding for doc types
   document.getElementById("finding-doctypes").innerHTML = '<div class="finding-label">What This Means</div><div class="finding-text">We analyzed <em>'+t.pdfs_analyzed+' PDFs</em> attached to contract items across '+t.meetings_count+' meetings. Of those, <em>'+poCt+' ('+((poCt/totF*100).toFixed(0))+'%) are internal purchase orders</em> &mdash; forms the district uses to authorize its own spending, not actual contracts. Only <em>'+conCt+' documents</em> contain real contract elements like terms, scope of work, and signatures. The remaining files are proposals, bid sheets, amendments, and software renewal notices &mdash; none of which are signed agreements.</div>';
+
+  // Category gap chart
+  (function(){
+    var cats = {};
+    DATA.meetings.forEach(function(m){
+      m.items.forEach(function(it){
+        var cat = categorize(it.text || '');
+        if(!cats[cat]) cats[cat] = {total:0, gaps:0, totalVal:0, gapVal:0};
+        cats[cat].total++;
+        cats[cat].totalVal += it.amount;
+        if(!it.has_file){ cats[cat].gaps++; cats[cat].gapVal += it.amount; }
+      });
+    });
+    // Sort by gap rate (min 2 items)
+    var sorted = Object.keys(cats).filter(function(c){ return cats[c].total >= 2; })
+      .sort(function(a,b){
+        var ga = cats[a].gaps/cats[a].total, gb = cats[b].gaps/cats[b].total;
+        return gb - ga;
+      });
+    var html = '';
+    sorted.forEach(function(cat){
+      var c = cats[cat];
+      var gapPct = (c.gaps/c.total*100);
+      var docPct = 100 - gapPct;
+      if(gapPct === 0 && c.total < 5) return; // skip tiny fully-doc'd categories
+      html += '<div class="cat-row">';
+      html += '<div class="cat-label">'+cat+'</div>';
+      html += '<div class="cat-bar-track">';
+      html += '<div class="cat-bar-doc" style="width:'+docPct+'%"></div>';
+      html += '<div class="cat-bar-gap" style="left:'+docPct+'%;width:'+gapPct+'%">'+(gapPct>=5?gapPct.toFixed(0)+'%':'')+'</div>';
+      html += '</div>';
+      html += '<div class="cat-meta"><strong>'+c.gaps+'</strong>/'+c.total+' gaps<br>'+fmt(c.gapVal)+' undoc</div>';
+      html += '</div>';
+    });
+    document.getElementById("cat-chart").innerHTML = html;
+  })();
 
   // Undoc table — with plain-language descriptions
   document.getElementById("undoc-count").textContent = DATA.undocumented.length+" items totaling "+fmtF(t.undoc_value);
