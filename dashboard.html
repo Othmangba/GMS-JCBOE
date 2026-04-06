@@ -788,22 +788,29 @@ function switchTab02(tab, btn) {
 function categorize(text) {
   var t = text.toLowerCase();
   if (/legal|attorney|counsel|law group|law firm/.test(t)) return 'Legal Services';
-  if (/transport|route r\d|bus service/.test(t)) return 'Transportation';
-  if (/hvac|boiler|cooling|heating|air quality|ventilat/.test(t)) return 'HVAC / Mechanical';
-  if (/software|licens|hosting|saas|cloud|subscription|proprietary|hardware support|technology department/.test(t)) return 'Software / IT';
+  if (/transport|route r\d|route \d|bus service|to and from|to\/from|drtrs/.test(t)) return 'Transportation';
+  if (/hvac|boiler|cooling|heating|air quality|ventilat|cooling tower/.test(t)) return 'HVAC / Mechanical';
+  if (/software|licens|hosting|saas|cloud|subscription|proprietary|hardware support|technology department|infinite campus|powerschool|edplan|google|goguardian/.test(t)) return 'Software / IT';
   if (/tuition|iep|out.of.district|sending.*receiving/.test(t)) return 'Special Ed Tuition';
-  if (/construction|renovation|roof|masonry|asphalt|concrete|capital reserve/.test(t)) return 'Construction';
-  if (/plumbing|electrical service|generator|fencing|window|floor|welding|pipe/.test(t)) return 'Building Repair';
-  if (/food|meal|cafeteria|frozen|groceries|kitchen/.test(t)) return 'Food Service';
-  if (/tutor|instruction|professional development|training|curriculum|literacy|orton/.test(t)) return 'Instructional';
-  if (/therap|speech|nursing|health|ot\/pt|occupational|physical therapy|medical|nurse/.test(t)) return 'Health / Therapy';
+  if (/construction|renovation|roof|masonry|asphalt|concrete|capital reserve|facade|turf field|paving|tuck point/.test(t)) return 'Construction';
+  if (/plumbing|electrical service|generator|fencing|window|floor|welding|pipe|fire alarm|fire sprinkler|suppression/.test(t)) return 'Building Systems';
+  if (/food|meal|cafeteria|frozen|groceries|kitchen|dairy|milk|produce|grease trap/.test(t)) return 'Food Service';
+  if (/tutor|instruction|professional development|training|curriculum|literacy|orton|cisco certification|college.*readiness|music ed/.test(t)) return 'Instructional';
+  if (/therap|speech|nursing|health|ot\/pt|occupational|physical therapy|medical|nurse|behavioral analyst|neurolog|psychoeducational/.test(t)) return 'Health / Therapy';
   if (/employment contract|superintendent.*employ/.test(t)) return 'Employment';
-  if (/community school|after.school|camp|casper/.test(t)) return 'Community Programs';
-  if (/telecom|phone|voip|fiber|broadband/.test(t)) return 'Telecom';
-  if (/security|surveillance|environmental/.test(t)) return 'Security';
-  if (/insurance|broker|workers comp/.test(t)) return 'Insurance';
-  if (/pest|landscap|cleaning|custod/.test(t)) return 'Custodial';
+  if (/community school|after.school|camp|casper|sheltered workshop|disabilities employ|project search/.test(t)) return 'Community / Vocational';
+  if (/telecom|phone|voip|fiber|broadband|e.rate|internet connect/.test(t)) return 'Telecom';
+  if (/security|surveillance|cctv/.test(t)) return 'Security';
+  if (/insurance|broker|workers comp|dental carrier/.test(t)) return 'Insurance / Benefits';
+  if (/pest|landscap|cleaning|custod|snow plow|pool|vehicle maintenance/.test(t)) return 'Facilities Ops';
   if (/travel|conference/.test(t)) return 'Travel Policy';
+  if (/architect|engineer|design.*oversee|locker room|walk.in.*box|cooler|freezer.*replacement/.test(t)) return 'Architecture / Engineering';
+  if (/audit|accounting|accountant/.test(t)) return 'Auditing';
+  if (/lease|rent/.test(t)) return 'Facility Lease';
+  if (/lead test|ahera|remediation|underground storage|environmental/.test(t)) return 'Environmental';
+  if (/caps and gowns|diploma/.test(t)) return 'Supplies';
+  if (/pre.employment|physical.*human resources/.test(t)) return 'HR Services';
+  if (/equipment repair|refrigerat.*repair/.test(t)) return 'Equipment Repair';
   return 'Other';
 }
 
