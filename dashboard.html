@@ -785,8 +785,8 @@ function switchTab02(tab, btn) {
   if(tab.startsWith('cats')) renderCatChart(tab==='cats-dollar' ? 'dollar' : 'pct');
 }
 
-function categorize(text) {
-  var t = text.toLowerCase();
+function categorize(text, vendor) {
+  var t = (text + ' ' + (vendor||'')).toLowerCase();
   if (/legal|attorney|counsel|law group|law firm/.test(t)) return 'Legal Services';
   if (/transport|route r\d|route \d|bus service|to and from|to\/from|drtrs/.test(t)) return 'Transportation';
   if (/hvac|boiler|cooling|heating|air quality|ventilat|cooling tower/.test(t)) return 'HVAC / Mechanical';
@@ -824,6 +824,19 @@ function categorize(text) {
   if (/pameh|transport.*renewal|renewal contract.*r\d/.test(t)) return 'Transportation';
   if (/individualized education plan system/.test(t)) return 'Software / IT';
   if (/bergen county.*special services/.test(t)) return 'Special Ed Tuition';
+  if (/stop loss|dental carrier|medical carrier/.test(t)) return 'Insurance / Benefits';
+  if (/verizon|spectrotel|telecommunicat/.test(t)) return 'Telecom';
+  if (/barnabas|medical center|hospital/.test(t)) return 'Health / Therapy';
+  if (/guarini|vanderbeck|pennetta|mak group|in.line agm|fox fence|sal electric|pmx?y construction/.test(t)) return 'Facilities Contracts';
+  if (/center for supportive|supportive schools|new city kids|speranza|educational arts|team wilderness|coalition.*inclusive/.test(t)) return 'Community Programs';
+  if (/dual enrollment|career.*technical|post.secondary/.test(t)) return 'Career / Technical Ed';
+  if (/record retention|content management|student records/.test(t)) return 'Software / IT';
+  if (/genova burns|adams.*lattiboudere|machado/.test(t)) return 'Legal Services';
+  if (/n\.j\.s\.a.*18a.*18a.*42.*renew|offered to renew|year \d+ of/.test(t)) return 'Contract Renewals';
+  if (/new jersey city university|njcu/.test(t)) return 'Instructional';
+  if (/ems linq/.test(t)) return 'Software / IT';
+  if (/waste hauling|grease trap|russell reid/.test(t)) return 'Facilities Ops';
+  if (/capital reserve|withdrawal.*fund/.test(t)) return 'Capital Projects';
   return 'Other';
 }
 
@@ -987,7 +1000,7 @@ function categorize(text) {
   window._catData = {};
   DATA.meetings.forEach(function(m){
     m.items.forEach(function(it){
-      var cat = categorize(it.text || '');
+      var cat = categorize(it.text || '', it.vendor || '');
       if(!window._catData[cat]) window._catData[cat] = {total:0, gaps:0, totalVal:0, gapVal:0};
       window._catData[cat].total++;
       window._catData[cat].totalVal += it.amount;
