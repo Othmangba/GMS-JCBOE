@@ -336,7 +336,15 @@ We effectively built a static version of this system for this investigation. Our
 
 ## About This Project
 
-This investigation is part of OCC Research's Governance Memory System (GMS) — a framework for building institutional memory infrastructure that makes governance cumulative, queryable, and accountable. The tools we built for this investigation are a proof of concept: a static PLM Agent that does retrospectively what a live system would do in real time — track every contract from proposal to payment, flag missing documentation, and surface the gaps before they become audit findings.
+This investigation is part of OCC Research's Governance Memory System (GMS) — a framework for building institutional memory infrastructure that makes governance cumulative, queryable, and accountable.
+
+Two of the five GMS layers are directly demonstrated in this investigation:
+
+**Proposal Lifecycle Metadata (PLM):** Our scripts track every contract from proposal through approval, amendment, and payment — flagging when required documentation is missing at any stage. The amendment chain analysis, the vendor extraction pipeline, and the document classifier are all components of a static PLM Agent. A live version would do this in real time, blocking incomplete proposals from advancing rather than flagging them after the fact.
+
+**Outcome Review Anchors (ORA):** The cross-reference between our findings and the official Lerch, Vinci & Bliss audits is an ORA in action. An Outcome Review Anchor asks: "did what was decided actually produce the expected result?" The Board decided to approve 374 contracts. The expected outcome is that each contract would be publicly documented, properly executed, and reported to the State where required. The ORA — anchored to the auditor's independent findings — shows that outcome was not achieved. And by comparing the FY2024 and FY2025 audits side by side, the ORA reveals something even more important: the Board was told about 16 problems, and 8 of them came back the next year unchanged. The decisions to fix those problems didn't produce outcomes either. That's a second-order governance failure — not just failing to document contracts, but failing to fix the failure.
+
+The tools we built for this investigation are a proof of concept: a static PLM + ORA system that does retrospectively what a live system would do in real time — track every contract from proposal to payment, anchor outcomes to independent verification, and surface the gaps before they become repeat audit findings.
 
 It was led by Othman Gbadamassi, founder of OCC Research and a product of the Jersey City Public School system — McNair Academic High School, Class of 2017. This isn't an outsider's critique. This is a Jersey City kid who went through these schools, benefited from the teachers and programs they fund, and came back to ask a simple question: can the community see how the money is being spent?
 
