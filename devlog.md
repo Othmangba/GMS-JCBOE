@@ -86,6 +86,20 @@
 4. **No content analysis of "documented" items** — an item having an attachment doesn't mean the attachment is the actual contract (most are PO forms)
 5. **Meeting minutes not analyzed** — votes, discussion, and dissent are in minutes, not agendas
 
+### Multi-vendor contract resolution
+A critical finding: when the Board awards contracts to "multiple vendors by route," the vendor list only exists in an attached spreadsheet at the original meeting. Follow-up amendments reference the original resolution but don't re-attach the vendor list. A citizen looking at the amendment sees "$1.85M to multiple vendors" with no way to know who they are without finding a different meeting's attachment.
+
+**Resolved multi-vendor awards via OCR:**
+
+**PD24-25-47 — Summer Special Ed Transport ($1.85M, June 2024):**
+AKA Transportation ($117K), Blessings ($57K), E-Z Bell Transit ($581K), Hudson County Trans ($66K), JR Transportation ($48K), K&D Bus Service ($142K), Mayor Transportation ($100K+), NJ Transportation ($54K), NuHeights Transportation, Pat & Carie Transportation, R & May Transportation, VAF Trans ($275K)
+
+**PD24-25-77 — Special Ed Transport Charter/Bilingual ($706K, Feb 2025):**
+Amity Bus ($28K), EzBell ($33K), Cranes ($26K), LaBelle ($24K), Mat Atin ($106K), Rewer Ston ($157K), NW Transport ($40K), Re Mayon ($255K), VAF Transport ($37K)
+
+**PD25-26-TD5-33 — Special Ed Transport ($933K, Dec 2025):**
+American Star ($123K), Amity Bus ($78K), NW Transport ($192K+), JR Transport ($59K), Samna Transport ($40K), VAF Transport ($33K), Mayor Transportation ($124K), R & May ($35K), RR&D Bus ($31K), LaBelle Trans ($20K)
+
 ### Key findings summary
 | Metric | Value |
 |--------|-------|
