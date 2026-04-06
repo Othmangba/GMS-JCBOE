@@ -36,6 +36,13 @@ try:
 except ImportError:
     HAS_PDFMINER = False
 
+try:
+    import pytesseract
+    from PIL import Image
+    HAS_TESSERACT = True
+except ImportError:
+    HAS_TESSERACT = False
+
 SITE = "nj/jcps/Board.nsf"
 BASE_URL = f"https://go.boarddocs.com/{SITE}"
 COMMITTEE_ID = "A9QM9A5A1F6C"
@@ -92,16 +99,57 @@ def download_pdf(href, filename):
         return None, 0
 
 
+def is_only_watermark(text):
+    """Check if extracted text is just BoardDocs page stamps, not real content."""
+    lines = [l.strip() for l in text.strip().splitlines() if l.strip()]
+    if not lines:
+        return True
+    watermark_lines = sum(1 for l in lines if re.match(
+        r'^(Attachment\s+\S+\s*-\s*Board Meeting|Meeting of .+|Page \d+ of \d+)$', l))
+    return watermark_lines >= len(lines) * 0.8
+
+
+def ocr_pdf(filepath, max_pages=5):
+    """OCR a scanned PDF using tesseract. Only OCRs first max_pages to save time."""
+    if not HAS_TESSERACT or not HAS_PYMUPDF:
+        return None, 0
+    try:
+        doc = fitz.open(filepath)
+        page_count = len(doc)
+        text = ""
+        for i, page in enumerate(doc):
+            if i >= max_pages:
+                break
+            # Render page to image at 200 DPI
+            pix = page.get_pixmap(dpi=200)
+            img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+            page_text = pytesseract.image_to_string(img)
+            text += page_text + "\n"
+        doc.close()
+        return text, page_count
+    except Exception as e:
+        return f"[OCR error: {e}]", 0
+
+
 def extract_pdf_text(filepath):
-    """Extract text from a PDF using available libraries."""
+    """Extract text from a PDF. Falls back to OCR for scanned documents."""
     if HAS_PYMUPDF:
         try:
             doc = fitz.open(filepath)
             text = ""
             for page in doc:
                 text += page.get_text()
+            page_count = len(doc)
             doc.close()
-            return text, len(doc)
+
+            # If text is just watermarks, try OCR
+            if is_only_watermark(text) and HAS_TESSERACT:
+                print(f"     (Scanned PDF detected, running OCR on first 5 pages...)")
+                ocr_text, _ = ocr_pdf(filepath)
+                if ocr_text and not ocr_text.startswith("["):
+                    return ocr_text, page_count
+
+            return text, page_count
         except Exception as e:
             return f"[PyMuPDF error: {e}]", 0
 
