@@ -81,7 +81,28 @@ Here's what we actually found inside 362 attached PDFs:
 
 ## What the Auditors Found — And How It Confirms Our Investigation
 
-The district's own independent auditors — Lerch, Vinci & Bliss, LLP — completed their audit of the fiscal year ending June 30, 2025. Their report, presented at the March 20, 2026 Board meeting, contains **13 formal findings**. Many directly confirm what our GMS investigation discovered.
+The district's own independent auditors — Lerch, Vinci & Bliss, LLP — have now completed audits for two consecutive fiscal years: FY2023-24 (ending June 30, 2024) and FY2024-25 (ending June 30, 2025). The FY2024 audit contained **16 findings**. The FY2025 audit contained **13 findings**.
+
+**Here's the problem: 8 of the same findings appear in both years.** The auditors told the district to fix these issues in 2024. The district didn't fix them. The same problems showed up again in 2025.
+
+### Repeat Findings — Two Years Running
+
+| Problem | FY2024 Finding | FY2025 Finding |
+|---|---|---|
+| Payroll deposits don't match required amounts | 2024-1 | 2025-1 |
+| Financial books not closed on time, checks backdated | 2024-7 | 2025-3 |
+| Can't provide documentation for salary/wage liabilities | 2024-8 | 2025-4 |
+| No actuarial report for workers comp claims | 2024-9 | 2025-5 |
+| Bank reconciliation revised multiple times with significant variance | 2024-10 | 2025-6 |
+| Contract documentation missing — can't verify procurement method | 2024-13 | 2025-8 |
+| State contract prices don't match invoices, docs missing | 2024-14 | 2025-9 |
+| State Comptroller not notified about contracts over $2.5M | 2024-15 | 2025-10 |
+
+The FY2024 audit also found issues that may or may not have been resolved: CASPER program timesheets missing (2024-3), payroll check verification not done since 2019 (2024-4), invalid purchase order encumbrances (2024-5), Energy Savings payments not in financial system (2024-6), and food service deposits made a month late (2024-16).
+
+The FY2025 audit found **new** problems not in the prior year: employment contracts missing for Board-approved administrators (2025-2), transportation contracts not submitted to the County for up to 12 months (2025-13), and special education students reported for transportation without proper IEP documentation (2025-11, 2025-12).
+
+Many directly confirm what our GMS investigation discovered.
 
 ### Finding-by-Finding Comparison
 
@@ -94,7 +115,9 @@ The district's own independent auditors — Lerch, Vinci & Bliss, LLP — comple
 - Post-award advertisement notices were missing
 - Quotes were not obtained for certain purchases exceeding the legal threshold
 
-**What this means:** The auditors couldn't even verify how contracts were awarded because the documentation didn't exist. Our GMS data shows this isn't an occasional oversight — it's the norm.
+**What this means:** The auditors couldn't even verify how contracts were awarded because the documentation didn't exist. The FY2024 audit (Finding 2024-13) found the same thing the year before, plus two additional problems: *"Contract change orders were not always approved by the Board in the official minutes"* and *"Documentation was unable to be provided for audit with respect to certain contracts awarded through the public advertisement for bid."*
+
+Two years in a row, the district's own auditors said: we asked for the contracts, and the district couldn't produce them. Our GMS data shows this isn't an occasional oversight — it's the norm.
 
 ---
 
@@ -121,7 +144,9 @@ The district's own independent auditors — Lerch, Vinci & Bliss, LLP — comple
 
 **What the auditors found (Finding 2025-10):** *"Post-award notification to the State Comptroller's office was not made for certain contracts, the cost of which exceeded $2.5 million."*
 
-**What this means:** New Jersey law requires that the State Comptroller be notified about large contracts. The district didn't do this. Combined with our finding that these contracts lack public documentation, there's a pattern of large expenditures moving through without proper oversight at any level.
+**What this means:** New Jersey law requires that the State Comptroller be notified about large contracts. The district didn't do this — in either year. The FY2024 audit (Finding 2024-15) was even more specific: *"a pre-bid notification for a contract exceeding $12.5 million was not made."* That means a contract worth more than $12.5 million went through without the State even being told it was happening.
+
+Combined with our finding that these contracts lack public documentation, there's a pattern of large expenditures moving through without proper oversight at any level — not from the public, not from the Board's own records, and not from the State.
 
 ---
 
