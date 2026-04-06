@@ -810,7 +810,20 @@ function categorize(text) {
   if (/lead test|ahera|remediation|underground storage|environmental/.test(t)) return 'Environmental';
   if (/caps and gowns|diploma/.test(t)) return 'Supplies';
   if (/pre.employment|physical.*human resources/.test(t)) return 'HR Services';
-  if (/equipment repair|refrigerat.*repair/.test(t)) return 'Equipment Repair';
+  if (/equipment repair|refrigerat.*repair|systems equipment|brick.*refractory/.test(t)) return 'Equipment Repair';
+  if (/workers.compensation|third party admin/.test(t)) return 'Insurance / Benefits';
+  if (/sign language|interpreter|multilingual|child study team|evaluation.*special ed/.test(t)) return 'Health / Therapy';
+  if (/cooperative purchasing|tips.interlocal/.test(t)) return 'Cooperative Purchasing';
+  if (/grant|department of community affairs/.test(t)) return 'Grants';
+  if (/leadership coach|njpsa/.test(t)) return 'Instructional';
+  if (/bid threshold|appropriation/.test(t)) return 'Policy / Admin';
+  if (/rutgers.*evaluation|evaluation plan/.test(t)) return 'Instructional';
+  if (/absences.*substitute|frontline|absence management/.test(t)) return 'Software / IT';
+  if (/instrument repair|elefante music/.test(t)) return 'Supplies';
+  if (/brightly|portal access|work order/.test(t)) return 'Software / IT';
+  if (/pameh|transport.*renewal|renewal contract.*r\d/.test(t)) return 'Transportation';
+  if (/individualized education plan system/.test(t)) return 'Software / IT';
+  if (/bergen county.*special services/.test(t)) return 'Special Ed Tuition';
   return 'Other';
 }
 

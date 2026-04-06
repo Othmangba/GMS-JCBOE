@@ -195,6 +195,38 @@ Student enrollment dropped **2.3%** from 29,710 to 29,037 in 2024-25 — that's 
 
 Meanwhile, the pass-through to charter schools jumped **29.8%** in one year (from $168M in 2023-24 to $174.6M in 2024-25), even though charter enrollment only grew by 0.76%.
 
+### Which Types of Spending Have the Worst Documentation?
+
+We categorized all 374 contracts by what they're actually for. The results reveal clear patterns in where documentation is missing:
+
+**Worst gap rates (how often docs are missing):**
+
+| Category | Gap Rate | Gaps | Undocumented $ |
+|---|---|---|---|
+| Employment Contracts | 100% | 3/3 | $593,240 |
+| Legal Services | 67% | 4/6 | $600,000 |
+| Transportation | 52% | 14/27 | $4.2M |
+| HR Services | 50% | 1/2 | $240,000 |
+| HVAC / Mechanical | 18% | 4/22 | $14.9M |
+
+**Biggest dollar exposure (most money without documentation):**
+
+| Category | Undocumented $ | Gap Rate | Items |
+|---|---|---|---|
+| HVAC / Mechanical | $14.9M | 18% | 4/22 |
+| Transportation | $4.2M | 52% | 14/27 |
+| Instructional Services | $2.6M | 13% | 4/30 |
+| Software / IT | $2.5M | 9% | 3/34 |
+| Community / Vocational | $896K | 11% | 3/27 |
+
+Two patterns jump out:
+
+1. **Legal services and employment contracts are almost never documented.** The district's outside law firms (Adams Lattiboudere for labor law, Machado Law Group for special ed law) were approved for a combined $600,000 across 4 items over two years — none with contracts attached. The Superintendent's and Business Administrator's employment contracts were approved without documentation, which the auditors also flagged.
+
+2. **HVAC has the lowest gap rate among the big-dollar categories (18%) but by far the most money at risk ($14.9M).** This is almost entirely Pennetta Industrial Automation — their $7.26M capital reserve withdrawal appeared at two meetings with no documentation at either.
+
+**Fully documented categories** (0% gap): Food Service (34 items, $20.7M), Construction (11 items, $8.2M), Architecture/Engineering (4 items), Insurance/Benefits (3 items, $7M), Supplies, Equipment Repair.
+
 ### Who Gets the Contracts?
 
 Our vendor analysis identified 345 out of 374 contract recipients. Some notable patterns:
