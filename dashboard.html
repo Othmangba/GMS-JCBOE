@@ -348,7 +348,7 @@ body {
 }
 .cat-row:last-child { border-bottom: none; }
 .cat-label { font-family: var(--heading); font-size: 13px; font-weight: 600; color: var(--text); text-align: right; }
-.cat-bar-track { height: 28px; background: var(--surface); position: relative; overflow: hidden; }
+.cat-bar-track { height: 28px; background: var(--surface); position: relative; overflow: visible; }
 .cat-bar-doc { height: 100%; background: var(--green-dim); position: absolute; left: 0; top: 0; }
 .cat-bar-gap { height: 100%; background: var(--accent-dim); position: absolute; top: 0;
   display: flex; align-items: center; justify-content: center;
@@ -753,7 +753,8 @@ function renderCatChart(mode) {
       html += '<div class="cat-row">';
       html += '<div class="cat-label">'+cat+'</div>';
       html += '<div class="cat-bar-track">';
-      html += '<div class="cat-bar-gap" style="left:0;width:'+barW+'%">'+(c.gapVal > 0 ? fmt(c.gapVal) : '')+'</div>';
+      var labelInside = barW > 15;
+      html += '<div class="cat-bar-gap" style="left:0;width:'+Math.max(barW,2)+'%;overflow:visible;justify-content:'+(labelInside?'center':'flex-start')+'"><span style="'+(labelInside?'':'position:relative;left:calc(100% + 6px);color:var(--text-dim)')+'">'+( c.gapVal > 0 ? fmt(c.gapVal) : '')+'</span></div>';
       html += '</div>';
       html += '<div class="cat-meta"><strong>'+c.gaps+'</strong>/'+c.total+' gaps<br>'+gapPct.toFixed(0)+'% rate</div>';
       html += '</div>';
