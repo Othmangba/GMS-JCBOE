@@ -149,8 +149,8 @@ Two years in a row, the district's own auditors said: we asked for the contracts
 
 ---
 
-#### Contracts Over $2.5 Million Not Reported to the State
-**What I found:** Multiple contracts exceeding $2.5 million — including the Pennetta Industrial Automation capital reserve withdrawal ($7.26 million) and Edmentum tutoring services ($2.13 million).
+#### Contracts Over $2 Million Not Reported to the State
+**What I found:** Multiple contracts exceeding $2 million — including the Pennetta Industrial Automation capital reserve withdrawal ($7.26 million) and Edmentum tutoring services ($2.13 million).
 
 **What the auditors found (Finding 2025-10):** *"Post-award notification to the State Comptroller's office was not made for certain contracts, the cost of which exceeded $2.5 million."*
 
