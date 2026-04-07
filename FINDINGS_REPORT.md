@@ -246,6 +246,55 @@ Our vendor analysis identified 345 out of 374 contract recipients. Some notable 
 
 ---
 
+## The 17% Tax Increase — And $183 Million in Reserves
+
+In March 2026, the Board voted 6-3 to submit a preliminary FY2027 budget of **$1.027 billion** that includes a roughly **17% increase to the local tax levy** — approximately $452 million from Jersey City property taxpayers.
+
+The Board says the increase is driven by $98 million in lost state equalization aid. That's a real funding challenge. But the district's own audited financial statements raise questions about whether the full increase is necessary.
+
+### What the District Is Sitting On
+
+According to the ACFR for the fiscal year ended June 30, 2025 — the district's own audited numbers — the General Fund balance was **$284.4 million**. Here's how it breaks down:
+
+| Category | Amount | What It Means |
+|---|---|---|
+| Reserved for Encumbrances | $24.8M | Money committed to existing purchase orders |
+| Capital Reserve | $12.7M | Set aside for building projects |
+| Designated for FY2026 | $102.7M | Pre-committed for this year's spending |
+| Assigned for FY2026 | $46.2M | Earmarked for this year |
+| **Unassigned Fund Balance** | **$98.0M** | **Not committed to anything** |
+| **Excess Surplus** | **$80.5M** | **Above the state's 2% legal cap** |
+
+New Jersey law caps excess surplus at 2% of adjusted expenditures — for JCPS, that's $17.4 million. The district is holding **$80.5 million above that cap**. By law, this excess must be appropriated in the subsequent budget.
+
+The total reserves entering FY2026 were **$183 million** ($102.7M designated + $80.5M excess). That's nearly 20% of the entire budget sitting in accounts while taxpayers are being asked to pay 17% more.
+
+### Growing Costs, Cancelled Projects
+
+The ACFR also reveals cost trends that compound the picture:
+
+- **Workers compensation claims nearly doubled** — from $13.8 million to $22.8 million in one year. The auditors flagged in both FY2024 and FY2025 that the district didn't get a required actuarial report for this self-insurance plan. The district is carrying $22.8 million in workers comp liability without a professional estimate of what it should actually cost.
+
+- **Health insurance claims up 22%** — from $9.5 million to $11.6 million in unpaid claims. The new budget shows health/benefits spending jumping 15% to $168.9 million — the single largest spending increase.
+
+- **$5.2 million in capital spending was cancelled during the audit** — projects that were budgeted and encumbered (committed) for schools, then reversed. The total capital budget was $16.7 million, but $5.2 million was pulled back. That's money that was supposed to go to school buildings and didn't.
+
+- **Enrollment dropped 2.3%** — 673 fewer students — yet the budget continues to grow. Charter school pass-through jumped 29.8% in one year (to $174.6M) even though charter enrollment grew by less than 1%.
+
+### The Question for April 30th
+
+The Board has said a corrective action plan based on the audit recommendations will be presented publicly at the April 30 meeting. Superintendent Fernandez and SBA Luce have committed to this timeline. Three questions deserve answers:
+
+1. **How much of the $183 million in reserves was actually spent in FY2026?** If the designated funds weren't fully used, the surplus may be even larger entering FY2027 — which weakens the case for a 17% tax increase.
+
+2. **Why were $5.2 million in capital projects cancelled?** These were already approved and encumbered. What happened? Were the schools that were supposed to benefit from these projects told?
+
+3. **What does the excess surplus corrective plan look like?** NJ law requires the district to appropriate the excess above 2%. How is the $80.5 million being deployed, and does the FY2027 budget draw it down — or does it grow further while taxes go up?
+
+The state aid loss is real. But asking taxpayers for 17% more while holding $183 million in reserves, cancelling school construction, and unable to produce the contracts for 95% of current spending is a credibility gap that the corrective action plan needs to address.
+
+---
+
 ## Why This Matters
 
 This isn't about accusing anyone of wrongdoing. It's about a basic question: **Can you, as a resident of Jersey City, verify how your tax dollars are being spent?**
