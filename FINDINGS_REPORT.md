@@ -481,7 +481,7 @@ Two of the five GMS layers are directly demonstrated in this investigation, both
 
 The tools I built for this investigation are a proof of concept: a static PLM + ORA system that does retrospectively what a live system would do in real time — track every contract from proposal to payment, anchor outcomes to independent verification, and surface the gaps before they become repeat audit findings.
 
-My name is Othman Gbadamassi. I'm the founder of OCC Research and a product of the Jersey City Public School system — McNair Academic High School, Class of 2017. This isn't an outsider's critique. I'm a Jersey City kid who went through these schools, benefited from the teachers and programs they fund, and came back to ask a simple question: can the community see how the money is being spent?
+My name is Othman Gbadamassi. I'm the founder of OCC Research and a product of the Jersey City Public School system — McNair Academic High School, Class of 2017. This isn't an outsider's critique. I'm a long time Jersey City resident who went through these schools, benefited from the teachers and programs they fund, and came back to ask a simple question: can the community see how the money is being spent?
 
 The answer, right now, is mostly no. But it doesn't have to stay that way.
 
