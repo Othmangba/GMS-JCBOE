@@ -358,6 +358,40 @@ All code, data, and methodology are published at [github.com/Othmangba/GMS-JCBOE
 
 ---
 
+## Three Systems, Zero Contracts
+
+The district operates three separate systems for tracking contracts. None of them reliably contain the actual signed agreement.
+
+### System 1: The Procurement Portal (OpenGov)
+
+The district uses an [OpenGov e-Procurement portal](https://procurement.opengov.com/portal/jcboe) to manage the bidding process. Vendors register, receive bid notifications, submit proposals, and the district posts solicitations with addenda and specifications.
+
+The portal's own terms — written by the district — say this:
+
+> *"Upon notification of award of contract by the Board of Education, the contractor shall sign and execute a formal contract agreement between the Board of Education and the contractor."*
+
+> *"Contracts and related documents shall be returned to the Office of the School Business Administrator/Board Secretary within ten (10) days of receipt of notification and shall not exceed twenty-one (21) days."*
+
+In other words: the district's own procurement rules require a signed contract to exist within 21 days of every Board approval. These contracts are supposed to be returned to the School Business Administrator's office.
+
+We cross-referenced the procurement portal's project list (200 solicitations) against our contract data and matched 165 projects. The portal confirms these projects went through a formal bidding process with PD numbers, release dates, and addenda. The bidding happened. The Board voted. But the resulting signed contracts still aren't on BoardDocs.
+
+### System 2: BoardDocs
+
+This is the public-facing system where residents go to see what the Board voted on. Our analysis of 362 attached PDFs found that 72% are internal purchase order forms, not contracts. Only 20 documents (5.5%) contain actual contract terms, scope, and signatures.
+
+### System 3: The SBA's Office
+
+The procurement portal says contracts must be returned to the School Business Administrator within 21 days. But when the independent auditors asked for these contracts, they couldn't find them. Finding 2025-8: *"Contract awards and purchases which exceeded the bid threshold were not approved in the minutes and therefore we were unable to determine the method of procurement."* Finding 2025-9: *"Contract award documentation was unable to be provided for audit."*
+
+### What This Means
+
+The contracts should exist. The district's own rules require them to be signed within 21 days. The procurement portal proves the bidding happened. The Board voted to approve them. But somewhere between the Board vote and the SBA's filing cabinet, the actual agreements disappear — from the public portal, from the Board's records, and from the auditor's reach.
+
+This isn't a technology problem. All three systems exist and function. It's a **governance memory problem** — no system is responsible for ensuring the signed contract makes it from the vendor's desk back to a place where the public, the Board, or the auditors can find it.
+
+---
+
 ## The Amendment Chain Gap — A Problem Only Memory Can Solve
 
 This is one of the most important things we found, and it's worth explaining carefully because it affects millions of dollars and it's almost invisible unless you know to look for it.
