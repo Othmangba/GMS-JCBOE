@@ -183,6 +183,106 @@ Combined with my finding that these contracts lack public documentation, there's
 
 ---
 
+---
+
+## Three Systems, Zero Contracts
+
+The district operates three separate systems for tracking contracts. None of them reliably contain the actual signed agreement.
+
+### System 1: The Procurement Portal (OpenGov)
+
+The district uses an [OpenGov e-Procurement portal](https://procurement.opengov.com/portal/jcboe) to manage the bidding process. Vendors register, receive bid notifications, submit proposals, and the district posts solicitations with addenda and specifications.
+
+I manually created an account on the procurement portal to see firsthand what information the district makes available through this system. Even though procurement records should be easily accessible to the public, I wanted to check whether the district kept more detailed documentation behind this slightly gated venue — a portal that requires registration to browse. What I found is that the portal confirms the bidding process happened, but still doesn't house the signed contracts.
+
+The portal's own terms — written by the district — say this:
+
+> *"Upon notification of award of contract by the Board of Education, the contractor shall sign and execute a formal contract agreement between the Board of Education and the contractor."*
+
+> *"Contracts and related documents shall be returned to the Office of the School Business Administrator/Board Secretary within ten (10) days of receipt of notification and shall not exceed twenty-one (21) days."*
+
+In other words: the district's own procurement rules require a signed contract to exist within 21 days of every Board approval. These contracts are supposed to be returned to the School Business Administrator's office.
+
+I cross-referenced the procurement portal's project list (200 solicitations) against my contract data and matched 165 projects. The portal confirms these projects went through a formal bidding process with PD numbers, release dates, and addenda. The bidding happened. The Board voted. But the resulting signed contracts still aren't on BoardDocs.
+
+### System 2: BoardDocs
+
+This is the public-facing system where residents go to see what the Board voted on. My analysis of 362 attached PDFs found that 72% are internal purchase order forms, not contracts. Only 20 documents (5.5%) contain actual contract terms, scope, and signatures.
+
+### System 3: The SBA's Office
+
+The procurement portal says contracts must be returned to the School Business Administrator within 21 days. But when the independent auditors asked for these contracts, they couldn't find them. Finding 2025-8: *"Contract awards and purchases which exceeded the bid threshold were not approved in the minutes and therefore we were unable to determine the method of procurement."* Finding 2025-9: *"Contract award documentation was unable to be provided for audit."*
+
+### What This Means
+
+The contracts should exist. The district's own rules require them to be signed within 21 days. The procurement portal proves the bidding happened. The Board voted to approve them. But somewhere between the Board vote and the SBA's filing cabinet, the actual agreements disappear — from the public portal, from the Board's records, and from the auditor's reach.
+
+This isn't a technology problem. All three systems exist and function. It's a **governance memory problem** — no system is responsible for ensuring the signed contract makes it from the vendor's desk back to a place where the public, the Board, or the auditors can find it.
+
+---
+
+## The Amendment Chain Gap — A Problem Only Memory Can Solve
+
+This is one of the most important things I found, and it's worth explaining carefully because it affects millions of dollars and it's almost invisible unless you know to look for it.
+
+### How It's Supposed to Work
+
+Let's say the Board votes in June to hire 12 bus companies to drive special education students to school. That's a big deal — $1.85 million, split across a dozen small companies. At the June meeting, there's a 5-page spreadsheet attached that lists every company, every route, every daily rate, and every annual total. If you attend that meeting or pull up the agenda on BoardDocs, you can see exactly who is getting paid what.
+
+So far, so good.
+
+### What Happens Next
+
+In August, one of those routes needs a change. A student needs a personal aide on the bus. That costs an extra $100 per day. The Board votes to approve the change — an "amendment" to the original contract.
+
+Here's what the August agenda says:
+
+> *"WHEREAS, the Jersey City Board of Education adopted Resolution 10.16 at the June 27, 2024 board meeting, awarding contracts to multiple vendors..."*
+
+That's it. No spreadsheet. No vendor names. No route numbers. Just a reference to "Resolution 10.16" from a meeting two months ago.
+
+If you're a parent, a journalist, or a concerned citizen reading the August agenda, you see: **"$1.85 million to multiple vendors."** Who are those vendors? The agenda doesn't say. You'd have to know to go back to the June meeting, find Resolution 10.16, and hope the spreadsheet is still there.
+
+### Then It Gets Worse
+
+In November, another route gets amended. More money for a different aide. The November agenda references the same June resolution. Then in December, another amendment. Then in March. Then in April, the Board votes to add three routes that were "omitted from the original resolution" — another $1.85 million, same generic language.
+
+By now you have a chain that looks like this:
+
+```
+June 2024:  Original award — $1.85M, 12 vendors, 5-page spreadsheet attached
+   ↓
+Aug 2024:   Amendment — references "Resolution 10.16" — no vendor list
+   ↓
+Nov 2024:   Amendment — references "Resolution 10.16" — no vendor list
+   ↓
+Dec 2024:   Amendment — references "Resolution 10.16" — no vendor list
+   ↓
+Mar 2025:   Amendment — references "Resolution 10.16" — no vendor list
+   ↓
+Apr 2025:   New routes added — $1.85M — "multiple vendors" — no vendor list
+```
+
+Each link in the chain only makes sense if you can see the link before it. But the only meeting that actually names the vendors is the first one. Every subsequent amendment is a dead end unless you know to go back to June 2024.
+
+### Why This Matters
+
+I found this pattern across **121 amendments and renewals** — 32% of all contract items. It's not limited to transportation. The same thing happens with:
+
+- **Special education services** — contracts renewed year after year, each renewal referencing the original award but never re-attaching the vendor agreement
+- **Construction projects** — change orders that add hundreds of thousands of dollars, referencing the original bid resolution but not the original contract
+- **Software licenses** — annual renewals that reference a prior resolution instead of attaching the current license agreement
+
+The result is that the Board's public record becomes a maze of cross-references. Each individual item looks fine — "approved per Resolution 8.07" — but no single meeting gives you the full picture. The institutional memory lives in the chain, and the chain is broken.
+
+### What Would Fix This
+
+This is exactly what a Proposal Lifecycle Metadata (PLM) system solves. In a PLM system, every amendment is linked to its parent contract. When you look at the August amendment, the system automatically shows you: here's the original June award, here are the 12 vendors, here are their rates, and here's what this amendment changes. No digging. No cross-referencing. No broken chains.
+
+I effectively built a static version of this system for this investigation. My scripts crawl every meeting, identify every contract, trace amendment references back to their originals, and surface the gaps. The fact that I found what I found — using the same public data anyone can access — proves that the infrastructure to solve this problem already exists. It just needs to be built into the process, not bolted on after the fact.
+
+---
+
 ## The Big Picture: Follow the Money
 
 ### Where the Money Goes
@@ -345,6 +445,31 @@ The more residents who understand these findings, the more likely the district i
 
 ---
 
+## About This Project
+
+This investigation is part of OCC Research's Governance Memory System (GMS) — a framework for building institutional memory infrastructure that makes governance cumulative, queryable, and accountable.
+
+Two of the five GMS layers are directly demonstrated in this investigation, both built and applied by me:
+
+**Proposal Lifecycle Metadata (PLM):** My scripts track every contract from proposal through approval, amendment, and payment — flagging when required documentation is missing at any stage. The amendment chain analysis, the vendor extraction pipeline, and the document classifier are all components of a static PLM Agent. A live version would do this in real time, blocking incomplete proposals from advancing rather than flagging them after the fact.
+
+**Outcome Review Anchors (ORA):** The cross-reference between my findings and the official Lerch, Vinci & Bliss audits is an ORA in action. An Outcome Review Anchor asks: "did what was decided actually produce the expected result?" The Board decided to approve 374 contracts. The expected outcome is that each contract would be publicly documented, properly executed, and reported to the State where required. The ORA — anchored to the auditor's independent findings — shows that outcome was not achieved. And by comparing the FY2024 and FY2025 audits side by side, the ORA reveals something even more important: the Board was told about 16 problems, and 8 of them came back the next year unchanged. The decisions to fix those problems didn't produce outcomes either. That's a second-order governance failure — not just failing to document contracts, but failing to fix the failure.
+
+The tools I built for this investigation are a proof of concept: a static PLM + ORA system that does retrospectively what a live system would do in real time — track every contract from proposal to payment, anchor outcomes to independent verification, and surface the gaps before they become repeat audit findings.
+
+My name is Othman Gbadamassi. I'm the founder of OCC Research and a product of the Jersey City Public School system — McNair Academic High School, Class of 2017. This isn't an outsider's critique. I'm a long time Jersey City resident who went through these schools, benefited from the teachers and programs they fund, and came back to ask a simple question: can the community see how the money is being spent?
+
+The answer, right now, is mostly no. But it doesn't have to stay that way.
+
+[Full PDF Report](https://occresearch.org/gms-jcboe-report.pdf) | [Interactive Dashboard](https://github.com/Othmangba/GMS-JCBOE) | [occresearch.org](https://occresearch.org)
+
+**Governance that remembers. Institutional Memory as a Service.**
+
+---
+
+*Data sourced entirely from public records. No private or restricted information was accessed. This report represents independent analysis and does not constitute legal advice or formal allegations of wrongdoing.*
+---
+
 ## Methodology
 
 ### Data Sources
@@ -369,126 +494,3 @@ The more residents who understand these findings, the more likely the district i
 ### Reproducibility
 All code, data, and methodology are published at [github.com/Othmangba/GMS-JCBOE](https://github.com/Othmangba/GMS-JCBOE). Anyone can run the same analysis and verify my findings.
 
----
-
-## Three Systems, Zero Contracts
-
-The district operates three separate systems for tracking contracts. None of them reliably contain the actual signed agreement.
-
-### System 1: The Procurement Portal (OpenGov)
-
-The district uses an [OpenGov e-Procurement portal](https://procurement.opengov.com/portal/jcboe) to manage the bidding process. Vendors register, receive bid notifications, submit proposals, and the district posts solicitations with addenda and specifications.
-
-I manually created an account on the procurement portal to see firsthand what information the district makes available through this system. Even though procurement records should be easily accessible to the public, I wanted to check whether the district kept more detailed documentation behind this slightly gated venue — a portal that requires registration to browse. What I found is that the portal confirms the bidding process happened, but still doesn't house the signed contracts.
-
-The portal's own terms — written by the district — say this:
-
-> *"Upon notification of award of contract by the Board of Education, the contractor shall sign and execute a formal contract agreement between the Board of Education and the contractor."*
-
-> *"Contracts and related documents shall be returned to the Office of the School Business Administrator/Board Secretary within ten (10) days of receipt of notification and shall not exceed twenty-one (21) days."*
-
-In other words: the district's own procurement rules require a signed contract to exist within 21 days of every Board approval. These contracts are supposed to be returned to the School Business Administrator's office.
-
-I cross-referenced the procurement portal's project list (200 solicitations) against my contract data and matched 165 projects. The portal confirms these projects went through a formal bidding process with PD numbers, release dates, and addenda. The bidding happened. The Board voted. But the resulting signed contracts still aren't on BoardDocs.
-
-### System 2: BoardDocs
-
-This is the public-facing system where residents go to see what the Board voted on. My analysis of 362 attached PDFs found that 72% are internal purchase order forms, not contracts. Only 20 documents (5.5%) contain actual contract terms, scope, and signatures.
-
-### System 3: The SBA's Office
-
-The procurement portal says contracts must be returned to the School Business Administrator within 21 days. But when the independent auditors asked for these contracts, they couldn't find them. Finding 2025-8: *"Contract awards and purchases which exceeded the bid threshold were not approved in the minutes and therefore we were unable to determine the method of procurement."* Finding 2025-9: *"Contract award documentation was unable to be provided for audit."*
-
-### What This Means
-
-The contracts should exist. The district's own rules require them to be signed within 21 days. The procurement portal proves the bidding happened. The Board voted to approve them. But somewhere between the Board vote and the SBA's filing cabinet, the actual agreements disappear — from the public portal, from the Board's records, and from the auditor's reach.
-
-This isn't a technology problem. All three systems exist and function. It's a **governance memory problem** — no system is responsible for ensuring the signed contract makes it from the vendor's desk back to a place where the public, the Board, or the auditors can find it.
-
----
-
-## The Amendment Chain Gap — A Problem Only Memory Can Solve
-
-This is one of the most important things I found, and it's worth explaining carefully because it affects millions of dollars and it's almost invisible unless you know to look for it.
-
-### How It's Supposed to Work
-
-Let's say the Board votes in June to hire 12 bus companies to drive special education students to school. That's a big deal — $1.85 million, split across a dozen small companies. At the June meeting, there's a 5-page spreadsheet attached that lists every company, every route, every daily rate, and every annual total. If you attend that meeting or pull up the agenda on BoardDocs, you can see exactly who is getting paid what.
-
-So far, so good.
-
-### What Happens Next
-
-In August, one of those routes needs a change. A student needs a personal aide on the bus. That costs an extra $100 per day. The Board votes to approve the change — an "amendment" to the original contract.
-
-Here's what the August agenda says:
-
-> *"WHEREAS, the Jersey City Board of Education adopted Resolution 10.16 at the June 27, 2024 board meeting, awarding contracts to multiple vendors..."*
-
-That's it. No spreadsheet. No vendor names. No route numbers. Just a reference to "Resolution 10.16" from a meeting two months ago.
-
-If you're a parent, a journalist, or a concerned citizen reading the August agenda, you see: **"$1.85 million to multiple vendors."** Who are those vendors? The agenda doesn't say. You'd have to know to go back to the June meeting, find Resolution 10.16, and hope the spreadsheet is still there.
-
-### Then It Gets Worse
-
-In November, another route gets amended. More money for a different aide. The November agenda references the same June resolution. Then in December, another amendment. Then in March. Then in April, the Board votes to add three routes that were "omitted from the original resolution" — another $1.85 million, same generic language.
-
-By now you have a chain that looks like this:
-
-```
-June 2024:  Original award — $1.85M, 12 vendors, 5-page spreadsheet attached
-   ↓
-Aug 2024:   Amendment — references "Resolution 10.16" — no vendor list
-   ↓
-Nov 2024:   Amendment — references "Resolution 10.16" — no vendor list
-   ↓
-Dec 2024:   Amendment — references "Resolution 10.16" — no vendor list
-   ↓
-Mar 2025:   Amendment — references "Resolution 10.16" — no vendor list
-   ↓
-Apr 2025:   New routes added — $1.85M — "multiple vendors" — no vendor list
-```
-
-Each link in the chain only makes sense if you can see the link before it. But the only meeting that actually names the vendors is the first one. Every subsequent amendment is a dead end unless you know to go back to June 2024.
-
-### Why This Matters
-
-I found this pattern across **121 amendments and renewals** — 32% of all contract items. It's not limited to transportation. The same thing happens with:
-
-- **Special education services** — contracts renewed year after year, each renewal referencing the original award but never re-attaching the vendor agreement
-- **Construction projects** — change orders that add hundreds of thousands of dollars, referencing the original bid resolution but not the original contract
-- **Software licenses** — annual renewals that reference a prior resolution instead of attaching the current license agreement
-
-The result is that the Board's public record becomes a maze of cross-references. Each individual item looks fine — "approved per Resolution 8.07" — but no single meeting gives you the full picture. The institutional memory lives in the chain, and the chain is broken.
-
-### What Would Fix This
-
-This is exactly what a Proposal Lifecycle Metadata (PLM) system solves. In a PLM system, every amendment is linked to its parent contract. When you look at the August amendment, the system automatically shows you: here's the original June award, here are the 12 vendors, here are their rates, and here's what this amendment changes. No digging. No cross-referencing. No broken chains.
-
-I effectively built a static version of this system for this investigation. My scripts crawl every meeting, identify every contract, trace amendment references back to their originals, and surface the gaps. The fact that I found what I found — using the same public data anyone can access — proves that the infrastructure to solve this problem already exists. It just needs to be built into the process, not bolted on after the fact.
-
----
-
-## About This Project
-
-This investigation is part of OCC Research's Governance Memory System (GMS) — a framework for building institutional memory infrastructure that makes governance cumulative, queryable, and accountable.
-
-Two of the five GMS layers are directly demonstrated in this investigation, both built and applied by me:
-
-**Proposal Lifecycle Metadata (PLM):** My scripts track every contract from proposal through approval, amendment, and payment — flagging when required documentation is missing at any stage. The amendment chain analysis, the vendor extraction pipeline, and the document classifier are all components of a static PLM Agent. A live version would do this in real time, blocking incomplete proposals from advancing rather than flagging them after the fact.
-
-**Outcome Review Anchors (ORA):** The cross-reference between my findings and the official Lerch, Vinci & Bliss audits is an ORA in action. An Outcome Review Anchor asks: "did what was decided actually produce the expected result?" The Board decided to approve 374 contracts. The expected outcome is that each contract would be publicly documented, properly executed, and reported to the State where required. The ORA — anchored to the auditor's independent findings — shows that outcome was not achieved. And by comparing the FY2024 and FY2025 audits side by side, the ORA reveals something even more important: the Board was told about 16 problems, and 8 of them came back the next year unchanged. The decisions to fix those problems didn't produce outcomes either. That's a second-order governance failure — not just failing to document contracts, but failing to fix the failure.
-
-The tools I built for this investigation are a proof of concept: a static PLM + ORA system that does retrospectively what a live system would do in real time — track every contract from proposal to payment, anchor outcomes to independent verification, and surface the gaps before they become repeat audit findings.
-
-My name is Othman Gbadamassi. I'm the founder of OCC Research and a product of the Jersey City Public School system — McNair Academic High School, Class of 2017. This isn't an outsider's critique. I'm a long time Jersey City resident who went through these schools, benefited from the teachers and programs they fund, and came back to ask a simple question: can the community see how the money is being spent?
-
-The answer, right now, is mostly no. But it doesn't have to stay that way.
-
-[Full PDF Report](https://occresearch.org/gms-jcboe-report.pdf) | [Interactive Dashboard](https://github.com/Othmangba/GMS-JCBOE) | [occresearch.org](https://occresearch.org)
-
-**Governance that remembers. Institutional Memory as a Service.**
-
----
-
-*Data sourced entirely from public records. No private or restricted information was accessed. This report represents independent analysis and does not constitute legal advice or formal allegations of wrongdoing.*
