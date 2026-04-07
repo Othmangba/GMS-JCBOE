@@ -7,36 +7,46 @@
 
 ---
 
+## How to Read This Report
+
+If you've ever tried to follow a Board of Education meeting — on BoardDocs, in person, or in the minutes — you know the language can be hard to follow. Resolutions are full of parliamentary jargon: "WHEREAS," "BE IT RESOLVED," "pursuant to N.J.S.A. 18A:18A-4.1," and references to prior resolutions by number. It's designed for legal compliance, not for residents trying to understand what's happening with their tax dollars.
+
+**This report is a plain-language guide.** I translated the jargon into straightforward English so that any Jersey City resident — whether you're a parent, a student, a homeowner, or just someone who pays taxes here — can understand what the Board is approving, what documentation is missing, and why it matters. When I do use technical terms (like "encumbrance" or "excess surplus"), I explain what they mean right there in the text.
+
+Think of this as the companion guide you wish existed when you tried to read the meeting minutes yourself.
+
+---
+
 ## TLDR
 
-We looked at every contract the Jersey City Board of Education approved over the last two years. We checked whether the actual agreements — the documents that say what a company will do, for how much, and under what conditions — were available to the public.
+I looked at every contract the Jersey City Board of Education approved over the last two years. I checked whether the actual agreements — the documents that say what a company will do, for how much, and under what conditions — were available to the public.
 
 **They almost never were.**
 
-Out of 374 contracts worth $402.6 million, we found just 20 actual signed contracts in the attached documents — covering only $7.2 million. The remaining 342 items were supported by internal forms, proposals, or nothing at all. That means **95% of contract approvals lack the actual agreement.** And when we compared our findings to the district's own official audit? The auditors found the same problems — and then some.
+Out of 374 contracts worth $402.6 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. The remaining 342 items were supported by internal forms, proposals, or nothing at all. That means **95% of contract approvals lack the actual agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
 
 This isn't just a transparency problem. It's a compliance problem. And it affects every taxpayer and student in Jersey City.
 
 ---
 
-## Who We Are
+## Who I Am
 
-[OCC Research](https://occresearch.org) builds governance infrastructure for institutions that matter. Our Governance Memory System (GMS) treats governance as a solvable engineering problem — we believe that when decisions are documented, tracked, and made accessible, better outcomes follow.
+[OCC Research](https://occresearch.org) builds governance infrastructure for institutions that matter. The Governance Memory System (GMS) treats governance as a solvable engineering problem — I believe that when decisions are documented, tracked, and made accessible, better outcomes follow.
 
 This investigation applies GMS methodology to a question any Jersey City resident should be able to answer: **When the Board of Education votes to spend your money, can you see the actual contract?**
 
 ---
 
-## What We Did
+## What I Did
 
-We built software that systematically analyzed the Jersey City Board of Education's public records on [BoardDocs](https://go.boarddocs.com/nj/jcps/Board.nsf/Public) — the platform where the Board posts its meeting agendas and attachments.
+I built software that systematically analyzed the Jersey City Board of Education's public records on [BoardDocs](https://go.boarddocs.com/nj/jcps/Board.nsf/Public) — the platform where the Board posts its meeting agendas and attachments.
 
-Here's what we checked:
+Here's what I checked:
 
 1. **Every meeting** from January 2024 through March 2026 — 42 meetings total (regular sessions, special meetings, and reorganizations)
 2. **Every contract approval** on each agenda — 374 items where the Board voted to spend money on a contract, agreement, or purchase order over $10,000
-3. **Every attached document** — we downloaded 362 PDFs and analyzed what was actually inside them using text extraction and OCR (optical character recognition for scanned documents)
-4. **Every vendor name** — we identified who received the contracts, extracting names from resolution text, cross-referencing procurement numbers, and OCR-ing purchase order forms
+3. **Every attached document** — I downloaded 362 PDFs and analyzed what was actually inside them using text extraction and OCR (optical character recognition for scanned documents)
+4. **Every vendor name** — I identified who received the contracts, extracting names from resolution text, cross-referencing procurement numbers, and OCR-ing purchase order forms
 
 All data was collected from publicly available records. No private or restricted information was accessed.
 
@@ -44,7 +54,7 @@ All data was collected from publicly available records. No private or restricted
 
 ## The Numbers
 
-| What We Measured | What We Found |
+| What I Measured | What I Found |
 |---|---|
 | Meetings analyzed | 42 |
 | Contract items tracked | 374 |
@@ -63,7 +73,7 @@ When the Board votes to approve a contract, they sometimes attach a document. Yo
 
 It almost never is.
 
-Here's what we actually found inside 362 attached PDFs:
+Here's what I actually found inside 362 attached PDFs:
 
 | Document Type | Count | What It Is |
 |---|---|---|
@@ -79,7 +89,7 @@ Here's what we actually found inside 362 attached PDFs:
 
 ---
 
-## What the Auditors Found — And How It Confirms Our Investigation
+## What the Auditors Found — And How It Confirms My Investigation
 
 The district's own independent auditors — Lerch, Vinci & Bliss, LLP — have now completed audits for two consecutive fiscal years: FY2023-24 (ending June 30, 2024) and FY2024-25 (ending June 30, 2025). The FY2024 audit contained **16 findings**. The FY2025 audit contained **13 findings**.
 
@@ -102,12 +112,12 @@ The FY2024 audit also found issues that may or may not have been resolved: CASPE
 
 The FY2025 audit found **new** problems not in the prior year: employment contracts missing for Board-approved administrators (2025-2), transportation contracts not submitted to the County for up to 12 months (2025-13), and special education students reported for transportation without proper IEP documentation (2025-11, 2025-12).
 
-Many directly confirm what our GMS investigation discovered.
+Many directly confirm what my GMS investigation discovered.
 
 ### Finding-by-Finding Comparison
 
 #### Missing Contract Documentation
-**What we found:** 51 contracts worth $28.9 million had zero documents attached on BoardDocs. Of 362 PDFs that were attached, only 20 were actual contracts.
+**What I found:** 51 contracts worth $28.9 million had zero documents attached on BoardDocs. Of 362 PDFs that were attached, only 20 were actual contracts.
 
 **What the auditors found (Finding 2025-8):** *"Contract awards and purchases which exceeded the bid threshold were not approved in the minutes and therefore we were unable to determine the method of procurement."* The auditors also found:
 - Prevailing wage reports from construction vendors were missing
@@ -117,12 +127,12 @@ Many directly confirm what our GMS investigation discovered.
 
 **What this means:** The auditors couldn't even verify how contracts were awarded because the documentation didn't exist. The FY2024 audit (Finding 2024-13) found the same thing the year before, plus two additional problems: *"Contract change orders were not always approved by the Board in the official minutes"* and *"Documentation was unable to be provided for audit with respect to certain contracts awarded through the public advertisement for bid."*
 
-Two years in a row, the district's own auditors said: we asked for the contracts, and the district couldn't produce them. Our GMS data shows this isn't an occasional oversight — it's the norm.
+Two years in a row, the district's own auditors said: we asked for the contracts, and the district couldn't produce them. My GMS data shows this isn't an occasional oversight — it's the norm.
 
 ---
 
 #### Missing Employment Contracts
-**What we found:** The Superintendent's employment contract ($330,440) and the School Business Administrator's contract ($216,000) were approved without attached documentation.
+**What I found:** The Superintendent's employment contract ($330,440) and the School Business Administrator's contract ($216,000) were approved without attached documentation.
 
 **What the auditors found (Finding 2025-2):** *"Salaries of certain administrative personnel approved by the Board in the minutes were not supported by employment contracts. Such contracts are required to be submitted to the County for review and approval."*
 
@@ -131,7 +141,7 @@ Two years in a row, the district's own auditors said: we asked for the contracts
 ---
 
 #### State Contract Purchasing Problems
-**What we found:** Hewlett Packard contracts ($1.03 million, appearing twice) and CDW contracts ($429K) were approved under state cooperative purchasing but without attached contract documentation.
+**What I found:** Hewlett Packard contracts ($1.03 million, appearing twice) and CDW contracts ($429K) were approved under state cooperative purchasing but without attached contract documentation.
 
 **What the auditors found (Finding 2025-9):** *"Contract award documentation was unable to be provided for audit... Per unit prices charged on vendor invoices for payment were not in agreement with the cooperative purchasing contract award documentation... Vendor invoices were not sufficiently detailed to determine compliance with contract award pricing."*
 
@@ -140,18 +150,18 @@ Two years in a row, the district's own auditors said: we asked for the contracts
 ---
 
 #### Contracts Over $2.5 Million Not Reported to the State
-**What we found:** Multiple contracts exceeding $2.5 million — including the Pennetta Industrial Automation capital reserve withdrawal ($7.26 million) and Edmentum tutoring services ($2.13 million).
+**What I found:** Multiple contracts exceeding $2.5 million — including the Pennetta Industrial Automation capital reserve withdrawal ($7.26 million) and Edmentum tutoring services ($2.13 million).
 
 **What the auditors found (Finding 2025-10):** *"Post-award notification to the State Comptroller's office was not made for certain contracts, the cost of which exceeded $2.5 million."*
 
 **What this means:** New Jersey law requires that the State Comptroller be notified about large contracts. The district didn't do this — in either year. The FY2024 audit (Finding 2024-15) was even more specific: *"a pre-bid notification for a contract exceeding $12.5 million was not made."* That means a contract worth more than $12.5 million went through without the State even being told it was happening.
 
-Combined with our finding that these contracts lack public documentation, there's a pattern of large expenditures moving through without proper oversight at any level — not from the public, not from the Board's own records, and not from the State.
+Combined with my finding that these contracts lack public documentation, there's a pattern of large expenditures moving through without proper oversight at any level — not from the public, not from the Board's own records, and not from the State.
 
 ---
 
 #### Transportation Contract Delays
-**What we found:** Transportation contracts were frequently amended — we found 11 amendments to special education transportation routes across multiple meetings. The original vendor lists were only available in spreadsheet attachments from the original award meeting; follow-up amendments never re-attached the vendor list.
+**What I found:** Transportation contracts were frequently amended — I found 11 amendments to special education transportation routes across multiple meetings. The original vendor lists were only available in spreadsheet attachments from the original award meeting; follow-up amendments never re-attached the vendor list.
 
 **What the auditors found (Finding 2025-13):** *"Renewal contracts for student transportation services were not submitted to the County for review and approval in a timely manner. Certain contracts were not submitted while others were submitted up to twelve (12) months after approval by the Board."*
 
@@ -177,7 +187,7 @@ Combined with our finding that these contracts lack public documentation, there'
 
 ### Where the Money Goes
 
-The district's total General Fund expenditures for 2024-25 were **$911.8 million**. Here's how some of that breaks down based on the encumbrances (committed spending) we found:
+The district's total General Fund expenditures for 2024-25 were **$911.8 million**. Here's how some of that breaks down based on the encumbrances (committed spending) I found:
 
 | Category | Amount |
 |---|---|
@@ -197,7 +207,7 @@ Meanwhile, the pass-through to charter schools jumped **29.8%** in one year (fro
 
 ### Which Types of Spending Have the Worst Documentation?
 
-We categorized all 374 contracts by what they're actually for. The results reveal clear patterns in where documentation is missing:
+I categorized all 374 contracts by what they're actually for. The results reveal clear patterns in where documentation is missing:
 
 **Worst gap rates (how often docs are missing):**
 
@@ -234,7 +244,7 @@ Three patterns jump out:
 
 ### Who Gets the Contracts?
 
-Our vendor analysis identified 345 out of 374 contract recipients. Some notable patterns:
+My vendor analysis identified 345 out of 374 contract recipients. Some notable patterns:
 
 **Repeat vendors with documentation gaps:**
 - **Pennetta Industrial Automation** — $14.5 million across multiple contracts for HVAC and boiler work. Their largest single item ($7.26 million capital reserve withdrawal) appeared at two separate meetings with no documentation attached at either one.
@@ -254,20 +264,22 @@ The Board says the increase is driven by $98 million in lost state equalization 
 
 ### What the District Is Sitting On
 
-According to the ACFR for the fiscal year ended June 30, 2025 — the district's own audited numbers — the General Fund balance was **$284.4 million**. Here's how it breaks down:
+The ACFR — that's the Annual Comprehensive Financial Report, basically the district's official, auditor-verified financial records — for the fiscal year ended June 30, 2025 shows a General Fund balance of **$284.4 million**. That's the total amount of money the district had in its main operating accounts at year-end.
 
-| Category | Amount | What It Means |
+Here's where that money is:
+
+| Category | Amount | What It Means (Plain English) |
 |---|---|---|
-| Reserved for Encumbrances | $24.8M | Money committed to existing purchase orders |
-| Capital Reserve | $12.7M | Set aside for building projects |
-| Designated for FY2026 | $102.7M | Pre-committed for this year's spending |
-| Assigned for FY2026 | $46.2M | Earmarked for this year |
-| **Unassigned Fund Balance** | **$98.0M** | **Not committed to anything** |
-| **Excess Surplus** | **$80.5M** | **Above the state's 2% legal cap** |
+| Reserved for Encumbrances | $24.8M | Money already promised to vendors through purchase orders — think of it as checks that have been written but not yet cashed |
+| Capital Reserve | $12.7M | A savings account specifically for building repairs and construction projects |
+| Designated for FY2026 | $102.7M | Money the district planned to carry over and spend during the current school year |
+| Assigned for FY2026 | $46.2M | Additional money earmarked for this year, but with more flexibility in how it's used |
+| **Unassigned Fund Balance** | **$98.0M** | **Money sitting in the district's accounts with no specific plan for how to spend it** |
+| **Excess Surplus** | **$80.5M** | **The amount over what NJ law says a district is allowed to hold in reserve (see below)** |
 
-New Jersey law caps excess surplus at 2% of adjusted expenditures — for JCPS, that's $17.4 million. The district is holding **$80.5 million above that cap**. By law, this excess must be appropriated in the subsequent budget.
+**What "excess surplus" means:** New Jersey has a rule that says school districts can't stockpile too much money — the cap is 2% of their total spending. For JCPS, 2% works out to $17.4 million. The district is holding **$80.5 million above that legal limit**. By law, they're required to spend or allocate that excess in next year's budget — they can't just keep sitting on it.
 
-The total reserves entering FY2026 were **$183 million** ($102.7M designated + $80.5M excess). That's nearly 20% of the entire budget sitting in accounts while taxpayers are being asked to pay 17% more.
+**The big picture:** The total reserves entering FY2026 were **$183 million** ($102.7M designated + $80.5M excess). To put that in perspective, that's nearly 20% of the entire budget sitting in accounts while taxpayers are being asked to pay 17% more in property taxes.
 
 ### Growing Costs, Cancelled Projects
 
@@ -305,9 +317,9 @@ Right now, the answer is mostly no. Here's what's broken:
 
 2. **Amendments break the chain.** When a contract is amended to spend more money, the amendment should include or reference the original agreement. Instead, amendments reference a resolution number from a different meeting, and the resident has to go hunt for it themselves.
 
-3. **The auditors confirmed the problem.** This isn't just our opinion. The district's own certified public accountants identified 13 findings, including missing contract documentation, missing employment contracts, backdated checks, and failures to notify the State about large contracts.
+3. **The auditors confirmed the problem.** This isn't just my opinion. The district's own certified public accountants identified 13 findings, including missing contract documentation, missing employment contracts, backdated checks, and failures to notify the State about large contracts.
 
-4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. We did find 20 actual contracts — but those covered just $7.2 million out of $402.6 million in total approvals. The other 342 items (94.5%) were backed by internal forms, proposals, or nothing at all. The contracts that *are* provided tend to be smaller, lower-profile agreements (healthcare providers, engineering firms), while the largest expenditures go undocumented.
+4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. I did find 20 actual contracts — but those covered just $7.2 million out of $402.6 million in total approvals. The other 342 items (94.5%) were backed by internal forms, proposals, or nothing at all. The contracts that *are* provided tend to be smaller, lower-profile agreements (healthcare providers, engineering firms), while the largest expenditures go undocumented.
 
 ---
 
@@ -326,7 +338,7 @@ Priority contracts to request (highest-dollar undocumented items):
 The Board meets regularly at 346 Claremont Avenue, Jersey City. Meeting schedules are posted on BoardDocs. During public comment periods, you can ask the Board to explain why contract documentation is not being attached to agenda items.
 
 ### Use This Dashboard
-We built an [interactive dashboard](https://github.com/Othmangba/GMS-JCBOE) that lets you explore all 374 contracts, see which vendors have documentation gaps, and track the gap rate over time. Download `dashboard.html` and open it in any browser — no installation needed.
+I built an [interactive dashboard](https://github.com/Othmangba/GMS-JCBOE) that lets you explore all 374 contracts, see which vendors have documentation gaps, and track the gap rate over time. Download `dashboard.html` and open it in any browser — no installation needed.
 
 ### Share This Report
 The more residents who understand these findings, the more likely the district is to improve its practices. Share this report with your neighbors, your PTA, your local news outlet, or your Board representative.
@@ -345,16 +357,17 @@ The more residents who understand these findings, the more likely the district i
 2. **Contract detection** — Regex-based identification of contract approval language in agenda items, with personnel/HR items excluded
 3. **PDF analysis** — Downloaded 362 PDFs; classified using text extraction (PyMuPDF), OCR (Tesseract), and a 7-category classifier with 20 content signals
 4. **Vendor extraction** — Multi-pass extraction: regex patterns on resolution text (8 patterns), PD# cross-referencing against original meeting agendas, OCR of attached PO forms, and manual normalization of duplicate names
-5. **Cross-referencing** — Compared GMS findings against the official audit report to identify corroborating evidence
+5. **Procurement portal review** — Created an account on the district's OpenGov e-Procurement portal to manually inspect what documentation was available behind the registration wall, cross-referencing 200 solicitations against contract data
+6. **Cross-referencing** — Compared GMS findings against the official audit report to identify corroborating evidence
 
 ### Limitations
 - Vendor names could not be extracted for 29 of 374 items (8%) where the resolution uses generic language ("lowest responsible bidder") and the vendor is named only in attached spreadsheets
 - PDF classification relies on text signals and may miscategorize documents with unusual formatting
-- We did not analyze meeting minutes (which may contain additional context about votes and discussion)
-- Our contract value figures use the maximum amount stated in the resolution, which may differ from actual expenditures
+- I did not analyze meeting minutes (which may contain additional context about votes and discussion)
+- My contract value figures use the maximum amount stated in the resolution, which may differ from actual expenditures
 
 ### Reproducibility
-All code, data, and methodology are published at [github.com/Othmangba/GMS-JCBOE](https://github.com/Othmangba/GMS-JCBOE). Anyone can run the same analysis and verify our findings.
+All code, data, and methodology are published at [github.com/Othmangba/GMS-JCBOE](https://github.com/Othmangba/GMS-JCBOE). Anyone can run the same analysis and verify my findings.
 
 ---
 
@@ -366,6 +379,8 @@ The district operates three separate systems for tracking contracts. None of the
 
 The district uses an [OpenGov e-Procurement portal](https://procurement.opengov.com/portal/jcboe) to manage the bidding process. Vendors register, receive bid notifications, submit proposals, and the district posts solicitations with addenda and specifications.
 
+I manually created an account on the procurement portal to see firsthand what information the district makes available through this system. Even though procurement records should be easily accessible to the public, I wanted to check whether the district kept more detailed documentation behind this slightly gated venue — a portal that requires registration to browse. What I found is that the portal confirms the bidding process happened, but still doesn't house the signed contracts.
+
 The portal's own terms — written by the district — say this:
 
 > *"Upon notification of award of contract by the Board of Education, the contractor shall sign and execute a formal contract agreement between the Board of Education and the contractor."*
@@ -374,11 +389,11 @@ The portal's own terms — written by the district — say this:
 
 In other words: the district's own procurement rules require a signed contract to exist within 21 days of every Board approval. These contracts are supposed to be returned to the School Business Administrator's office.
 
-We cross-referenced the procurement portal's project list (200 solicitations) against our contract data and matched 165 projects. The portal confirms these projects went through a formal bidding process with PD numbers, release dates, and addenda. The bidding happened. The Board voted. But the resulting signed contracts still aren't on BoardDocs.
+I cross-referenced the procurement portal's project list (200 solicitations) against my contract data and matched 165 projects. The portal confirms these projects went through a formal bidding process with PD numbers, release dates, and addenda. The bidding happened. The Board voted. But the resulting signed contracts still aren't on BoardDocs.
 
 ### System 2: BoardDocs
 
-This is the public-facing system where residents go to see what the Board voted on. Our analysis of 362 attached PDFs found that 72% are internal purchase order forms, not contracts. Only 20 documents (5.5%) contain actual contract terms, scope, and signatures.
+This is the public-facing system where residents go to see what the Board voted on. My analysis of 362 attached PDFs found that 72% are internal purchase order forms, not contracts. Only 20 documents (5.5%) contain actual contract terms, scope, and signatures.
 
 ### System 3: The SBA's Office
 
@@ -394,7 +409,7 @@ This isn't a technology problem. All three systems exist and function. It's a **
 
 ## The Amendment Chain Gap — A Problem Only Memory Can Solve
 
-This is one of the most important things we found, and it's worth explaining carefully because it affects millions of dollars and it's almost invisible unless you know to look for it.
+This is one of the most important things I found, and it's worth explaining carefully because it affects millions of dollars and it's almost invisible unless you know to look for it.
 
 ### How It's Supposed to Work
 
@@ -438,7 +453,7 @@ Each link in the chain only makes sense if you can see the link before it. But t
 
 ### Why This Matters
 
-We found this pattern across **121 amendments and renewals** — 32% of all contract items. It's not limited to transportation. The same thing happens with:
+I found this pattern across **121 amendments and renewals** — 32% of all contract items. It's not limited to transportation. The same thing happens with:
 
 - **Special education services** — contracts renewed year after year, each renewal referencing the original award but never re-attaching the vendor agreement
 - **Construction projects** — change orders that add hundreds of thousands of dollars, referencing the original bid resolution but not the original contract
@@ -450,7 +465,7 @@ The result is that the Board's public record becomes a maze of cross-references.
 
 This is exactly what a Proposal Lifecycle Metadata (PLM) system solves. In a PLM system, every amendment is linked to its parent contract. When you look at the August amendment, the system automatically shows you: here's the original June award, here are the 12 vendors, here are their rates, and here's what this amendment changes. No digging. No cross-referencing. No broken chains.
 
-We effectively built a static version of this system for this investigation. Our scripts crawl every meeting, identify every contract, trace amendment references back to their originals, and surface the gaps. The fact that we found what we found — using the same public data anyone can access — proves that the infrastructure to solve this problem already exists. It just needs to be built into the process, not bolted on after the fact.
+I effectively built a static version of this system for this investigation. My scripts crawl every meeting, identify every contract, trace amendment references back to their originals, and surface the gaps. The fact that I found what I found — using the same public data anyone can access — proves that the infrastructure to solve this problem already exists. It just needs to be built into the process, not bolted on after the fact.
 
 ---
 
@@ -458,15 +473,15 @@ We effectively built a static version of this system for this investigation. Our
 
 This investigation is part of OCC Research's Governance Memory System (GMS) — a framework for building institutional memory infrastructure that makes governance cumulative, queryable, and accountable.
 
-Two of the five GMS layers are directly demonstrated in this investigation:
+Two of the five GMS layers are directly demonstrated in this investigation, both built and applied by me:
 
-**Proposal Lifecycle Metadata (PLM):** Our scripts track every contract from proposal through approval, amendment, and payment — flagging when required documentation is missing at any stage. The amendment chain analysis, the vendor extraction pipeline, and the document classifier are all components of a static PLM Agent. A live version would do this in real time, blocking incomplete proposals from advancing rather than flagging them after the fact.
+**Proposal Lifecycle Metadata (PLM):** My scripts track every contract from proposal through approval, amendment, and payment — flagging when required documentation is missing at any stage. The amendment chain analysis, the vendor extraction pipeline, and the document classifier are all components of a static PLM Agent. A live version would do this in real time, blocking incomplete proposals from advancing rather than flagging them after the fact.
 
-**Outcome Review Anchors (ORA):** The cross-reference between our findings and the official Lerch, Vinci & Bliss audits is an ORA in action. An Outcome Review Anchor asks: "did what was decided actually produce the expected result?" The Board decided to approve 374 contracts. The expected outcome is that each contract would be publicly documented, properly executed, and reported to the State where required. The ORA — anchored to the auditor's independent findings — shows that outcome was not achieved. And by comparing the FY2024 and FY2025 audits side by side, the ORA reveals something even more important: the Board was told about 16 problems, and 8 of them came back the next year unchanged. The decisions to fix those problems didn't produce outcomes either. That's a second-order governance failure — not just failing to document contracts, but failing to fix the failure.
+**Outcome Review Anchors (ORA):** The cross-reference between my findings and the official Lerch, Vinci & Bliss audits is an ORA in action. An Outcome Review Anchor asks: "did what was decided actually produce the expected result?" The Board decided to approve 374 contracts. The expected outcome is that each contract would be publicly documented, properly executed, and reported to the State where required. The ORA — anchored to the auditor's independent findings — shows that outcome was not achieved. And by comparing the FY2024 and FY2025 audits side by side, the ORA reveals something even more important: the Board was told about 16 problems, and 8 of them came back the next year unchanged. The decisions to fix those problems didn't produce outcomes either. That's a second-order governance failure — not just failing to document contracts, but failing to fix the failure.
 
-The tools we built for this investigation are a proof of concept: a static PLM + ORA system that does retrospectively what a live system would do in real time — track every contract from proposal to payment, anchor outcomes to independent verification, and surface the gaps before they become repeat audit findings.
+The tools I built for this investigation are a proof of concept: a static PLM + ORA system that does retrospectively what a live system would do in real time — track every contract from proposal to payment, anchor outcomes to independent verification, and surface the gaps before they become repeat audit findings.
 
-It was led by Othman Gbadamassi, founder of OCC Research and a product of the Jersey City Public School system — McNair Academic High School, Class of 2017. This isn't an outsider's critique. This is a Jersey City kid who went through these schools, benefited from the teachers and programs they fund, and came back to ask a simple question: can the community see how the money is being spent?
+My name is Othman Gbadamassi. I'm the founder of OCC Research and a product of the Jersey City Public School system — McNair Academic High School, Class of 2017. This isn't an outsider's critique. I'm a Jersey City kid who went through these schools, benefited from the teachers and programs they fund, and came back to ask a simple question: can the community see how the money is being spent?
 
 The answer, right now, is mostly no. But it doesn't have to stay that way.
 
