@@ -322,20 +322,19 @@ I categorized all 374 contracts by what they're actually for. The results reveal
 | Transportation | 61% | 17/28 | $4.6M |
 | Instructional | 19% | 5/27 | $2.7M |
 | Security | 17% | 1/6 | $60,000 |
-| Facilities & Maintenance | 15% | 2/13 | $7.3M* |
+| Facilities & Maintenance | 8% | 4/52 | $8.5M |
 
-*\*Facilities & Maintenance undocumented figure adjusted to remove double-counting of items re-voted at two meetings (see note below).*
+*Facilities & Maintenance includes HVAC/mechanical work. Undocumented figure calculated after removing re-voted items (see note above).*
 
 **Biggest dollar exposure (most money without documentation):**
 
 | Category | Undocumented $ | Gap Rate | Items |
 |---|---|---|---|
-| Facilities & Maintenance | $7.3M* | 15% | 2/13 |
+| Facilities & Maintenance | $8.5M | 8% | 4/52 |
 | Transportation | $4.6M | 61% | 17/28 |
 | Instructional | $2.7M | 19% | 5/27 |
 | Software / IT | $2.6M | 11% | 4/36 |
 | Community Programs | $896K | 11% | 3/28 |
-| Building Systems | $800K | 6% | 1/17 |
 | Legal Services | $600K | 80% | 4/5 |
 
 **Fully documented categories** (0% gap): Food Service (33 items), Construction (12 items), Architecture/Engineering (7 items), Insurance/Benefits (7 items), Equipment Repair (7 items), Supplies (7 items), Auditing (3 items). *Note: "fully documented" here means an attachment exists — not that the attachment is the actual signed contract. As shown above, most attachments are PO forms or proposals, not the agreements themselves.*
@@ -346,7 +345,7 @@ Three patterns jump out:
 
 2. **Transportation has the highest gap rate among major categories (61%).** 17 of 28 transportation items — including multi-vendor route awards and special education transport amendments — have no documentation. This is where the amendment chain problem is most severe: the original vendor list exists in one meeting's attachment, but every subsequent amendment is a dead end.
 
-3. **Facilities & Maintenance has the biggest dollar exposure.** This is driven by Pennetta Industrial Automation, which handles capital reserve projects, boiler replacements, brick and refractory services, cooling units, HVAC repair services, and systems equipment inspection — all falling under facilities and maintenance. After removing re-votes, Pennetta totals $12.1M across 10 unique items, with $7.3M undocumented. Their largest item — a $7.26M capital reserve withdrawal for boiler replacements — was voted on at two separate meetings (Feb 29 and Mar 19, 2024) with no documentation at either. *Note: 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting. These represent the same spending commitments approved twice, not separate contracts. Dollar exposure figures in this section are calculated without double-counting these re-votes.* Every other facilities vendor (William J. Guarini, Sal Electric, Mak Group, Vanderbeck, Fox Fence, In-Line AGM) is fully documented. Pennetta is the only one with gaps.
+3. **Facilities & Maintenance has the biggest dollar exposure ($8.5M undocumented).** This category includes HVAC/mechanical work and totals $61.8M across 52 unique items after removing re-votes. Pennetta Industrial Automation is the primary driver — handling capital reserve projects, boiler replacements, cooling units, HVAC repair services, brick and refractory services, and systems equipment inspection. Pennetta totals $12.1M across 10 unique items, with $7.3M undocumented. Their largest item — a $7.26M capital reserve withdrawal for boiler replacements — was voted on at two separate meetings (Feb 29 and Mar 19, 2024) with no documentation at either. Sal Electric also has one undocumented item ($800K). The remaining facilities vendors (William J. Guarini, Mak Group, Vanderbeck, Fox Fence, In-Line AGM) are fully documented. *Note: 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting. These represent the same spending commitments approved twice, not separate contracts. Dollar exposure figures are calculated without double-counting these re-votes.*
 
 ### Who Gets the Contracts?
 
