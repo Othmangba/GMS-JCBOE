@@ -332,7 +332,7 @@ I categorized all 374 contracts by what they're actually for. The results reveal
 | Building Systems | $800K | 6% | 1/17 |
 | Legal Services | $600K | 80% | 4/5 |
 
-**Fully documented categories** (0% gap): Food Service (33 items), Construction (12 items), Architecture/Engineering (7 items), Insurance/Benefits (7 items), Equipment Repair (7 items), Supplies (7 items), Auditing (3 items). Note: "fully documented" here means an attachment exists — not that the attachment is the actual signed contract. As shown above, most attachments are PO forms or proposals, not the agreements themselves.
+**Fully documented categories** (0% gap): Food Service (33 items), Construction (12 items), Architecture/Engineering (7 items), Insurance/Benefits (7 items), Equipment Repair (7 items), Supplies (7 items), Auditing (3 items). *Note: "fully documented" here means an attachment exists — not that the attachment is the actual signed contract. As shown above, most attachments are PO forms or proposals, not the agreements themselves.*
 
 Three patterns jump out:
 
