@@ -207,7 +207,7 @@ The portal's own terms — written by the district — say this:
 
 In other words: the district's own procurement rules require a signed contract to exist within 21 days of every Board approval. These contracts are supposed to be returned to the School Business Administrator's office.
 
-I cross-referenced the procurement portal's project list (200 solicitations) against my contract data and matched 165 projects. The portal confirms these projects went through a formal bidding process with PD numbers, release dates, and addenda. The bidding happened. The Board voted. But the resulting signed contracts still aren't on BoardDocs.
+I browsed the procurement portal's project list and focused on the highest-value solicitations and ones that indicated contract documentation should be present. The portal confirms these projects went through a formal bidding process with PD numbers, release dates, and addenda. The bidding happened. The Board voted. But the resulting signed contracts still aren't on BoardDocs.
 
 ### System 2: BoardDocs
 
@@ -482,14 +482,14 @@ The answer, right now, is mostly no. But it doesn't have to stay that way.
 - **JCBOE Annual Comprehensive Financial Report** (ACFR) — fiscal year ended June 30, 2025
 - **Auditor's Management Report on Administrative Findings, FY2024** — Lerch, Vinci & Bliss, LLP, dated February 27, 2025 (19 findings)
 - **Auditor's Management Report on Administrative Findings, FY2025** — Lerch, Vinci & Bliss, LLP, dated February 24, 2026 (13 findings)
-- **OpenGov e-Procurement Portal** (procurement.opengov.com/portal/jcboe) — 200 solicitations cross-referenced against contract data
+- **OpenGov e-Procurement Portal** (procurement.opengov.com/portal/jcboe) — manually reviewed high-value solicitations and those indicating contract documentation
 
 ### Tools and Process
 1. **API mapping** — Identified BoardDocs API endpoints and tested rate limits
 2. **Contract detection** — Regex-based identification of contract approval language in agenda items, with personnel/HR items excluded
 3. **PDF analysis** — Downloaded 362 PDFs; classified using text extraction (PyMuPDF), OCR (Tesseract), and a 7-category classifier with 20 content signals
 4. **Vendor extraction** — Multi-pass extraction: regex patterns on resolution text (8 patterns), PD# cross-referencing against original meeting agendas, OCR of attached PO forms, and manual normalization of duplicate names
-5. **Procurement portal review** — Created an account on the district's OpenGov e-Procurement portal to manually inspect what documentation was available behind the registration wall, cross-referencing 200 solicitations against contract data
+5. **Procurement portal review** — Created an account on the district's OpenGov e-Procurement portal to manually inspect what documentation was available behind the registration wall, focusing on high-value solicitations and those that indicated contracts should be present
 6. **Cross-referencing** — Compared GMS findings against the official audit report to identify corroborating evidence
 
 ### Limitations
