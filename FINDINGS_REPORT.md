@@ -23,7 +23,7 @@ I looked at every contract the Jersey City Board of Education approved over the 
 
 **They almost never were.**
 
-Out of 374 contract actions worth $402.6 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. The remaining 354 contract approvals were supported by internal forms, proposals, or nothing at all. That means **95% of contract approvals lack the actual agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
+Out of 367 unique spending commitments worth $389.7 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. That means **95% of contract approvals lack the actual agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
 
 This isn't just a transparency problem. It's a compliance problem. And it affects every taxpayer and student in Jersey City.
 
@@ -57,15 +57,15 @@ All data was collected from publicly available records. No private or restricted
 | What I Measured | What I Found |
 |---|---|
 | Meetings analyzed | 42 |
-| Contract items tracked | 374 |
-| Total contract value | $402.6 million |
-| Items with zero documents attached | 51 ($28.9 million) |
+| Board actions tracked | 374 (367 unique spending commitments) |
+| Total contract value | $389.7 million (unique commitments) |
+| Items with zero documents attached | 50 ($21.6 million) |
 | PDFs downloaded and analyzed | 362 |
 | **Actual signed contracts found** | **20 out of 362** |
 | Internal PO forms (not contracts) | 262 |
 | Vendors identified | 345 out of 374 (92%) |
 
-*Note on counting: 374 represents the total number of contract-related board actions tracked. 7 of these items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting — these represent the same spending commitments approved at two separate meetings, not additional contracts. Where dollar exposure is calculated (e.g., undocumented spending by category), these re-votes are not double-counted.*
+*Note on counting: This report uses two numbers depending on what's being measured. **374** is the total number of contract-related board actions tracked — every time the Board voted on a contract item, it counts. **367** is the number of unique spending commitments — because 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting. Both votes are real board actions, but they represent the same contracts, not additional spending. Gap rates and item counts use the 374 figure (since each board action should have documentation regardless of whether it's a re-vote). Dollar exposure calculations use the 367 figure to avoid inflating the amount of money at stake. Of the 374 board actions, 354 lack an actual signed contract. Of the 367 unique commitments, 347 lack one.*
 
 ---
 
@@ -87,7 +87,7 @@ Here's what I actually found inside 362 attached PDFs:
 | **Bid Tabulations** | 9 (2.5%) | Spreadsheets showing who bid and who won. Useful, but not the contract. |
 | **Other** | 3 (0.8%) | Unclassified. |
 
-**The bottom line:** 20 actual contracts exist — but they cover only $7.2 million of the $402.6 million the Board approved. For 95% of contract spending, the public cannot see what was actually agreed to.
+**The bottom line:** 20 actual contracts exist — but they cover only $7.2 million of the $389.7 million the Board approved. For 95% of contract spending, the public cannot see what was actually agreed to.
 
 ---
 
@@ -121,7 +121,7 @@ Many directly confirm what my GMS investigation discovered.
 ### Finding-by-Finding Comparison
 
 #### Missing Contract Documentation
-**What I found:** 51 contracts worth $28.9 million had zero documents attached on BoardDocs. Of 362 PDFs that were attached, only 20 were actual contracts.
+**What I found:** 50 unique contracts worth $21.6 million had zero documents attached on BoardDocs. Of 362 PDFs that were attached, only 20 were actual contracts.
 
 **What the auditors found (Finding 2025-8):** *"Contract awards and purchases which exceeded the bid threshold were not approved in the minutes and therefore we were unable to determine the method of procurement."* The auditors also found:
 - Prevailing wage reports from construction vendors were missing
@@ -425,7 +425,7 @@ Right now, the answer is mostly no. Here's what's broken:
 
 3. **The auditors confirmed the problem.** This isn't just my opinion. The district's own certified public accountants identified 13 findings, including missing contract documentation, missing employment contracts, backdated checks, and failures to notify the State about large contracts.
 
-4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. I did find 20 actual contracts — but those covered just $7.2 million out of $402.6 million in total approvals. The other 354 items (95%) were backed by internal forms, proposals, or nothing at all. The contracts that *are* provided tend to be smaller, lower-profile agreements (healthcare providers, engineering firms), while the largest expenditures go undocumented.
+4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. I did find 20 actual contracts — but those covered just $7.2 million out of $389.7 million in total approvals. The other 347 unique spending commitments (95%) were backed by internal forms, proposals, or nothing at all. The contracts that *are* provided tend to be smaller, lower-profile agreements (healthcare providers, engineering firms), while the largest expenditures go undocumented.
 
 ---
 
