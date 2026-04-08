@@ -480,7 +480,9 @@ The answer, right now, is mostly no. But it doesn't have to stay that way.
 ### Data Sources
 - **BoardDocs** (go.boarddocs.com/nj/jcps/Board.nsf) — all meeting agendas and attachments from Jan 2024 through Mar 2026
 - **JCBOE Annual Comprehensive Financial Report** (ACFR) — fiscal year ended June 30, 2025
-- **Auditor's Management Report on Administrative Findings** — Lerch, Vinci & Bliss, LLP, dated February 24, 2026
+- **Auditor's Management Report on Administrative Findings, FY2024** — Lerch, Vinci & Bliss, LLP, dated February 27, 2025 (19 findings)
+- **Auditor's Management Report on Administrative Findings, FY2025** — Lerch, Vinci & Bliss, LLP, dated February 24, 2026 (13 findings)
+- **OpenGov e-Procurement Portal** (procurement.opengov.com/portal/jcboe) — 200 solicitations cross-referenced against contract data
 
 ### Tools and Process
 1. **API mapping** — Identified BoardDocs API endpoints and tested rate limits
