@@ -23,7 +23,7 @@ I looked at every contract the Jersey City Board of Education approved over the 
 
 **They almost never were.**
 
-Out of 374 contracts worth $402.6 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. The remaining 342 items were supported by internal forms, proposals, or nothing at all. That means **95% of contract approvals lack the actual agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
+Out of 374 contract actions worth $402.6 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. The remaining 354 contract approvals were supported by internal forms, proposals, or nothing at all. That means **95% of contract approvals lack the actual agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
 
 This isn't just a transparency problem. It's a compliance problem. And it affects every taxpayer and student in Jersey City.
 
@@ -65,6 +65,8 @@ All data was collected from publicly available records. No private or restricted
 | Internal PO forms (not contracts) | 262 |
 | Vendors identified | 345 out of 374 (92%) |
 
+*Note on counting: 374 represents the total number of contract-related board actions tracked. 7 of these items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting — these represent the same spending commitments approved at two separate meetings, not additional contracts. Where dollar exposure is calculated (e.g., undocumented spending by category), these re-votes are not double-counted.*
+
 ---
 
 ## What's Actually in the Attachments?
@@ -91,9 +93,9 @@ Here's what I actually found inside 362 attached PDFs:
 
 ## What the Auditors Found — And How It Confirms My Investigation
 
-The district's own independent auditors — Lerch, Vinci & Bliss, LLP — have now completed audits for two consecutive fiscal years: FY2023-24 (ending June 30, 2024) and FY2024-25 (ending June 30, 2025). The FY2024 audit contained **16 findings**. The FY2025 audit contained **13 findings**.
+The district's own independent auditors — Lerch, Vinci & Bliss, LLP — have now completed audits for two consecutive fiscal years: FY2023-24 (ending June 30, 2024) and FY2024-25 (ending June 30, 2025). The FY2024 audit contained **19 findings**. The FY2025 audit contained **13 findings**.
 
-**Here's the problem: 8 of the same findings appear in both years.** The auditors told the district to fix these issues in 2024. The district didn't fix them. The same problems showed up again in 2025.
+**Here's the problem: 10 of the same findings appear in both years.** The auditors told the district to fix these issues in 2024. The district didn't fix them. The same problems showed up again in 2025.
 
 ### Repeat Findings — Two Years Running
 
@@ -107,10 +109,12 @@ The district's own independent auditors — Lerch, Vinci & Bliss, LLP — have n
 | Contract documentation missing — can't verify procurement method | 2024-13 | 2025-8 |
 | State contract prices don't match invoices, docs missing | 2024-14 | 2025-9 |
 | State Comptroller not notified about contracts over $2.5M | 2024-15 | 2025-10 |
+| Transported students missing IEPs and tuition contracts | 2024-17 | 2025-12 |
+| Transportation contracts not submitted to County for up to 12 months | 2024-18 | 2025-13 |
 
-The FY2024 audit also found issues that may or may not have been resolved: CASPER program timesheets missing (2024-3), payroll check verification not done since 2019 (2024-4), invalid purchase order encumbrances (2024-5), Energy Savings payments not in financial system (2024-6), and food service deposits made a month late (2024-16).
+The FY2024 audit also found issues that may or may not have been resolved: CASPER program timesheets missing (2024-3), payroll check verification not done since 2019 (2024-4), invalid purchase order encumbrances (2024-5), Energy Savings payments not in financial system (2024-6), food service deposits made a month late (2024-16), ESEA/ESSER budget reporting inaccuracies (2024-11.1, 2024-11.2), ESSER employee rate/timesheet issues (2024-12), payroll deduction discrepancies (2024-2), and capital assets ledger not maintained (2024-19).
 
-The FY2025 audit found **new** problems not in the prior year: employment contracts missing for Board-approved administrators (2025-2), transportation contracts not submitted to the County for up to 12 months (2025-13), and special education students reported for transportation without proper IEP documentation (2025-11, 2025-12).
+The FY2025 audit found **new** problems not in the prior year: employment contracts missing for Board-approved administrators (2025-2), federal grant salary approvals missing from Board minutes (2025-7), and students categorized as special education on state aid application without current IEPs (2025-11).
 
 Many directly confirm what my GMS investigation discovered.
 
@@ -318,13 +322,15 @@ I categorized all 374 contracts by what they're actually for. The results reveal
 | Transportation | 61% | 17/28 | $4.6M |
 | Instructional | 19% | 5/27 | $2.7M |
 | Security | 17% | 1/6 | $60,000 |
-| Facilities & Maintenance | 15% | 2/13 | $14.5M |
+| Facilities & Maintenance | 15% | 2/13 | $7.3M* |
+
+*\*Facilities & Maintenance undocumented figure adjusted to remove double-counting of items re-voted at two meetings (see note below).*
 
 **Biggest dollar exposure (most money without documentation):**
 
 | Category | Undocumented $ | Gap Rate | Items |
 |---|---|---|---|
-| Facilities & Maintenance | $14.5M | 15% | 2/13 |
+| Facilities & Maintenance | $7.3M* | 15% | 2/13 |
 | Transportation | $4.6M | 61% | 17/28 |
 | Instructional | $2.7M | 19% | 5/27 |
 | Software / IT | $2.6M | 11% | 4/36 |
@@ -340,14 +346,14 @@ Three patterns jump out:
 
 2. **Transportation has the highest gap rate among major categories (61%).** 17 of 28 transportation items — including multi-vendor route awards and special education transport amendments — have no documentation. This is where the amendment chain problem is most severe: the original vendor list exists in one meeting's attachment, but every subsequent amendment is a dead end.
 
-3. **Facilities & Maintenance has the biggest dollar exposure ($14.5M).** This is almost entirely Pennetta Industrial Automation — $15.8 million out of $19.6 million in the category (81%). Every other facilities vendor (William J. Guarini, Sal Electric, Mak Group, Vanderbeck, Fox Fence, In-Line AGM) is fully documented. Pennetta is the only one with gaps, and their largest item ($7.26M for boiler replacements) appeared at two meetings with no documentation at either.
+3. **Facilities & Maintenance has the biggest dollar exposure.** This is driven by Pennetta Industrial Automation, which performs facilities work (capital reserve projects, boiler replacements, brick and refractory services) and HVAC work (cooling units, gas/oil/electric repair services, systems equipment inspection). Pennetta's facilities work totals $7.8M across 6 items, with $7.3M undocumented. Their largest item — a $7.26M capital reserve withdrawal for boiler replacements — was voted on at two separate meetings (Feb 29 and Mar 19, 2024) with no documentation at either. *Note: 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting. These represent the same spending commitments approved twice, not separate contracts. Dollar exposure figures in this section are calculated without double-counting these re-votes.* Every other facilities vendor (William J. Guarini, Sal Electric, Mak Group, Vanderbeck, Fox Fence, In-Line AGM) is fully documented. Pennetta is the only one with gaps.
 
 ### Who Gets the Contracts?
 
 My vendor analysis identified 345 out of 374 contract recipients. Some notable patterns:
 
 **Repeat vendors with documentation gaps:**
-- **Pennetta Industrial Automation** — $14.5 million across multiple contracts for HVAC and boiler work. Their largest single item ($7.26 million capital reserve withdrawal) appeared at two separate meetings with no documentation attached at either one.
+- **Pennetta Industrial Automation** — $12.1 million across 10 unique contracts spanning facilities maintenance and HVAC services (after removing re-votes). Their largest single item ($7.26 million capital reserve withdrawal for boiler replacements) was voted on at two separate meetings with no documentation at either. Of their facilities work, $7.3M is undocumented. Pennetta also won a competitive bid for $2.07M in cooling units (4 vendors competed), but even there, only a bid tabulation sheet is attached — not the signed contract.
 - **Hewlett Packard** — $2.06 million in software/hardware maintenance, approved twice with identical amounts, no contract documentation either time.
 - **Adams Lattiboudere** (law firm) — $450,000 in legal services, undocumented at both meetings.
 - **Machado Law Group** — $150,000 in special education legal services, undocumented at both meetings.
@@ -419,7 +425,7 @@ Right now, the answer is mostly no. Here's what's broken:
 
 3. **The auditors confirmed the problem.** This isn't just my opinion. The district's own certified public accountants identified 13 findings, including missing contract documentation, missing employment contracts, backdated checks, and failures to notify the State about large contracts.
 
-4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. I did find 20 actual contracts — but those covered just $7.2 million out of $402.6 million in total approvals. The other 342 items (94.5%) were backed by internal forms, proposals, or nothing at all. The contracts that *are* provided tend to be smaller, lower-profile agreements (healthcare providers, engineering firms), while the largest expenditures go undocumented.
+4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. I did find 20 actual contracts — but those covered just $7.2 million out of $402.6 million in total approvals. The other 354 items (95%) were backed by internal forms, proposals, or nothing at all. The contracts that *are* provided tend to be smaller, lower-profile agreements (healthcare providers, engineering firms), while the largest expenditures go undocumented.
 
 ---
 
@@ -453,7 +459,7 @@ Two of the five GMS layers are directly demonstrated in this investigation, both
 
 **Proposal Lifecycle Metadata (PLM):** My scripts track every contract from proposal through approval, amendment, and payment — flagging when required documentation is missing at any stage. The amendment chain analysis, the vendor extraction pipeline, and the document classifier are all components of a static PLM Agent. A live version would do this in real time, blocking incomplete proposals from advancing rather than flagging them after the fact.
 
-**Outcome Review Anchors (ORA):** The cross-reference between my findings and the official Lerch, Vinci & Bliss audits is an ORA in action. An Outcome Review Anchor asks: "did what was decided actually produce the expected result?" The Board decided to approve 374 contracts. The expected outcome is that each contract would be publicly documented, properly executed, and reported to the State where required. The ORA — anchored to the auditor's independent findings — shows that outcome was not achieved. And by comparing the FY2024 and FY2025 audits side by side, the ORA reveals something even more important: the Board was told about 16 problems, and 8 of them came back the next year unchanged. The decisions to fix those problems didn't produce outcomes either. That's a second-order governance failure — not just failing to document contracts, but failing to fix the failure.
+**Outcome Review Anchors (ORA):** The cross-reference between my findings and the official Lerch, Vinci & Bliss audits is an ORA in action. An Outcome Review Anchor asks: "did what was decided actually produce the expected result?" The Board decided to approve 374 contracts. The expected outcome is that each contract would be publicly documented, properly executed, and reported to the State where required. The ORA — anchored to the auditor's independent findings — shows that outcome was not achieved. And by comparing the FY2024 and FY2025 audits side by side, the ORA reveals something even more important: the Board was told about 19 problems, and 10 of them came back the next year unchanged. The decisions to fix those problems didn't produce outcomes either. That's a second-order governance failure — not just failing to document contracts, but failing to fix the failure.
 
 The tools I built for this investigation are a proof of concept: a static PLM + ORA system that does retrospectively what a live system would do in real time — track every contract from proposal to payment, anchor outcomes to independent verification, and surface the gaps before they become repeat audit findings.
 
