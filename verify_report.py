@@ -97,19 +97,30 @@ def main():
     total_val = sum(float(r.get("max_amount", 0) or 0) for r in rows)
     check("Total value (all items)", 402_579_067, round(total_val), tolerance=100)
 
-    check("Unique commitments (deduped)", 367, len(deduped))
+    check("Unique commitments (deduped - revotes only)", 367, len(deduped))
 
-    dedup_val = sum(float(r.get("max_amount", 0) or 0) for r in deduped)
-    check("Unique value (deduped)", 389_746_291, round(dedup_val), tolerance=100)
+    # Further dedup: remove HP Aug 2025 duplicate of May 2025
+    deduped_full = [
+        r for r in deduped
+        if not (
+            r.get("date", "") == "20250828"
+            and abs(float(r.get("max_amount", 0) or 0) - 1029870.0) < 1
+            and "hewlett" in (r.get("resolution_text", "") or "").lower()
+        )
+    ]
+    check("Unique commitments (fully deduped)", 366, len(deduped_full))
+
+    dedup_val = sum(float(r.get("max_amount", 0) or 0) for r in deduped_full)
+    check("Unique value (fully deduped)", 388_716_421, round(dedup_val), tolerance=100)
 
     no_docs = [r for r in rows if r.get("has_file", "") == "False"]
     check("Items with zero docs (all)", 51, len(no_docs))
 
-    no_docs_dedup = [r for r in deduped if r.get("has_file", "") == "False"]
-    check("Items with zero docs (deduped)", 50, len(no_docs_dedup))
+    no_docs_dedup = [r for r in deduped_full if r.get("has_file", "") == "False"]
+    check("Items with zero docs (fully deduped)", 49, len(no_docs_dedup))
 
     undoc_val = sum(float(r.get("max_amount", 0) or 0) for r in no_docs_dedup)
-    check("Undocumented value (deduped)", 21_637_508, round(undoc_val), tolerance=100)
+    check("Undocumented value (fully deduped)", 20_607_638, round(undoc_val), tolerance=100)
 
     vendors = sum(
         1
@@ -164,8 +175,8 @@ def main():
     bad_patterns = {
         r"\b16 findings\b": "Should be 19 findings",
         r"\b8 of the same\b": "Should be 10 of the same",
-        r"\$402\.6": "Should be $389.7 (deduplicated)",
-        r"\$28\.9 million": "Should be $21.6 million (deduplicated)",
+        r"\$402\.6": "Should be $388.7 (deduplicated)",
+        r"\$28\.9 million": "Should be $20.6 million (deduplicated)",
         r"\$14\.5M": "Old Facilities number, should be $8.5M",
         r"HVAC / Mechanical": "Should be merged into Facilities & Maintenance",
         r"\b342 items\b": "Should be 347 or 354",
@@ -177,12 +188,12 @@ def main():
 
     # Check that correct numbers ARE present
     good_patterns = {
-        r"\b367\b": "Unique commitments count",
-        r"\$389\.7": "Deduplicated total value",
+        r"\b366\b": "Unique commitments count",
+        r"\$388\.7": "Deduplicated total value",
         r"\b19 findings\b": "FY2024 finding count",
         r"\b10 of the same\b": "Repeat finding count",
-        r"\b50\b.*undoc": "Undocumented items (deduped)",
-        r"\$21\.6": "Undocumented value (deduped)",
+        r"\b49\b.*undoc": "Undocumented items (deduped)",
+        r"\$20\.6": "Undocumented value (deduped)",
         r"2024-17.*2025-12": "Transportation IEP repeat finding",
         r"2024-18.*2025-13": "Transportation County repeat finding",
     }

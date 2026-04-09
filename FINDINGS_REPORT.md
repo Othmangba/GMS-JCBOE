@@ -23,7 +23,7 @@ I looked at every contract the Jersey City Board of Education approved over the 
 
 **They almost never were.**
 
-Out of 367 unique spending commitments worth $389.7 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. That means **95% of contract approvals lack the actual agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
+Out of 366 unique spending commitments worth $388.7 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. That means **95% of contract approvals lack the actual agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
 
 This isn't just a transparency problem. It's a compliance problem. And it affects every taxpayer and student in Jersey City.
 
@@ -57,15 +57,15 @@ All data was collected from publicly available records. No private or restricted
 | What I Measured | What I Found |
 |---|---|
 | Meetings analyzed | 42 |
-| Board actions tracked | 374 (367 unique spending commitments) |
-| Total contract value | $389.7 million (unique commitments) |
-| Items with zero documents attached | 50 ($21.6 million) |
+| Board actions tracked | 374 (366 unique spending commitments) |
+| Total contract value | $388.7 million (unique commitments) |
+| Items with zero documents attached | 49 ($20.6 million) |
 | PDFs downloaded and analyzed | 362 |
 | **Actual signed contracts found** | **20 out of 362** |
 | Internal PO forms (not contracts) | 262 |
 | Vendors identified | 345 out of 374 (92%) |
 
-*Note on counting: This report uses two numbers depending on what's being measured. **374** is the total number of contract-related board actions tracked — every time the Board voted on a contract item, it counts. **367** is the number of unique spending commitments — because 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting. Both votes are real board actions, but they represent the same contracts, not additional spending. Gap rates and item counts use the 374 figure (since each board action should have documentation regardless of whether it's a re-vote). Dollar exposure calculations use the 367 figure to avoid inflating the amount of money at stake. Of the 374 board actions, 354 lack an actual signed contract. Of the 367 unique commitments, 347 lack one.*
+*Note on counting: This report uses two numbers depending on what's being measured. **374** is the total number of contract-related board actions tracked — every time the Board voted on a contract item, it counts. **366** is the number of unique spending commitments — because 8 items appear to be re-votes or duplicates of the same contract: 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting, and a Hewlett Packard state contract purchase ($1.03M) was voted on at both the May 22, 2025 and August 28, 2025 meetings under the same state contract #89974 with nearly identical language. Both votes are real board actions, but they represent the same contracts, not additional spending. Gap rates and item counts use the 374 figure (since each board action should have documentation regardless of whether it's a re-vote). Dollar exposure calculations use the 366 figure to avoid inflating the amount of money at stake. Of the 374 board actions, 354 lack an actual signed contract. Of the 366 unique commitments, 346 lack one.*
 
 ---
 
@@ -87,7 +87,7 @@ Here's what I actually found inside 362 attached PDFs:
 | **Bid Tabulations** | 9 (2.5%) | Spreadsheets showing who bid and who won. Useful, but not the contract. |
 | **Other** | 3 (0.8%) | Unclassified. |
 
-**The bottom line:** 20 actual contracts exist — but they cover only $7.2 million of the $389.7 million the Board approved. For 95% of contract spending, the public cannot see what was actually agreed to.
+**The bottom line:** 20 actual contracts exist — but they cover only $7.2 million of the $388.7 million the Board approved. For 95% of contract spending, the public cannot see what was actually agreed to.
 
 ---
 
@@ -145,7 +145,7 @@ Two years in a row, the district's own auditors said: we asked for the contracts
 ---
 
 #### State Contract Purchasing Problems
-**What I found:** Hewlett Packard contracts ($1.03 million, appearing twice) and CDW contracts ($429K) were approved under state cooperative purchasing but without attached contract documentation.
+**What I found:** A Hewlett Packard contract ($1.03 million) for software licenses and hardware maintenance under state contract #89974 was voted on at two separate meetings (May and August 2025) with nearly identical resolution text and no contract documentation at either. CDW contracts ($429K) were also approved under state cooperative purchasing without attached documentation.
 
 **What the auditors found (Finding 2025-9):** *"Contract award documentation was unable to be provided for audit... Per unit prices charged on vendor invoices for payment were not in agreement with the cooperative purchasing contract award documentation... Vendor invoices were not sufficiently detailed to determine compliance with contract award pricing."*
 
@@ -353,7 +353,7 @@ My vendor analysis identified 345 out of 374 contract recipients. Some notable p
 
 **Repeat vendors with documentation gaps:**
 - **Pennetta Industrial Automation** — $12.1 million across 10 unique facilities and maintenance contracts (after removing re-votes). Their largest single item ($7.26 million capital reserve withdrawal for boiler replacements) was voted on at two separate meetings with no documentation at either. $7.3M of their work is undocumented. Pennetta also won a competitive bid for $2.07M in cooling units (4 vendors competed), but even there, only a bid tabulation sheet is attached — not the signed contract.
-- **Hewlett Packard** — $2.06 million in software/hardware maintenance, approved twice with identical amounts, no contract documentation either time.
+- **Hewlett Packard** — $1.03 million in software/hardware maintenance under state contract #89974, voted on at two separate meetings (May and August 2025) with nearly identical resolution text — appears to be the same contract counted twice. No documentation at either meeting.
 - **Adams Lattiboudere** (law firm) — $450,000 in legal services, undocumented at both meetings.
 - **Machado Law Group** — $150,000 in special education legal services, undocumented at both meetings.
 
@@ -424,7 +424,7 @@ Right now, the answer is mostly no. Here's what's broken:
 
 3. **The auditors confirmed the problem.** This isn't just my opinion. The district's own certified public accountants identified 13 findings, including missing contract documentation, missing employment contracts, backdated checks, and failures to notify the State about large contracts.
 
-4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. I did find 20 actual contracts — but those covered just $7.2 million out of $389.7 million in total approvals. The other 347 unique spending commitments (95%) were backed by internal forms, proposals, or nothing at all. The contracts that *are* provided tend to be smaller, lower-profile agreements (healthcare providers, engineering firms), while the largest expenditures go undocumented.
+4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. I did find 20 actual contracts — but those covered just $7.2 million out of $388.7 million in total approvals. The other 346 unique spending commitments (95%) were backed by internal forms, proposals, or nothing at all. The contracts that *are* provided tend to be smaller, lower-profile agreements (healthcare providers, engineering firms), while the largest expenditures go undocumented.
 
 ---
 
@@ -436,7 +436,7 @@ New Jersey's Open Public Records Act (OPRA) gives you the right to request any p
 Priority contracts to request (highest-dollar undocumented items):
 1. Pennetta Industrial Automation — $7.26M capital reserve/boiler contracts
 2. Edmentum Inc. — $2.13M tutoring services
-3. Hewlett Packard — $1.03M software/hardware (x2)
+3. Hewlett Packard — $1.03M software/hardware (state contract #89974)
 4. Special Ed Transportation routes — $933K (Dec 2025), $1.85M (June 2024)
 
 ### Attend Board Meetings
