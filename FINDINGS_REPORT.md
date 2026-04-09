@@ -121,7 +121,7 @@ Many directly confirm what my GMS investigation discovered.
 ### Finding-by-Finding Comparison
 
 #### Missing Contract Documentation
-**What I found:** 50 unique contracts worth $21.6 million had zero documents attached on BoardDocs. Of 362 PDFs that were attached, only 20 were actual contracts.
+**What I found:** 49 unique contracts worth $20.6 million had zero documents attached on BoardDocs. Of 362 PDFs that were attached, only 20 were actual contracts.
 
 **What the auditors found (Finding 2025-8):** *"Contract awards and purchases which exceeded the bid threshold were not approved in the minutes and therefore we were unable to determine the method of procurement."* The auditors also found:
 - Prevailing wage reports from construction vendors were missing
