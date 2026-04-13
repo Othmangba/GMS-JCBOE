@@ -23,7 +23,7 @@ I looked at every contract the Jersey City Board of Education approved over the 
 
 **They almost never were.**
 
-Out of 368 unique spending commitments worth $430.4 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. That means **98% of contract spending lacks the actual signed agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
+Out of 484 unique spending commitments worth $514.9 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. That means **98.6% of contract spending lacks the actual signed agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
 
 This isn't just a transparency problem. It's a compliance problem. And it affects every taxpayer and student in Jersey City.
 
@@ -57,14 +57,14 @@ All data was collected from publicly available records. No private or restricted
 | What I Measured | What I Found |
 |---|---|
 | Meetings analyzed | 42 |
-| Board actions tracked | 376 (368 unique spending commitments) |
-| Total contract value | $430.4 million (unique commitments, after Scenario C arithmetic fix) |
-| Items with zero documents attached (raw) | 49 ($18.5 million) |
-| **Genuine undocumented vendor spending** (after filtering out 1 rescission, 1 grant application, 1 policy threshold, and 10 amendments whose parent resolution is documented and whose chain cumulative increments stay within the parent's NTE ceiling) | **36 items ($14.48 million)** |
+| Board actions tracked | 504 (484 unique spending commitments) |
+| Total contract value | $514.9 million (unique commitments, after full scraper audit) |
+| Items with zero documents attached (raw) | 81 ($81.7 million) |
+| **Genuine undocumented vendor spending** (after filtering out 1 rescission, 1 grant application, 1 policy threshold, and 10 amendments whose parent resolution is documented and whose chain cumulative increments stay within the parent's NTE ceiling) | **68 items ($77.6 million)** |
 | PDFs downloaded and analyzed | 364 |
 | **Actual signed contracts found** | **20 out of 364** |
 | Internal PO forms (not contracts) | 262 |
-| Vendors identified | ~348 out of 376 |
+| Vendors identified | ~476 out of 504 |
 
 *Note on counting: This report uses two numbers depending on what's being measured. **376** is the total number of contract-related board actions tracked — every time the Board voted on a contract item, it counts. **368** is the number of unique spending commitments — because 8 items appear to be re-votes or duplicates of the same contract: 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting, and a Hewlett Packard state contract purchase ($1.03M) was voted on at both the May 22, 2025 and August 28, 2025 meetings under the same state contract #89974 with nearly identical language. Both votes are real board actions, but they represent the same contracts, not additional spending. Gap rates and item counts use the 376 figure (since each board action should have documentation regardless of whether it's a re-vote). Dollar exposure calculations use the 368 figure to avoid inflating the amount of money at stake.*
 

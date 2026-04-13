@@ -1,5 +1,5 @@
 {
-  "_note": "51 entries total; 2 duplicate_of (1 Dougherty re-vote idx 3; 1 HP #89974 re-vote idx 47). 49 unique items. Scenario C applied: the $7,261,000 capital reserve withdrawal (Resolution 11.06, 2/29/24) was split \u2014 the $2,074,000 Pennetta HVAC slice is already tracked separately via Resolution 11.10 (has bid tab AF10659 attached), so only the remaining $5,187,000 Dougherty slice is kept in this entry (idx 2) to avoid double-counting the same Pennetta money. Of 49 unique items: 13 excluded from spending dollar total (1 rescission idx 4, 1 grant application idx 36, 1 policy threshold idx 46, 10 amendments absorbed within documented parent NTE). Result: 36 items / $14,477,997 genuine undocumented spending, 49 items / $18,533,640 raw.",
+  "_note": "Total 83 entries. Duplicates (revotes) filtered: 2. Unique undocumented items: 81. Excluded from spending dollar total: 13 items (rescissions, grant apps, policy thresholds, and amendments absorbed within documented parent NTE). Items in genuine spending total: 68 worth $77,610,891. Raw zero-attachment total: 81 worth $81,666,534.",
   "summaries": [
     {
       "idx": 1,
@@ -511,6 +511,262 @@
       "chain_parent_nte": 933178,
       "increment_amount": 61200,
       "chain_status": "within_nte"
+    },
+    {
+      "idx": 52,
+      "date": "20240125",
+      "amount": 69120,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.17 Ratify/Approve Renewal of Transportation Routes for FY24",
+      "category": "Transportation"
+    },
+    {
+      "idx": 53,
+      "date": "20240125",
+      "amount": 19619,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.18 Approve Transportation Jointure Agreement with Union County Educational Commission for the 2023/24 school year",
+      "category": "Transportation"
+    },
+    {
+      "idx": 54,
+      "date": "20240125",
+      "amount": 12900,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.14 Ratify/Approve Additional Bus Attendant on Route R544 (Mayor Transportation)",
+      "category": "Transportation"
+    },
+    {
+      "idx": 55,
+      "date": "20240229",
+      "amount": 21450,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.13 Approve Transportation Jointure Agreement with Camden County Educational Commission for the 2023/24 school year",
+      "category": "Transportation"
+    },
+    {
+      "idx": 56,
+      "date": "20240425",
+      "amount": 250000,
+      "vendor_fix": "Contract Increase",
+      "summary": "11.01 Approve Contract Increase (PD23-24-MD2-33) Bituminous Concrete Resurfacing",
+      "category": "Construction"
+    },
+    {
+      "idx": 57,
+      "date": "20240425",
+      "amount": 60000,
+      "vendor_fix": "Contract Increase",
+      "summary": "11.02 Approve Contract Increase (PD23-24-MD13-78) Pest Control Management Services",
+      "category": "Other"
+    },
+    {
+      "idx": 58,
+      "date": "20240627",
+      "amount": 888960,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.19 Approve Purchase of Bus Tickets (2024/25) Transportation Department",
+      "category": "Transportation"
+    },
+    {
+      "idx": 59,
+      "date": "20240627",
+      "amount": 72000,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.21 Approve Transportation Jointure Agreement w/Camden County ESC (2024/25)",
+      "category": "Transportation"
+    },
+    {
+      "idx": 60,
+      "date": "20240627",
+      "amount": 11040,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.20 Approve Parental Transportation Route PO10 (H.T.)",
+      "category": "Special Ed Tuition"
+    },
+    {
+      "idx": 61,
+      "date": "20240826",
+      "amount": 2774730,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.27 Amend Contract (PD22-23-FD12-64) FY2024/25 School Pre-Plated Commercial Vended Meals (Year 3)",
+      "category": "Construction"
+    },
+    {
+      "idx": 62,
+      "date": "20240826",
+      "amount": 2635000,
+      "vendor_fix": "GL Group",
+      "summary": "11.01 Approve GL Group (HVAC Upgrade at PS#27)",
+      "category": "Facilities & Maintenance"
+    },
+    {
+      "idx": 63,
+      "date": "20240826",
+      "amount": 2285000,
+      "vendor_fix": "GL Group",
+      "summary": "11.02 Approve GL Group (HVAC Upgrade at Academy I)",
+      "category": "Facilities & Maintenance"
+    },
+    {
+      "idx": 64,
+      "date": "20240826",
+      "amount": 235235,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.17 Approve Emergency Contract for Pool Repairs 2024/25",
+      "category": "Facilities Ops"
+    },
+    {
+      "idx": 65,
+      "date": "20240826",
+      "amount": 135450,
+      "vendor_fix": "Mobile Modular Management Corp",
+      "summary": "11.03 Approve Mobile Modular Management Corp (Removal of TCU's at PS#17)",
+      "category": "Construction"
+    },
+    {
+      "idx": 66,
+      "date": "20240826",
+      "amount": 60000,
+      "vendor_fix": "Healthier JC Grant",
+      "summary": "10.25 Approve Healthier JC Grant (Vertical Farming)",
+      "category": "Grants"
+    },
+    {
+      "idx": 67,
+      "date": "20240925",
+      "amount": 3700000,
+      "vendor_fix": "(see resolution text)",
+      "summary": "11.03 Approve Renovation of Bathrooms at PS#23 and PS#25",
+      "category": "Construction"
+    },
+    {
+      "idx": 68,
+      "date": "20240925",
+      "amount": 2300000,
+      "vendor_fix": "HVAC Upgrade at Alfred Zampella",
+      "summary": "11.02 Approve HVAC Upgrade at Alfred Zampella (PS#27) School",
+      "category": "Facilities & Maintenance"
+    },
+    {
+      "idx": 69,
+      "date": "20240925",
+      "amount": 1990000,
+      "vendor_fix": "HVAC Upgrade at Jersey City Academy I",
+      "summary": "11.01 Approve HVAC Upgrade at Jersey City Academy I",
+      "category": "Facilities & Maintenance"
+    },
+    {
+      "idx": 70,
+      "date": "20240925",
+      "amount": 620000,
+      "vendor_fix": "(see resolution text)",
+      "summary": "11.04 Approve Demo/Removal of HVAC Uninvents at PS#27 and JC Academy I",
+      "category": "Facilities & Maintenance"
+    },
+    {
+      "idx": 71,
+      "date": "20240925",
+      "amount": 33459,
+      "vendor_fix": "Transportation Jointure Agreement with Barnstable Academy",
+      "summary": "10.12 Approve Transportation Jointure Agreement with Barnstable Academy (2024/25)",
+      "category": "Transportation"
+    },
+    {
+      "idx": 72,
+      "date": "20240925",
+      "amount": 18000,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.14 Approve Additional Bus Attendant on R309",
+      "category": "Transportation"
+    },
+    {
+      "idx": 73,
+      "date": "20241030",
+      "amount": 6540364,
+      "vendor_fix": "A. Harry Moore Tuition Contracts",
+      "summary": "9.02 Approve A. Harry Moore Tuition Contracts (SY2024/25)",
+      "category": "Special Ed Tuition"
+    },
+    {
+      "idx": 74,
+      "date": "20241030",
+      "amount": 2771100,
+      "vendor_fix": "Regional Day School Tuition Contracts",
+      "summary": "9.04 Approve Regional Day School Tuition Contracts (SY2024/25)",
+      "category": "Special Ed Tuition"
+    },
+    {
+      "idx": 75,
+      "date": "20241030",
+      "amount": 553360,
+      "vendor_fix": "A. Harry Moore Tuition Contracts",
+      "summary": "9.01 Approve A. Harry Moore Tuition Contracts (Extended School Year)",
+      "category": "Special Ed Tuition"
+    },
+    {
+      "idx": 76,
+      "date": "20241030",
+      "amount": 387839,
+      "vendor_fix": "Painting",
+      "summary": "11.04 Approve Painting (Dickinson High School)",
+      "category": "Construction"
+    },
+    {
+      "idx": 77,
+      "date": "20241030",
+      "amount": 295882,
+      "vendor_fix": "Repairs",
+      "summary": "11.03 Approve Repairs (Dr. Martin Luther King, Jr. School (PS#11)",
+      "category": "Construction"
+    },
+    {
+      "idx": 78,
+      "date": "20241030",
+      "amount": 148800,
+      "vendor_fix": "Regional Day School Tuition Contracts",
+      "summary": "9.03 Approve Regional Day School Tuition Contracts (Extended School Year)",
+      "category": "Special Ed Tuition"
+    },
+    {
+      "idx": 79,
+      "date": "20250416",
+      "amount": 486000,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.13 Approve Transportation Jointure Agreement with the Hudson County Schools of Technology (2024/25)",
+      "category": "Transportation"
+    },
+    {
+      "idx": 80,
+      "date": "20250416",
+      "amount": 175000,
+      "vendor_fix": "Increase to Elevator Repair & Maintenance Contract - Slade Elevator",
+      "summary": "11.23 Approve Increase to Elevator Repair & Maintenance Contract - Slade Elevator",
+      "category": "Other"
+    },
+    {
+      "idx": 81,
+      "date": "20250626",
+      "amount": 31299853,
+      "vendor_fix": "Early Childhood Department",
+      "summary": "8.69 Approve Early Childhood Department - Contracted Childcare Center Contract for 2025/26 School Year",
+      "category": "Special Ed Tuition"
+    },
+    {
+      "idx": 82,
+      "date": "20250626",
+      "amount": 2199833,
+      "vendor_fix": "(see resolution text)",
+      "summary": "12.15 Approve 2025/26 Renewal of Employment Contracts (Non-Affiliates)",
+      "category": "Legal Services"
+    },
+    {
+      "idx": 83,
+      "date": "20250828",
+      "amount": 82900,
+      "vendor_fix": "(see resolution text)",
+      "summary": "10.18 Approve Vacant Building - 70 Bright Street Insurance",
+      "category": "Insurance / Benefits"
     }
   ]
 }

@@ -41,12 +41,25 @@ def load_undoc():
         return json.load(f)
 
 
+def _dedup_key(row):
+    """Normalize a row to (subject-line, rounded-amount) for re-vote dedup.
+    See verify_report.py for rationale."""
+    t = (row.get("resolution_text", "") or "").strip()
+    first_line = t.split("\n")[0]
+    first_line = re.sub(r"^\d+\.\d+\s*", "", first_line).strip().lower()
+    try:
+        amt = round(float(row.get("max_amount", 0) or 0))
+    except (TypeError, ValueError):
+        amt = 0
+    return (first_line[:120], amt)
+
+
 def dedupe(rows):
     """Apply both dedup rules: Feb29/Mar19 re-votes and HP state contract re-vote."""
-    feb29 = {r["resolution_text"][:100]: r for r in rows if r.get("date") == "20240229"}
+    feb29_keys = {_dedup_key(r) for r in rows if r.get("date") == "20240229"}
     step1 = [
         r for r in rows
-        if not (r.get("date") == "20240319" and r["resolution_text"][:100] in feb29)
+        if not (r.get("date") == "20240319" and _dedup_key(r) in feb29_keys)
     ]
     step2 = [
         r for r in step1

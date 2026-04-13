@@ -61,15 +61,26 @@ def fetch_meeting_html(meeting):
 
 
 def parse_items_with_files(soup):
-    """Parse agenda items and their attached files."""
+    """Parse agenda items and their attached files.
+
+    The `text` field now includes BOTH the subject heading AND the itembody. The
+    original scraper only included the itembody, which missed items where "contract"
+    only appeared in the subject header (e.g. "8.69 Approve Early Childhood Department -
+    Contracted Childcare Center Contract for 2025/26").
+    """
     items = []
     for item_div in soup.find_all("div", class_="item"):
         leftcol = item_div.find("div", class_="leftcol")
         item_num = leftcol.get_text(strip=True) if leftcol else ""
 
         rightcol = item_div.find("div", class_="rightcol") or item_div
+        # Subject header (the "8.69 Approve X" line)
+        subject_el = rightcol.find("div", class_="itemsubject") or rightcol.find("h1") or rightcol.find("h2")
+        subject = subject_el.get_text(separator=" ", strip=True) if subject_el else ""
         itembody = rightcol.find("div", class_="itembody")
-        text = itembody.get_text(separator=" ", strip=True) if itembody else rightcol.get_text(separator=" ", strip=True)
+        body = itembody.get_text(separator=" ", strip=True) if itembody else rightcol.get_text(separator=" ", strip=True)
+        # Concatenate subject + body so the regex can match keywords from either
+        text = (subject + " " + body).strip() if subject else body
 
         files = []
         for fd in rightcol.find_all("div", class_="public-file"):
@@ -226,10 +237,19 @@ def check_contract_docs():
     target_meetings.sort(key=lambda m: str(m["numberdate"]))
     print(f"\nAll meetings since Jan 2024: {len(target_meetings)}\n")
 
-    # Contract detection
+    # Contract detection — widened character window (30 → 200) and now runs on
+    # subject line + body (not just body). The original regex missed:
+    #   - Tuition contracts ($10M) because body said "approve placements at X" while
+    #     only the subject mentioned "contract"
+    #   - Childcare Center Contract ($31.3M) because "approves entering into the
+    #     Preschool Program Contract" had 37 chars between the two keywords (beyond 30)
+    #   - Transportation route renewals ($20.25M + $23.54M) — needed 'renewal' keyword
+    # Widened to .{0,200} to handle the longer boilerplate filler like
+    # "upon the recommendation of the Superintendent and Acting School Business
+    # Administrator, approves the contract awarded to..."
     contract_pattern = re.compile(
-        r'(approve|authorize|award|ratif).{0,30}(contract|agreement|purchase order|professional .* service)',
-        re.IGNORECASE
+        r'(approve|authorize|award|ratif).{0,200}(contract|agreement|purchase order|professional .* service|renewal|tuition|jointure|insurance placement|casualty)',
+        re.IGNORECASE | re.DOTALL
     )
     dollar_pattern = re.compile(r'\$[\d,]+(?:\.\d{2})?')
 

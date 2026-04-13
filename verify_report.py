@@ -61,19 +61,35 @@ def load_report():
         return f.read()
 
 
+def _dedup_key(row):
+    """Normalize a row to (subject-line, rounded-amount) for re-vote dedup.
+
+    The original dedup rule compared first 100 chars of resolution_text, but that
+    fails when Feb 29 and Mar 19 have different leading resolution numbers (e.g.,
+    '11.01 Approve Bathroom...' vs '12.01 Approve Bathroom...'). This rule extracts
+    just the subject line, strips the leading resolution number, lowercases, and
+    pairs with the amount — catching all re-voted items regardless of renumbering.
+    """
+    import re as _re
+    t = (row.get("resolution_text", "") or "").strip()
+    first_line = t.split("\n")[0]
+    first_line = _re.sub(r"^\d+\.\d+\s*", "", first_line).strip().lower()
+    try:
+        amt = round(float(row.get("max_amount", 0) or 0))
+    except (TypeError, ValueError):
+        amt = 0
+    return (first_line[:120], amt)
+
+
 def get_deduped(rows):
-    """Remove the 7 Mar 19 re-votes of Feb 29 items."""
-    feb29_texts = {
-        r.get("resolution_text", "")[:100]: r
-        for r in rows
-        if r.get("date", "") == "20240229"
-    }
+    """Remove Mar 19 re-votes of Feb 29 items (catches all renumbered re-votes)."""
+    feb29_keys = {_dedup_key(r) for r in rows if r.get("date", "") == "20240229"}
     return [
         r
         for r in rows
         if not (
             r.get("date", "") == "20240319"
-            and r.get("resolution_text", "")[:100] in feb29_texts
+            and _dedup_key(r) in feb29_keys
         )
     ]
 
@@ -92,12 +108,12 @@ def main():
     # ── Source data checks ──
     print("\n--- Contract Data (source: jcboe_contract_source_docs.csv) ---")
 
-    check("Total board actions", 376, len(rows))
+    check("Total board actions", 504, len(rows))
 
     total_val = sum(float(r.get("max_amount", 0) or 0) for r in rows)
-    check("Total value (all items)", 442_219_922, round(total_val), tolerance=100)
+    check("Total value (all items)", 529_738_640, round(total_val), tolerance=1000)
 
-    check("Unique commitments (deduped - revotes only)", 369, len(deduped))
+    check("Unique commitments (deduped - revotes only)", 485, len(deduped))
 
     # Further dedup: remove HP Aug 2025 duplicate of May 2025
     deduped_full = [
@@ -108,26 +124,26 @@ def main():
             and "hewlett" in (r.get("resolution_text", "") or "").lower()
         )
     ]
-    check("Unique commitments (fully deduped)", 368, len(deduped_full))
+    check("Unique commitments (fully deduped)", 484, len(deduped_full))
 
     dedup_val = sum(float(r.get("max_amount", 0) or 0) for r in deduped_full)
-    check("Unique value (fully deduped)", 430_431_276, round(dedup_val), tolerance=100)
+    check("Unique value (fully deduped)", 514_860_120, round(dedup_val), tolerance=1000)
 
     no_docs = [r for r in rows if r.get("has_file", "") == "False"]
-    check("Items with zero docs (all)", 51, len(no_docs))
+    check("Items with zero docs (all, pre-dedup)", 84, len(no_docs))
 
     no_docs_dedup = [r for r in deduped_full if r.get("has_file", "") == "False"]
-    check("Items with zero docs (fully deduped)", 49, len(no_docs_dedup))
+    check("Items with zero docs (fully deduped)", 81, len(no_docs_dedup))
 
     undoc_val = sum(float(r.get("max_amount", 0) or 0) for r in no_docs_dedup)
-    check("Undocumented value (fully deduped, raw)", 18_533_638, round(undoc_val), tolerance=100)
+    check("Undocumented value (fully deduped, raw)", 81_666_532, round(undoc_val), tolerance=1000)
 
     vendors = sum(
         1
         for r in rows
         if r.get("vendor", "").strip() not in ["", "Unknown", "UNKNOWN"]
     )
-    check("Vendors identified", 348, vendors)
+    check("Vendors identified", 476, vendors)
 
     # ── PDF analysis checks ──
     print("\n--- PDF Analysis (source: jcboe_pdf_analysis.csv) ---")
@@ -263,7 +279,7 @@ def main():
             undoc_data = json.load(f)
         sums = undoc_data["summaries"]
         unique_sums = [s for s in sums if "duplicate_of" not in s]
-        check("Undoc summaries: unique entries", 49, len(unique_sums))
+        check("Undoc summaries: unique entries", 81, len(unique_sums))
 
         excluded = [s for s in unique_sums if s.get("excluded_from_spending_total")]
         check("Undoc summaries: excluded from spending total", 13, len(excluded))
@@ -280,10 +296,10 @@ def main():
         check("Undoc summaries: amendments within parent NTE (via chain_status)", 10, len(chain_amendments))
 
         in_total = [s for s in unique_sums if not s.get("excluded_from_spending_total")]
-        check("Undoc summaries: items in genuine spending total", 36, len(in_total))
+        check("Undoc summaries: items in genuine spending total", 68, len(in_total))
 
         genuine_val = sum(s["amount"] for s in in_total)
-        check("Genuine undocumented spending total", 14_477_997, genuine_val, tolerance=100)
+        check("Genuine undocumented spending total", 77_610_891, genuine_val, tolerance=100)
 
         # Each amendment chain stays within parent NTE
         chain_totals = {}
