@@ -13,20 +13,21 @@ When the Board of Education votes to approve a contract, residents should be abl
 | Metric | Value |
 |--------|-------|
 | Meetings analyzed | 42 (Jan 2024 — Mar 2026) |
-| Contract items tracked | 374 |
-| Total contract value | $402.6M |
-| Items with zero documentation | 51 ($28.9M) |
-| PDFs analyzed | 362 |
-| **Actual signed contracts found** | **20 out of 362 PDFs** |
+| Board actions tracked | 376 (368 unique commitments after deduplicating re-votes) |
+| Total contract value | $430.4M (deduplicated, after Scenario C) |
+| Items with zero documents attached (raw) | 49 ($18.5M) |
+| **Genuine undocumented vendor spending** (excludes 1 rescission, 1 grant application, 1 policy threshold, and 10 amendments absorbed within documented parent NTE) | **36 items ($14.48M)** |
+| PDFs analyzed | 364 |
+| **Actual signed contracts found** | **20 out of 364 PDFs** |
 | PO forms (internal forms, not contracts) | 262 ($198.8M) |
 
 **The bottom line:** When the Board says it "approved a contract," the actual signed agreement is almost never publicly available. What gets attached instead is an internal purchase order form — a document the district uses to authorize its own spending, not the agreement with the vendor.
 
 ## Dashboard
 
-Open `dashboard.html` in any browser — no server required. All data is embedded directly in the file.
+The interactive dashboard lives at [occresearch.org/gms-jcboe-dashboard.html](https://occresearch.org/gms-jcboe-dashboard.html).
 
-The dashboard includes:
+It includes:
 - Meeting-by-meeting documentation gap timeline
 - Document type breakdown (what's actually attached vs. what should be)
 - Largest undocumented contracts with plain-English descriptions
@@ -68,8 +69,7 @@ playwright install chromium     # For OPRAMachine scraper only
 | `jcboe_contract_source_docs.csv` | 374 contract items with vendor, amount, documentation status |
 | `jcboe_pdf_analysis.csv` | 362 PDFs with document type classification |
 | `jcboe_bid_tabulations.csv` | OCR'd bid sheets with competing vendors and amounts |
-| `dashboard_data.json` | Aggregated data powering the dashboard |
-| `undoc_summaries.json` | Plain-English summaries of all undocumented items |
+| `undoc_summaries.json` | Plain-English summaries of undocumented items (49 unique after dedup) |
 
 ## What You Can Do
 

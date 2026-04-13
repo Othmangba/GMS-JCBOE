@@ -23,7 +23,7 @@ I looked at every contract the Jersey City Board of Education approved over the 
 
 **They almost never were.**
 
-Out of 366 unique spending commitments worth $388.7 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. That means **95% of contract approvals lack the actual agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
+Out of 368 unique spending commitments worth $430.4 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. That means **98% of contract spending lacks the actual signed agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
 
 This isn't just a transparency problem. It's a compliance problem. And it affects every taxpayer and student in Jersey City.
 
@@ -57,15 +57,18 @@ All data was collected from publicly available records. No private or restricted
 | What I Measured | What I Found |
 |---|---|
 | Meetings analyzed | 42 |
-| Board actions tracked | 374 (366 unique spending commitments) |
-| Total contract value | $388.7 million (unique commitments) |
-| Items with zero documents attached | 49 ($20.6 million) |
-| PDFs downloaded and analyzed | 362 |
-| **Actual signed contracts found** | **20 out of 362** |
+| Board actions tracked | 376 (368 unique spending commitments) |
+| Total contract value | $430.4 million (unique commitments, after Scenario C arithmetic fix) |
+| Items with zero documents attached (raw) | 49 ($18.5 million) |
+| **Genuine undocumented vendor spending** (after filtering out 1 rescission, 1 grant application, 1 policy threshold, and 10 amendments whose parent resolution is documented and whose chain cumulative increments stay within the parent's NTE ceiling) | **36 items ($14.48 million)** |
+| PDFs downloaded and analyzed | 364 |
+| **Actual signed contracts found** | **20 out of 364** |
 | Internal PO forms (not contracts) | 262 |
-| Vendors identified | 345 out of 374 (92%) |
+| Vendors identified | ~348 out of 376 |
 
-*Note on counting: This report uses two numbers depending on what's being measured. **374** is the total number of contract-related board actions tracked — every time the Board voted on a contract item, it counts. **366** is the number of unique spending commitments — because 8 items appear to be re-votes or duplicates of the same contract: 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting, and a Hewlett Packard state contract purchase ($1.03M) was voted on at both the May 22, 2025 and August 28, 2025 meetings under the same state contract #89974 with nearly identical language. Both votes are real board actions, but they represent the same contracts, not additional spending. Gap rates and item counts use the 374 figure (since each board action should have documentation regardless of whether it's a re-vote). Dollar exposure calculations use the 366 figure to avoid inflating the amount of money at stake. Of the 374 board actions, 354 lack an actual signed contract. Of the 366 unique commitments, 346 lack one.*
+*Note on counting: This report uses two numbers depending on what's being measured. **376** is the total number of contract-related board actions tracked — every time the Board voted on a contract item, it counts. **368** is the number of unique spending commitments — because 8 items appear to be re-votes or duplicates of the same contract: 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting, and a Hewlett Packard state contract purchase ($1.03M) was voted on at both the May 22, 2025 and August 28, 2025 meetings under the same state contract #89974 with nearly identical language. Both votes are real board actions, but they represent the same contracts, not additional spending. Gap rates and item counts use the 376 figure (since each board action should have documentation regardless of whether it's a re-vote). Dollar exposure calculations use the 368 figure to avoid inflating the amount of money at stake.*
+
+*Note on the genuine undocumented figure: The 49-item / $20.6M raw figure counts every board action with zero documents attached. The **36-item / $16.55M genuine figure** filters out 13 items that aren't actually "new undocumented vendor spending": (a) 1 rescission that cancels a prior obligation rather than creating new spending, (b) 1 grant application for incoming funds, (c) 1 bid threshold policy adjustment per state law, and (d) 10 amendments to contracts whose parent resolution IS documented in the dataset and whose chain cumulative increments stay well within the parent's NTE ceiling. For those 10 amendments, the spending is technically within already-documented Board authorization — but each amendment is still counted as a governance event because the district did not attach contract documentation to the amendment itself.*
 
 ---
 
@@ -87,7 +90,7 @@ Here's what I actually found inside 362 attached PDFs:
 | **Bid Tabulations** | 9 (2.5%) | Spreadsheets showing who bid and who won. Useful, but not the contract. |
 | **Other** | 3 (0.8%) | Unclassified. |
 
-**The bottom line:** 20 actual contracts exist — but they cover only $7.2 million of the $388.7 million the Board approved. For 95% of contract spending, the public cannot see what was actually agreed to.
+**The bottom line:** 20 actual signed contracts exist — but they cover only $7.2 million of the **$430.4 million** the Board approved. For **over 98%** of contract spending, the public cannot see what was actually agreed to. At the item level, only **13 of 368 unique commitments (3.5%)** have a signed agreement attached.
 
 ---
 
@@ -121,7 +124,7 @@ Many directly confirm what my GMS investigation discovered.
 ### Finding-by-Finding Comparison
 
 #### Missing Contract Documentation
-**What I found:** 49 unique contracts worth $20.6 million had zero documents attached on BoardDocs. Of 362 PDFs that were attached, only 20 were actual contracts.
+**What I found:** 49 unique board actions worth $18.5 million had zero documents attached on BoardDocs. After removing 13 items that aren't actually undocumented vendor spending — 1 rescission (cancellation of a prior obligation), 1 grant application (incoming funds), 1 policy threshold adjustment, and 10 amendments whose parent resolution is documented in the dataset AND whose chain cumulative increments stay within the parent's NTE ceiling — the genuine undocumented vendor spending is **36 items worth $14.48 million**. Of 364 PDFs attached across the full dataset, only 20 were actual signed contracts.
 
 **What the auditors found (Finding 2025-8):** *"Contract awards and purchases which exceeded the bid threshold were not approved in the minutes and therefore we were unable to determine the method of procurement."* The auditors also found:
 - Prevailing wage reports from construction vendors were missing
@@ -154,7 +157,7 @@ Two years in a row, the district's own auditors said: we asked for the contracts
 ---
 
 #### Contracts Over $2 Million Not Reported to the State
-**What I found:** Multiple contracts exceeding $2 million — including the Pennetta Industrial Automation capital reserve withdrawal ($7.26 million) and Edmentum tutoring services ($2.13 million).
+**What I found:** Multiple contracts exceeding $2 million — including a $7.26 million capital reserve withdrawal funding two contractors (C. Dougherty & Co. $5.19M for boiler replacements and Pennetta Industrial Automation $2.07M for HVAC at Central Office), Edmentum tutoring services ($2.13 million via Omnia cooperative purchasing), and Hewlett Packard software/hardware ($1.03 million via NJ state contract #89974).
 
 **What the auditors found (Finding 2025-10):** *"Post-award notification to the State Comptroller's office was not made for certain contracts, the cost of which exceeded $2.5 million."*
 
@@ -345,14 +348,15 @@ Three patterns jump out:
 
 2. **Transportation has the highest gap rate among major categories (61%).** 17 of 28 transportation items — including multi-vendor route awards and special education transport amendments — have no documentation. This is where the amendment chain problem is most severe: the original vendor list exists in one meeting's attachment, but every subsequent amendment is a dead end.
 
-3. **Facilities & Maintenance has the biggest dollar exposure ($8.5M undocumented).** This category includes HVAC/mechanical work and totals $61.8M across 52 unique items after removing re-votes. Pennetta Industrial Automation is the primary driver — handling capital reserve projects, boiler replacements, cooling units, HVAC repair services, brick and refractory services, and systems equipment inspection. Pennetta totals $12.1M across 10 unique items, with $7.3M undocumented. Their largest item — a $7.26M capital reserve withdrawal for boiler replacements — was voted on at two separate meetings (Feb 29 and Mar 19, 2024) with no documentation at either. Sal Electric also has one undocumented item ($800K). The remaining facilities vendors (William J. Guarini, Mak Group, Vanderbeck, Fox Fence, In-Line AGM) are fully documented. *Note: 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting. These represent the same spending commitments approved twice, not separate contracts. Dollar exposure figures are calculated without double-counting these re-votes.*
+3. **Facilities & Maintenance has the biggest dollar exposure.** This category includes HVAC/mechanical work and totals $61.8M across 52 unique items after removing re-votes. The largest single undocumented item — the **$7.26 million capital reserve withdrawal voted Feb 29, 2024 (Resolution 11.06) and re-voted Mar 19, 2024** — is not a Pennetta contract, despite what my earlier analysis claimed. Careful reading of the full resolution text shows the withdrawal funds **two** contractors: **$5,187,000 to C. Dougherty & Co.** for boiler replacements at Liberty HS, PS#8, PS#16, PS#29, PS#41 (original contract Resolution 10.03 from Nov 16, 2023 — only a bid tabulation attached, no signed contract), and **$2,074,000 to Pennetta Industrial Automation** for HVAC at Central Office (Resolution 11.10 voted same day — only a bid tabulation attached, no signed contract). Pennetta actually lost the boiler bid — they bid $3.665M and $3.143M on the two contracts; Dougherty won both at $2.790M and $2.397M. Pennetta's direct contracts total $4.85M across 9 items ($425K undocumented — HVAC additional funding and boiler retubing additional funding, both from May 22, 2024). Sal Electric has one undocumented item ($800K electrical re-bid). The remaining facilities vendors (William J. Guarini, Mak Group, Vanderbeck, Fox Fence, In-Line AGM) are fully documented. *Note: 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting. These represent the same spending commitments approved twice, not separate contracts. Dollar exposure figures are calculated without double-counting these re-votes.*
 
 ### Who Gets the Contracts?
 
 My vendor analysis identified 345 out of 374 contract recipients. Some notable patterns:
 
 **Repeat vendors with documentation gaps:**
-- **Pennetta Industrial Automation** — $12.1 million across 10 unique facilities and maintenance contracts (after removing re-votes). Their largest single item ($7.26 million capital reserve withdrawal for boiler replacements) was voted on at two separate meetings with no documentation at either. $7.3M of their work is undocumented. Pennetta also won a competitive bid for $2.07M in cooling units (4 vendors competed), but even there, only a bid tabulation sheet is attached — not the signed contract.
+- **Pennetta Industrial Automation** — $4.85 million across 9 unique direct contracts. $425,000 of Pennetta's direct work is undocumented ($350K HVAC additional funding and $75K boiler retubing additional funding from May 22, 2024). Pennetta's biggest documented item is a $2.07M competitive bid for four 60-ton cooling units at Central Office (Resolution 11.10, Feb 29, 2024) — Pennetta was the lowest of 5 bidders, but only a bid tabulation is attached, not the signed contract. Note: an earlier version of this report lumped a $7.26M capital reserve withdrawal under Pennetta because the vendor field was mis-extracted. That withdrawal actually funds two contractors — see the Facilities section above.
+- **C. Dougherty & Co.** — $5.19 million for boiler replacement contracts at Liberty HS and four elementary schools, originally approved Nov 16, 2023 (outside the dataset window). Only the bid tabulation (AF10027) is attached to the original award, not a signed contract. Funds were subsequently transferred from capital reserve on Feb 29, 2024 via Resolution 11.06.
 - **Hewlett Packard** — $1.03 million in software/hardware maintenance under state contract #89974, voted on at two separate meetings (May and August 2025) with nearly identical resolution text — appears to be the same contract counted twice. No documentation at either meeting.
 - **Adams Lattiboudere** (law firm) — $450,000 in legal services, undocumented at both meetings.
 - **Machado Law Group** — $150,000 in special education legal services, undocumented at both meetings.
@@ -424,7 +428,7 @@ Right now, the answer is mostly no. Here's what's broken:
 
 3. **The auditors confirmed the problem.** This isn't just my opinion. The district's own certified public accountants identified 13 findings, including missing contract documentation, missing employment contracts, backdated checks, and failures to notify the State about large contracts.
 
-4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. I did find 20 actual contracts — but those covered just $7.2 million out of $388.7 million in total approvals. The other 346 unique spending commitments (95%) were backed by internal forms, proposals, or nothing at all. The contracts that *are* provided tend to be smaller, lower-profile agreements (healthcare providers, engineering firms), while the largest expenditures go undocumented.
+4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. I did find 20 actual signed contracts — but those covered just $7.2 million out of $432.5 million in total approvals. The other 355 unique spending commitments (96.5% of items, 98%+ of dollars) were backed by internal PO forms, proposals, bid tabulations, rate schedules, or nothing at all. The signed contracts that *are* provided tend to be smaller, lower-profile agreements (healthcare providers, engineering firms), while the largest expenditures go undocumented.
 
 ---
 
@@ -434,16 +438,17 @@ Right now, the answer is mostly no. Here's what's broken:
 New Jersey's Open Public Records Act (OPRA) gives you the right to request any public record. If a contract isn't on BoardDocs, you can file a request directly with the district. The JCBOE has an [online OPRA form](https://www.jcboe.org/apps/pages/index.jsp?uREC_ID=1537092&type=d&pREC_ID=1667639).
 
 Priority contracts to request (highest-dollar undocumented items):
-1. Pennetta Industrial Automation — $7.26M capital reserve/boiler contracts
-2. Edmentum Inc. — $2.13M tutoring services
-3. Hewlett Packard — $1.03M software/hardware (state contract #89974)
-4. Special Ed Transportation routes — $933K (Dec 2025), $1.85M (June 2024)
+1. C. Dougherty & Co. — $5.19M boiler replacements (original Res. 10.03 from Nov 16, 2023; funds transferred via capital reserve withdrawal Res. 11.06 on Feb 29, 2024)
+2. Pennetta Industrial Automation — $2.07M HVAC/cooling units at Central Office (Res. 11.10 from Feb 29, 2024; only a bid tabulation is attached, no signed contract)
+3. Edmentum Inc. — $2.13M tutoring services (via Omnia cooperative purchasing contract R191103)
+4. Hewlett Packard — $1.03M software/hardware (via NJ state contract #89974)
+5. Sal Electric Co. — $800K electrical services at various schools (PD24-25-049 re-bid)
 
 ### Attend Board Meetings
 The Board meets regularly at 346 Claremont Avenue, Jersey City. Meeting schedules are posted on BoardDocs. During public comment periods, you can ask the Board to explain why contract documentation is not being attached to agenda items.
 
 ### Use This Dashboard
-I built an [interactive dashboard](https://github.com/Othmangba/GMS-JCBOE) that lets you explore all 374 contracts, see which vendors have documentation gaps, and track the gap rate over time. Download `dashboard.html` and open it in any browser — no installation needed.
+I built an [interactive dashboard](https://occresearch.org/gms-jcboe-dashboard.html) that lets you explore all 376 board actions (368 unique commitments after dedup), see which vendors have documentation gaps, and track the gap rate over time.
 
 ### Share This Report
 The more residents who understand these findings, the more likely the district is to improve its practices. Share this report with your neighbors, your PTA, your local news outlet, or your Board representative.
