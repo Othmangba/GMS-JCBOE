@@ -121,6 +121,9 @@ def normalize_vendor(v):
     # Common OCR/extraction junk patterns
     if v.lower() in ("vendors", "vendor", "na na na na", "unknown", ""):
         return ""
+    # Drop placeholder labels left over from failed extraction
+    if "(see resolution text)" in v.lower():
+        return ""
 
     vl = v.lower()
     # Canonicalization map — keyed by substring, value is the canonical vendor name.
