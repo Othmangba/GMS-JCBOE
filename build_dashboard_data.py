@@ -297,6 +297,20 @@ def build_totals(rows_full, rows_dedup, undoc_data):
     doc_value = sum(float(r.get("max_amount", 0) or 0) for r in rows_dedup if r.get("has_file") == "True")
     undoc_value = total_value - doc_value
 
+    # Items where at least one attached file is ACTUAL_CONTRACT (item-level count,
+    # distinct from the PDF count which may be larger because some items have
+    # multiple contract PDFs attached — e.g. the 2024/25 Preschool Program has
+    # separate signed contracts for Academy House and Head Start).
+    items_with_contract = 0
+    items_with_contract_value = 0.0
+    for r in rows_dedup:
+        if r.get("has_file") != "True":
+            continue
+        file_types = r.get("file_types", "") or ""
+        if "ACTUAL_CONTRACT" in file_types:
+            items_with_contract += 1
+            items_with_contract_value += float(r.get("max_amount", 0) or 0)
+
     # Genuine undocumented spending (filters applied)
     sums = undoc_data.get("summaries", [])
     unique_sums = [s for s in sums if "duplicate_of" not in s]
@@ -328,6 +342,8 @@ def build_totals(rows_full, rows_dedup, undoc_data):
         "excluded_undoc_value": excluded_value,
         "raw_undoc_items": without_doc,
         "raw_undoc_value": undoc_value,
+        "items_with_signed_contract": items_with_contract,
+        "items_with_signed_contract_value": items_with_contract_value,
     }
 
 
