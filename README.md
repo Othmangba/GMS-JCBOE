@@ -13,13 +13,13 @@ When the Board of Education votes to approve a contract, residents should be abl
 | Metric | Value |
 |--------|-------|
 | Meetings analyzed | 42 (Jan 2024 — Mar 2026) |
-| Board actions tracked | 376 (368 unique commitments after deduplicating re-votes) |
-| Total contract value | $430.4M (deduplicated, after Scenario C) |
-| Items with zero documents attached (raw) | 49 ($18.5M) |
-| **Genuine undocumented vendor spending** (excludes 1 rescission, 1 grant application, 1 policy threshold, and 10 amendments absorbed within documented parent NTE) | **36 items ($14.48M)** |
-| PDFs analyzed | 364 |
-| **Actual signed contracts found** | **20 out of 364 PDFs** |
-| PO forms (internal forms, not contracts) | 262 ($198.8M) |
+| Board actions tracked | 504 (484 unique commitments after deduplicating re-votes) |
+| Total contract value | $514.9M (deduplicated) |
+| Items with zero documents attached (raw) | 81 ($81.7M) |
+| **Genuine undocumented vendor spending** (excludes 1 rescission, 1 grant application, 1 policy threshold, and 10 amendments absorbed within documented parent NTE) | **68 items ($77.6M)** |
+| PDFs analyzed | 461 (deduplicated) |
+| **Actual signed contracts found** | **25 PDFs across 15 unique commitments (3.1%, $39.2M or 7.6% of dollars)** |
+| PO forms (internal forms, not contracts) | 313 PDFs across 281 items (58.1%, $164.5M or 31.9% of dollars) |
 
 **The bottom line:** When the Board says it "approved a contract," the actual signed agreement is almost never publicly available. What gets attached instead is an internal purchase order form — a document the district uses to authorize its own spending, not the agreement with the vendor.
 

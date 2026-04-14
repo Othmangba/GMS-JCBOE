@@ -167,6 +167,9 @@ def normalize_vendor(v):
         ("inspired instruction",        "Inspired Instruction"),
         ("institute for multi-sensory", "Institute for Multi-Sensory Education"),
         ("cdw",                         "CDW"),
+        ("early childhood department",  "Early Childhood Department / Contracted Childcare Centers"),
+        ("contracted childcare",        "Early Childhood Department / Contracted Childcare Centers"),
+        ("preschool program",           "Early Childhood Department / Contracted Childcare Centers"),
     ]
     for needle, canonical in canonical_rules:
         if needle in vl:

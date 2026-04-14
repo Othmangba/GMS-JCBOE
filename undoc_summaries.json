@@ -7,7 +7,7 @@
       "amount": 175000,
       "vendor_fix": "(district policy)",
       "summary": "Annual authorization for staff travel expenses \u2014 conferences, training, and professional development",
-      "category": "Travel Policy",
+      "category": "Transportation",
       "action_type": "spending_authorization_policy"
     },
     {
@@ -16,7 +16,7 @@
       "amount": 5187000,
       "vendor_fix": "C. Dougherty & Co., Inc.",
       "summary": "Boiler replacements at Liberty HS, PS#8, PS#16, PS#29, PS#41 \u2014 awarded to C. Dougherty & Co. via Resolution 10.03 on Nov 16, 2023 (outside dataset window, had bid tab AF10027 attached). Funded via capital reserve withdrawal Resolution 11.06 on Feb 29, 2024 \u2014 the withdrawal resolution itself has zero attachments on BoardDocs. Stored in the dataset as $5,187,000 (the Dougherty slice) after removing the $2,074,000 Pennetta HVAC portion that is already tracked separately via Resolution 11.10 (which has bid tab AF10659 attached).",
-      "category": "Facilities & Maintenance",
+      "category": "Capital Projects",
       "notes": "Multi-vendor split. Earlier Pennetta-only attribution was incorrect. Funded Dougherty $5.187M (71%) and Pennetta $2.074M (29%)."
     },
     {
@@ -91,7 +91,7 @@
       "amount": 240000,
       "vendor_fix": "(multiple bidders)",
       "summary": "Pre-employment physicals (PD24-25-033) \u2014 three proposals received; Concentra Health Services was selected by the committee based on cost, effectiveness, experience, and qualifications. Renewal contract for health services.",
-      "category": "HR Services"
+      "category": "Transportation"
     },
     {
       "idx": 11,
@@ -107,7 +107,7 @@
       "amount": 800000,
       "vendor_fix": "Sal Electric Co.",
       "summary": "Electrical services at various schools \u2014 Sal Electric was lowest of 4 bidders",
-      "category": "Building Systems"
+      "category": "Facilities & Maintenance"
     },
     {
       "idx": 13,
@@ -299,7 +299,7 @@
       "amount": 171000,
       "vendor_fix": "(district policy)",
       "summary": "Annual authorization for staff travel expenses \u2014 conferences, training, and professional development",
-      "category": "Travel Policy",
+      "category": "Transportation",
       "action_type": "spending_authorization_policy"
     },
     {
@@ -426,7 +426,7 @@
       "amount": 75000,
       "vendor_fix": "Machado Law Group",
       "summary": "Legal services contract for special education matters",
-      "category": "Legal Services"
+      "category": "Facilities & Maintenance"
     },
     {
       "idx": 45,
@@ -493,7 +493,7 @@
       "amount": 174000,
       "vendor_fix": "(district policy)",
       "summary": "Annual authorization for staff travel expenses \u2014 conferences, training, and professional development",
-      "category": "Travel Policy",
+      "category": "Transportation",
       "action_type": "spending_authorization_policy"
     },
     {
@@ -550,7 +550,7 @@
       "amount": 250000,
       "vendor_fix": "Contract Increase",
       "summary": "11.01 Approve Contract Increase (PD23-24-MD2-33) Bituminous Concrete Resurfacing",
-      "category": "Construction"
+      "category": "Facilities & Maintenance"
     },
     {
       "idx": 57,
@@ -558,7 +558,7 @@
       "amount": 60000,
       "vendor_fix": "Contract Increase",
       "summary": "11.02 Approve Contract Increase (PD23-24-MD13-78) Pest Control Management Services",
-      "category": "Other"
+      "category": "Facilities Ops"
     },
     {
       "idx": 58,
@@ -582,7 +582,7 @@
       "amount": 11040,
       "vendor_fix": "(see resolution text)",
       "summary": "10.20 Approve Parental Transportation Route PO10 (H.T.)",
-      "category": "Special Ed Tuition"
+      "category": "Transportation"
     },
     {
       "idx": 61,
@@ -590,7 +590,7 @@
       "amount": 2774730,
       "vendor_fix": "(see resolution text)",
       "summary": "10.27 Amend Contract (PD22-23-FD12-64) FY2024/25 School Pre-Plated Commercial Vended Meals (Year 3)",
-      "category": "Construction"
+      "category": "Food Service"
     },
     {
       "idx": 62,
@@ -622,7 +622,7 @@
       "amount": 135450,
       "vendor_fix": "Mobile Modular Management Corp",
       "summary": "11.03 Approve Mobile Modular Management Corp (Removal of TCU's at PS#17)",
-      "category": "Construction"
+      "category": "Facilities & Maintenance"
     },
     {
       "idx": 66,
@@ -638,7 +638,7 @@
       "amount": 3700000,
       "vendor_fix": "(see resolution text)",
       "summary": "11.03 Approve Renovation of Bathrooms at PS#23 and PS#25",
-      "category": "Construction"
+      "category": "Facilities & Maintenance"
     },
     {
       "idx": 68,
@@ -710,7 +710,7 @@
       "amount": 387839,
       "vendor_fix": "Painting",
       "summary": "11.04 Approve Painting (Dickinson High School)",
-      "category": "Construction"
+      "category": "Facilities & Maintenance"
     },
     {
       "idx": 77,
@@ -718,7 +718,7 @@
       "amount": 295882,
       "vendor_fix": "Repairs",
       "summary": "11.03 Approve Repairs (Dr. Martin Luther King, Jr. School (PS#11)",
-      "category": "Construction"
+      "category": "Facilities & Maintenance"
     },
     {
       "idx": 78,
@@ -742,7 +742,7 @@
       "amount": 175000,
       "vendor_fix": "Increase to Elevator Repair & Maintenance Contract - Slade Elevator",
       "summary": "11.23 Approve Increase to Elevator Repair & Maintenance Contract - Slade Elevator",
-      "category": "Other"
+      "category": "Facilities & Maintenance"
     },
     {
       "idx": 81,
@@ -750,7 +750,7 @@
       "amount": 31299853,
       "vendor_fix": "Early Childhood Department",
       "summary": "8.69 Approve Early Childhood Department - Contracted Childcare Center Contract for 2025/26 School Year",
-      "category": "Special Ed Tuition"
+      "category": "Instructional"
     },
     {
       "idx": 82,
@@ -758,7 +758,7 @@
       "amount": 2199833,
       "vendor_fix": "(see resolution text)",
       "summary": "12.15 Approve 2025/26 Renewal of Employment Contracts (Non-Affiliates)",
-      "category": "Legal Services"
+      "category": "Employment"
     },
     {
       "idx": 83,

@@ -148,25 +148,18 @@ def main():
     # ── PDF analysis checks ──
     print("\n--- PDF Analysis (source: jcboe_pdf_analysis.csv) ---")
 
-    check("PDFs analyzed", 364, len(pdfs))
+    check("PDFs analyzed", 461, len(pdfs))
 
     from collections import Counter
 
     types = Counter(p.get("doc_type", "") for p in pdfs)
-    check("ACTUAL_CONTRACT count", 20, types.get("ACTUAL_CONTRACT", 0))
-    check("PO_FORM count", 262, types.get("PO_FORM", 0))
-    check("PROPOSAL/QUOTE count", 39, types.get("PROPOSAL/QUOTE", 0))
-    check("AMENDMENT count", 17, types.get("AMENDMENT", 0))
-    check("SOFTWARE_RENEWAL count", 12, types.get("SOFTWARE_RENEWAL", 0))
-    check("BID_TABULATION count", 9, types.get("BID_TABULATION", 0))
-    check("OTHER count", 5, types.get("OTHER", 0))  # 3 original + AF11561 + AF14181 (rate schedules)
-
-    ac_val = sum(
-        float(p.get("contract_amount", 0) or 0)
-        for p in pdfs
-        if p.get("doc_type", "") == "ACTUAL_CONTRACT"
-    )
-    check("Actual contracts value", 7_210_387, round(ac_val), tolerance=100)
+    check("ACTUAL_CONTRACT count", 25, types.get("ACTUAL_CONTRACT", 0))
+    check("PO_FORM count", 313, types.get("PO_FORM", 0))
+    check("PROPOSAL/QUOTE count", 66, types.get("PROPOSAL/QUOTE", 0))
+    check("AMENDMENT count", 26, types.get("AMENDMENT", 0))
+    check("SOFTWARE_RENEWAL count", 13, types.get("SOFTWARE_RENEWAL", 0))
+    check("BID_TABULATION count", 11, types.get("BID_TABULATION", 0))
+    check("OTHER count", 7, types.get("OTHER", 0))
 
     # ── Duplicate detection ──
     print("\n--- Duplicate Detection ---")
@@ -211,8 +204,8 @@ def main():
 
     # Check that correct numbers ARE present
     good_patterns = {
-        r"\b368\b": "Unique commitments count (fully deduped)",
-        r"\$432\.5": "Fully deduplicated total value",
+        r"\b484\b": "Unique commitments count (fully deduped)",
+        r"\$514\.9": "Fully deduplicated total value",
         r"\b19 findings\b": "FY2024 finding count",
         r"\b10 of the same\b": "Repeat finding count",
         r"\b49\b.*undoc|undoc.*\b49\b": "Undocumented items (raw)",

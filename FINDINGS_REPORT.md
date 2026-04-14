@@ -23,7 +23,7 @@ I looked at every contract the Jersey City Board of Education approved over the 
 
 **They almost never were.**
 
-Out of 484 unique spending commitments worth $514.9 million, I found just 20 actual signed contracts in the attached documents — covering only $7.2 million. That means **98.6% of contract spending lacks the actual signed agreement.** And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
+Out of 484 unique spending commitments worth $514.9 million, **only 15 (3.1%) have an actual signed contract attached** — covering just $39.2 million (7.6%). That means **over 92% of contract spending has no signed agreement in the public record** — the Board authorizes the money, but the actual agreement isn't attached to the agenda item. And when I compared my findings to the district's own official audit? The auditors found the same problems — and then some.
 
 This isn't just a transparency problem. It's a compliance problem. And it affects every taxpayer and student in Jersey City.
 
@@ -61,9 +61,9 @@ All data was collected from publicly available records. No private or restricted
 | Total contract value | $514.9 million (unique commitments, after full scraper audit) |
 | Items with zero documents attached (raw) | 81 ($81.7 million) |
 | **Genuine undocumented vendor spending** (after filtering out 1 rescission, 1 grant application, 1 policy threshold, and 10 amendments whose parent resolution is documented and whose chain cumulative increments stay within the parent's NTE ceiling) | **68 items ($77.6 million)** |
-| PDFs downloaded and analyzed | 364 |
-| **Actual signed contracts found** | **20 out of 364** |
-| Internal PO forms (not contracts) | 262 |
+| PDFs downloaded and analyzed | 461 (after deduplicating alternate filename entries) |
+| **Actual signed contracts found** | **25 PDFs attached to 15 unique items (3.1% of commitments, 7.6% of dollars)** |
+| Internal PO forms (not contracts) | 313 PDFs attached to 281 items (58.1% of commitments, 31.9% of dollars) |
 | Vendors identified | ~476 out of 504 |
 
 *Note on counting: This report uses two numbers depending on what's being measured. **376** is the total number of contract-related board actions tracked — every time the Board voted on a contract item, it counts. **368** is the number of unique spending commitments — because 8 items appear to be re-votes or duplicates of the same contract: 7 items from the February 29, 2024 regular meeting were re-voted with identical resolution text at the March 19, 2024 special budget meeting, and a Hewlett Packard state contract purchase ($1.03M) was voted on at both the May 22, 2025 and August 28, 2025 meetings under the same state contract #89974 with nearly identical language. Both votes are real board actions, but they represent the same contracts, not additional spending. Gap rates and item counts use the 376 figure (since each board action should have documentation regardless of whether it's a re-vote). Dollar exposure calculations use the 368 figure to avoid inflating the amount of money at stake.*
@@ -90,7 +90,7 @@ Here's what I actually found inside 362 attached PDFs:
 | **Bid Tabulations** | 9 (2.5%) | Spreadsheets showing who bid and who won. Useful, but not the contract. |
 | **Other** | 3 (0.8%) | Unclassified. |
 
-**The bottom line:** 20 actual signed contracts exist — but they cover only $7.2 million of the **$430.4 million** the Board approved. For **over 98%** of contract spending, the public cannot see what was actually agreed to. At the item level, only **13 of 368 unique commitments (3.5%)** have a signed agreement attached.
+**The bottom line:** 25 actual signed contracts exist across 15 unique Board commitments — covering $39.2 million of the **$514.9 million** the Board approved. For **over 92%** of contract spending ($475.6 million), the public cannot see what was actually agreed to. At the item level, only **15 of 484 unique commitments (3.1%)** have a signed agreement attached. Another 281 items (58.1%) are backed only by internal PO forms, and 81 items (16.7%) have zero documents attached at all.
 
 ---
 
@@ -124,7 +124,7 @@ Many directly confirm what my GMS investigation discovered.
 ### Finding-by-Finding Comparison
 
 #### Missing Contract Documentation
-**What I found:** 49 unique board actions worth $18.5 million had zero documents attached on BoardDocs. After removing 13 items that aren't actually undocumented vendor spending — 1 rescission (cancellation of a prior obligation), 1 grant application (incoming funds), 1 policy threshold adjustment, and 10 amendments whose parent resolution is documented in the dataset AND whose chain cumulative increments stay within the parent's NTE ceiling — the genuine undocumented vendor spending is **36 items worth $14.48 million**. Of 364 PDFs attached across the full dataset, only 20 were actual signed contracts.
+**What I found:** 81 unique board actions worth $81.7 million had zero documents attached on BoardDocs. After removing 13 items that aren't actually undocumented vendor spending — 1 rescission (cancellation of a prior obligation), 1 grant application (incoming funds), 1 policy threshold adjustment, and 10 amendments whose parent resolution is documented in the dataset AND whose chain cumulative increments stay within the parent's NTE ceiling — the genuine undocumented vendor spending is **68 items worth $77.6 million**. Of 461 PDFs attached across the full dataset, only 25 are actual signed contracts (attached to 15 of the 484 unique commitments).
 
 **What the auditors found (Finding 2025-8):** *"Contract awards and purchases which exceeded the bid threshold were not approved in the minutes and therefore we were unable to determine the method of procurement."* The auditors also found:
 - Prevailing wage reports from construction vendors were missing
@@ -428,7 +428,7 @@ Right now, the answer is mostly no. Here's what's broken:
 
 3. **The auditors confirmed the problem.** This isn't just my opinion. The district's own certified public accountants identified 13 findings, including missing contract documentation, missing employment contracts, backdated checks, and failures to notify the State about large contracts.
 
-4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. I did find 20 actual signed contracts — but those covered just $7.2 million out of $432.5 million in total approvals. The other 355 unique spending commitments (96.5% of items, 98%+ of dollars) were backed by internal PO forms, proposals, bid tabulations, rate schedules, or nothing at all. The signed contracts that *are* provided tend to be smaller, lower-profile agreements (healthcare providers, engineering firms), while the largest expenditures go undocumented.
+4. **The documentation gap is systemic.** It's not one or two contracts that slipped through. I did find 23 actual signed contracts across 15 unique commitments — but those covered just $39.2 million (7.6%) out of $514.9 million in total approvals. The other 469 unique spending commitments (96.9% of items, 92.4% of dollars) were backed by internal PO forms, proposals, bid tabulations, rate schedules, or nothing at all. Even the signed contracts that *are* provided are often partial — e.g., the $34.3M 2024/25 Preschool Program Contract has signed contracts for two childcare centers (Academy House and Head Start's Greater Bergen Community Action) attached, but not for the other ~18+ providers covered by the same program.
 
 ---
 
